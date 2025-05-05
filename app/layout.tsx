@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     description: 'Fullstack (MERN) Web Developer from Germany',
     images: [
       {
-        url: '/logo.svg',
+        url: `${process.env.NEXT_PUBLIC_APP_URL}/logo.svg`,
         width: 600,
         height: 600,
         alt: 'mrbubbles-src Logo',
