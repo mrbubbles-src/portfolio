@@ -5,6 +5,7 @@ import ContactForm from '@/components/layout/ContactForm';
 import ProjectCard from '@/components/layout/ProjectCard';
 import { projects } from '@/data/projects';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
+import ContactAbout from '@/components/layout/Contact-About';
 
 export default function Home() {
   return (
@@ -38,17 +39,23 @@ export default function Home() {
 
       <section
         id="contact"
-        className="scroll-mt-24 py-16"
+        className="scroll-mt-24 md:grid md:grid-cols-2 gap-4"
         aria-labelledby="contact-section">
-        <Card className="">
+        <Card className="w-full">
           <CardHeader>
-            <h2 className="text-3xl font-bold mb-6 text-center">Contact Me</h2>
+            <h2 className="text-3xl font-bold">Contact Me</h2>
           </CardHeader>
-          <div>
-            <CardContent className="max-w-xl mx-auto">
-              <ContactForm />
-            </CardContent>
-          </div>
+          <CardContent className="h-full">
+            <ContactForm />
+          </CardContent>
+        </Card>
+        <Card className="w-full mt-4 md:mt-0">
+          <CardHeader>
+            <h2 className="text-3xl font-bold">Profile Summary</h2>
+          </CardHeader>
+          <CardContent>
+            <ContactAbout />
+          </CardContent>
         </Card>
       </section>
     </>
