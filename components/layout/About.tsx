@@ -26,17 +26,17 @@ export default function About() {
 
   return (
     <Card className="shadow-md md:flex md:flex-row gap-1">
-      <CardHeader className="w-full max-w-[330px] place-self-center">
+      <CardHeader className="w-full place-self-center flex flex-col">
         <Image
           src="/profile.jpeg"
           alt="Profile picture of Manuel Fahrenholz"
           width={400}
           height={400}
-          className="rounded-lg shadow-md object-cover"
+          className="rounded-lg shadow-md object-cover place-self-center"
           priority
         />
-        <div className="flex justify-center gap-4 mt-4">
-          <Button asChild>
+        <div className="flex justify-center gap-4 mt-4 w-full grow">
+          <Button asChild size={'lg'} className="w-full max-w-[10rem]">
             <a
               href="https://github.com/mrbubbles-src"
               target="_blank"
@@ -44,7 +44,7 @@ export default function About() {
               <FontAwesomeIcon icon={faGithub} /> GitHub
             </a>
           </Button>
-          <Button asChild>
+          <Button asChild size={'lg'} className="w-full max-w-[10rem]">
             <a
               href="https://linkedin.com/in/manuel-fahrenholz"
               target="_blank"
@@ -54,7 +54,7 @@ export default function About() {
           </Button>
         </div>
       </CardHeader>
-      <CardContent>
+      <CardContent className="">
         <h1 className="text-3xl font-bold my-4 md:my-0 md:mb-4">
           Hello{' '}
           <code
@@ -155,11 +155,11 @@ export default function About() {
           <p className="mb-1 leading-relaxed text-lg text-justify">Best,</p>
           <p className="mb-1 leading-relaxed text-lg text-justify">Manuel</p>
         </article>
-        <div className="flex justify-center gap-4 mt-3">
-          <Button asChild className="">
+        <div className="flex justify-center gap-4 mt-3 grow">
+          <Button asChild size={'lg'} className="w-full max-w-[10rem]">
             <Link href="/cv">Check out my CV</Link>
           </Button>
-          <Button asChild>
+          <Button asChild size={'lg'} className="w-full max-w-[10rem]">
             <Link href="/#contact">Get in touch!</Link>
           </Button>
         </div>
