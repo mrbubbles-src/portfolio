@@ -97,7 +97,7 @@ const Navbar = () => {
           </NavigationMenu>
         </NavigationMenuItem>
         <button
-          className="md:hidden hover:text-primary cursor-pointer transition-all duration-100 ease-in-out active:animate-spin"
+          className={`md:hidden ml-2 hover:text-primary transition-transform duration-300 ease-in-out transform ${isOpen ? 'rotate-90' : ''}`}
           onClick={() => setIsOpen((prev) => !prev)}>
           {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>
