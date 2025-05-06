@@ -58,7 +58,7 @@ export default function About() {
         <h1 className="text-3xl font-bold my-4 md:my-0 md:mb-4">
           Hello{' '}
           <code
-            className="bg-sidebar-border rounded-md p-[0.3rem] italic text-lg text-pretty text-primary"
+            className="bg-accent rounded-md p-[0.3rem] italic text-lg text-pretty text-primary"
             aria-hidden="true">
             `
             <strong className="text-sh-sign" aria-hidden="true">
