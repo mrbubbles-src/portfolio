@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 export default function ContactAbout() {
   return (
-    <Card className="shadow-md md:flex md:flex-row gap-1 w-full h-full p-0">
+    <Card className="shadow-none md:flex md:flex-row gap-1 w-full h-full p-0">
       <CardHeader className="w-full max-w-[330px] place-self-center">
         <Image
           src="/profile.jpeg"
@@ -17,7 +17,7 @@ export default function ContactAbout() {
           priority
         />
       </CardHeader>
-      <CardContent className="flex flex-col justify-center ">
+      <CardContent className="flex flex-col justify-center">
         <article className="mt-5 md:mt-0">
           <h2 id="about-description" className="sr-only">
             Summary about Manuel Fahrenholz
@@ -73,7 +73,7 @@ export default function ContactAbout() {
             </a>
           </Button>
           <Button asChild size={'lg'} className="w-full max-w-[10rem]">
-            <Link href="/cv">Check out my CV</Link>
+            <Link href="/cv">See my journey</Link>
           </Button>
         </div>
       </CardContent>
