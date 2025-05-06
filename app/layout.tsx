@@ -78,7 +78,11 @@ export default function RootLayout({
       </head>
       <body
         className={`${montserrat.variable} bg-background text-foreground min-h-screen antialiased`}>
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem
+          disableTransitionOnChange>
           <Navbar />
           <main className="flex-1 container mx-auto px-4 py-8">{children}</main>
           <Footer />
