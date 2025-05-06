@@ -6,16 +6,18 @@ export default function StackGrid() {
   return (
     <div className="space-y-6 md:grid md:grid-cols-3 gap-4 auto-rows-fr">
       {Object.entries(stack).map(([category, tools]) => (
-        <Card key={category} className="flex flex-col p-2 h-full">
-          <CardHeader className="pl-2">
-            <h3 className="text-xl font-semibold pt-1">{category}</h3>
+        <Card key={category} className="flex flex-col p-4 h-full">
+          <CardHeader>
+            <h3 className="text-xl text-center font-semibold pt-1">
+              {category}
+            </h3>
           </CardHeader>
-          <CardContent className="flex flex-wrap gap-3 p-2">
+          <CardContent className="flex flex-wrap gap-3 justify-center">
             {tools.map((tool: string) => (
               <Badge
                 key={tool}
-                variant="secondary"
-                className=" text-base py-2 px-4">
+                variant="default"
+                className="font-semibold text-lg">
                 {tool}
               </Badge>
             ))}
