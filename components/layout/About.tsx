@@ -29,91 +29,137 @@ export default function About() {
       <CardHeader className="w-full max-w-[330px] place-self-center">
         <Image
           src="/profile.jpeg"
-          alt="Profile picture"
+          alt="Profile picture of Manuel Fahrenholz"
           width={400}
           height={400}
           className="rounded-lg shadow-md object-cover"
           priority
         />
         <div className="flex justify-center gap-4 mt-4">
-          <Button asChild className="">
+          <Button asChild>
             <a
               href="https://github.com/mrbubbles-src"
               target="_blank"
-              rel="noopener noreferrer"
-              aria-label="GitHub">
+              rel="noopener noreferrer">
               <FontAwesomeIcon icon={faGithub} /> GitHub
             </a>
           </Button>
-          <Button asChild className="">
+          <Button asChild>
             <a
               href="https://linkedin.com/in/manuel-fahrenholz"
               target="_blank"
-              rel="noopener noreferrer"
-              aria-label="LinkedIn">
+              rel="noopener noreferrer">
               <FontAwesomeIcon icon={faLinkedin} /> LinkedIn
             </a>
           </Button>
         </div>
       </CardHeader>
       <CardContent>
-        <h2 className="text-3xl font-bold my-4 md:my-0 md:mb-4">
-          Hello World!
-        </h2>
-        <p className="mb-1 leading-relaxed text-lg text-justify">
-          My name is <strong className="text-primary">Manuel Fahrenholz</strong>
-          , aka{' '}
-          <strong className="text-primary">
-            <a
-              href="https://github.com/mrbubbles-src"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="GitHub"
-              className="underline underline-offset-4 cursor-pointer">
-              mrbubbles-src
-            </a>
-          </strong>
-          . Nice to meet you!
-        </p>
-        <p className="mb-1 leading-relaxed text-lg text-justify">
-          I&apos;m <strong className="text-primary">{age}</strong> years old and
-          live in the b-e-a-utiful city of{' '}
-          <strong className="text-primary">Cologne, Germany</strong>.
-        </p>
-        <p className="mb-1 leading-relaxed text-lg text-justify">
-          My journey as a{' '}
-          <strong className="text-primary">Fullstack Web Developer</strong>{' '}
-          began in September 2022 at the DCI Digital Career Institute, where I
-          completed a 12-month{' '}
-          <strong className="text-primary">MERN-Stack</strong> course. I now
-          work there as a{' '}
-          <strong className="text-primary">
-            Junior Teacher for Web Development
-          </strong>
-          , sharing my knowledge with the next wave of developers.
-        </p>
-        <p className="mb-1 leading-relaxed text-lg text-justify">
-          With a background in caregiving, helping people is second nature — I
-          aim to build apps that offer real support, even in small ways.
-        </p>
-        <p className="mb-1 leading-relaxed">
-          Outside of work, I LOVE gaming, reading (or listening to) books,
-          binge-watching shows & movies, and occasionally doodling just for fun.
-        </p>
-        <p className="mb-1 leading-relaxed text-lg text-justify">
-          Want to know more? Feel free to check out my CV, GitHub, or LinkedIn —
-          or just send me a message via the contact form!
-        </p>
-        <p className="mb-1 leading-relaxed text-lg text-justify">
-          Can’t wait to hear more about YOU!
-        </p>
-        <p className="mb-1 leading-relaxed text-lg text-justify">Best,</p>
-        <p className="mb-1 leading-relaxed text-lg text-justify">Manuel</p>
+        <h1 className="text-3xl font-bold my-4 md:my-0 md:mb-4">
+          Hello{' '}
+          <code
+            className="bg-sidebar-border rounded-md p-[0.3rem] italic text-lg text-pretty text-primary"
+            aria-hidden="true">
+            `
+            <strong className="text-sh-sign" aria-hidden="true">
+              &#36;
+            </strong>
+            <strong className="text-sh-entity" aria-hidden="true">
+              &#123;
+            </strong>
+            <strong className="text-sh-sign" aria-hidden="true">
+              &lt;
+            </strong>
+            <strong className="text-sh-identifier" aria-hidden="true">
+              span
+            </strong>
+            <strong className="text-sh-sign" aria-hidden="true">
+              &gt;
+            </strong>
+            <strong className="text-sh-entity" aria-hidden="true">
+              &#123;
+            </strong>
+            <strong className="text-sh-identifier" aria-hidden="true">
+              username
+            </strong>
+            <strong className="text-sh-entity" aria-hidden="true">
+              &#125;
+            </strong>
+            <strong className="text-sh-sign" aria-hidden="true">
+              &lt;/
+            </strong>
+            <strong className="text-sh-identifier" aria-hidden="true">
+              span
+            </strong>
+            <strong className="text-sh-sign" aria-hidden="true">
+              &gt;
+            </strong>
+            <strong className="text-sh-entity" aria-hidden="true">
+              &#125;
+            </strong>
+            `
+          </code>
+          , nice to meet you!
+        </h1>
+        <article>
+          <h2 id="about-description" className="sr-only">
+            About Manuel Fahrenholz
+          </h2>
+          <p className="mb-1 leading-relaxed text-lg text-justify">
+            My name is{' '}
+            <strong className="text-primary">Manuel Fahrenholz</strong>, aka{' '}
+            <strong className="text-primary">
+              <a
+                href="https://github.com/mrbubbles-src"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline underline-offset-4 cursor-pointer">
+                mrbubbles-src
+              </a>
+            </strong>
+            . Nice to meet you!
+          </p>
+          <p className="mb-1 leading-relaxed text-lg text-justify">
+            I&apos;m <strong className="text-primary">{age}</strong> years old
+            and live in the b-e-a-utiful city of{' '}
+            <strong className="text-primary">Cologne, Germany</strong>.
+          </p>
+          <p className="mb-1 leading-relaxed text-lg text-justify">
+            My journey as a{' '}
+            <strong className="text-primary">Fullstack Web Developer</strong>{' '}
+            began in September 2022 at the DCI Digital Career Institute, where I
+            completed a 12-month{' '}
+            <strong className="text-primary">MERN-Stack</strong> course. I now
+            work there as a{' '}
+            <strong className="text-primary">
+              Junior Teacher for Web Development
+            </strong>
+            , sharing my knowledge with the next wave of developers.
+          </p>
+          <p className="mb-1 leading-relaxed text-lg text-justify">
+            With a background in caregiving, helping people is second nature — I
+            aim to build apps that offer real support, even in small ways.
+          </p>
+          <p className="mb-1 leading-relaxed">
+            Outside of work, I LOVE gaming, reading (or listening to) books,
+            binge-watching shows & movies, and occasionally doodling just for
+            fun.
+          </p>
+          <p className="mb-1 leading-relaxed text-lg text-justify">
+            Want to know more? Feel free to check out my CV, GitHub, or LinkedIn
+            — or just send me a message via the contact form!
+          </p>
+          <p className="mb-1 leading-relaxed text-lg text-justify">
+            Can’t wait to hear more about YOU!
+          </p>
+          <p className="mb-1 leading-relaxed text-lg text-justify">Best,</p>
+          <p className="mb-1 leading-relaxed text-lg text-justify">Manuel</p>
+        </article>
         <div className="flex justify-center gap-4 mt-3">
           <Button asChild className="">
             <Link href="/cv">Check out my CV</Link>
           </Button>
-          <Button asChild className="">
+          <Button asChild>
             <Link href="/#contact">Get in touch!</Link>
           </Button>
         </div>

@@ -9,16 +9,25 @@ import { Card, CardContent, CardHeader } from '@/components/ui/card';
 export default function Home() {
   return (
     <>
-      <section id="about" className="scroll-mt-24 py-16">
+      <section
+        id="about"
+        className="scroll-mt-24 py-16"
+        aria-labelledby="about-description">
         <About />
       </section>
 
-      <section id="stack" className="scroll-mt-24 py-16">
+      <section
+        id="stack"
+        className="scroll-mt-24 py-16"
+        aria-labelledby="tech-stack">
         <h2 className="text-3xl font-bold mb-6 text-center">Tech Stack</h2>
         <StackGrid />
       </section>
 
-      <section id="projects" className="scroll-mt-24 py-16">
+      <section
+        id="projects"
+        className="scroll-mt-24 py-16"
+        aria-labelledby="projects">
         <h2 className="text-3xl font-bold mb-6">Projects</h2>
         <div className="grid gap-6 sm:grid-cols-2">
           {projects.map((project, i) => (
@@ -27,7 +36,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="contact" className="scroll-mt-24 py-16">
+      <section
+        id="contact"
+        className="scroll-mt-24 py-16"
+        aria-labelledby="contact-section">
         <Card className="">
           <CardHeader>
             <h2 className="text-3xl font-bold mb-6 text-center">Contact Me</h2>

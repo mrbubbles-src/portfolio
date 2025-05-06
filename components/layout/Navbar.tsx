@@ -19,9 +19,7 @@ const Navbar = () => {
 
   return (
     <section className="border-b shadow-sm bg-background/70 backdrop-blur sticky top-0 left-0 z-50">
-      <nav
-        className="container mx-auto px-4 py-4 flex justify-between items-center text-xl"
-        aria-label="Main navigation container">
+      <nav className="container mx-auto px-4 py-4 flex justify-between items-center text-xl">
         <Link href="/" className="text-xl font-bold text-primary">
           <div role="banner">
             <Image
@@ -37,9 +35,7 @@ const Navbar = () => {
           <a
             href="https://github.com/mrbubbles-src"
             target="_blank"
-            rel="noopener noreferrer"
-            title="GitHub - mrbubbles-src"
-            aria-label="GitHub">
+            rel="noopener noreferrer">
             <FontAwesomeIcon
               icon={faGithub}
               className="hover:text-primary transition-all duration-300 ease-in-out active:scale-95"
@@ -48,9 +44,7 @@ const Navbar = () => {
           <a
             href="https://linkedin.com/in/manuel-fahrenholz"
             target="_blank"
-            rel="noopener noreferrer"
-            title="LinkedIn - Manuel Fahrenholz"
-            aria-label="LinkedIn">
+            rel="noopener noreferrer">
             <FontAwesomeIcon
               icon={faLinkedin}
               className="hover:text-primary transition-all duration-300 ease-in-out active:scale-95"
@@ -67,8 +61,6 @@ const Navbar = () => {
               <NavigationMenuItem className="active:scale-95">
                 <Link
                   href="/#about"
-                  title="About section"
-                  aria-label="About section"
                   className="hover:text-primary transition-all duration-300 ease-in-out hover:underline underline-offset-4">
                   About
                 </Link>
@@ -76,8 +68,6 @@ const Navbar = () => {
               <NavigationMenuItem className="active:scale-95">
                 <Link
                   href="/#stack"
-                  title="Tech-stack section"
-                  aria-label="Tech-stack section"
                   className="hover:text-primary transition-all duration-300 ease-in-out hover:underline underline-offset-4">
                   Stack
                 </Link>
@@ -85,8 +75,6 @@ const Navbar = () => {
               <NavigationMenuItem className="active:scale-95">
                 <Link
                   href="/#projects"
-                  title="Project section"
-                  aria-label="Project section"
                   className="hover:text-primary transition-all duration-300 ease-in-out hover:underline underline-offset-4">
                   Projects
                 </Link>
@@ -94,8 +82,6 @@ const Navbar = () => {
               <NavigationMenuItem className="active:scale-95">
                 <Link
                   href="/#contact"
-                  title="Contact section"
-                  aria-label="Contact section"
                   className="hover:text-primary transition-all duration-300 ease-in-out hover:underline underline-offset-4">
                   Contact
                 </Link>
@@ -103,8 +89,6 @@ const Navbar = () => {
               <NavigationMenuItem className="active:scale-95">
                 <Link
                   href="/cv"
-                  title="Curriculum Vitae - Manuel Fahrenholz"
-                  aria-label="Curriculum Vitae"
                   className="hover:text-primary transition-all duration-300 ease-in-out hover:underline underline-offset-4">
                   Curriculum Vitae
                 </Link>
@@ -114,7 +98,6 @@ const Navbar = () => {
         </NavigationMenuItem>
         <button
           className="md:hidden hover:text-primary cursor-pointer transition-all duration-100 ease-in-out active:animate-spin"
-          aria-label="Toggle navigation menu"
           onClick={() => setIsOpen((prev) => !prev)}>
           {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>
