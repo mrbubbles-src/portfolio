@@ -21,16 +21,24 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'mrbubbles-src < Fullstack Web Developer />',
     description: 'Fullstack (MERN) Web Developer from Germany',
+    siteName: 'https://mrbubbles-src.dev',
     images: [
       {
-        url: `${process.env.NEXT_PUBLIC_APP_URL}/logo.svg`,
-        width: 600,
-        height: 600,
-        alt: 'mrbubbles-src Logo',
+        url: 'https://mrbubbles-src.dev/api/og',
+        width: 1200,
+        height: 630,
+        alt: 'mrbubbles-src Portfolio Preview',
       },
     ],
     type: 'website',
-    locale: 'de_DE',
+    locale: 'en_GB',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'mrbubbles-src < Fullstack Web Developer />',
+    description: 'Fullstack (MERN) Web Developer from Germany',
+    images: ['https://mrbubbles-src.dev/api/og'],
+    creator: '@_MstrBubbles',
   },
   other: { 'apple-mobile-web-app-title': 'mrbubbles-src.dev' },
 };
