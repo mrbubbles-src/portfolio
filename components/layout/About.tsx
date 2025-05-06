@@ -54,11 +54,11 @@ export default function About() {
           </Button>
         </div>
       </CardHeader>
-      <CardContent className="">
+      <CardContent className="md:place-self-center md:mr-16">
         <h1 className="text-3xl font-bold my-4 md:my-0 md:mb-4">
           Hello{' '}
           <code
-            className="bg-accent rounded-md p-[0.3rem] italic text-lg text-pretty text-primary"
+            className="bg-accent rounded-md shadow-sm p-[0.3rem] italic text-lg text-pretty text-primary"
             aria-hidden="true">
             `
             <strong className="text-sh-sign" aria-hidden="true">
@@ -157,7 +157,7 @@ export default function About() {
         </article>
         <div className="flex justify-center gap-4 mt-3 grow">
           <Button asChild size={'lg'} className="w-full max-w-[10rem]">
-            <Link href="/cv">Check out my CV</Link>
+            <Link href="/cv">See my journey</Link>
           </Button>
           <Button asChild size={'lg'} className="w-full max-w-[10rem]">
             <Link href="/#contact">Get in touch!</Link>
