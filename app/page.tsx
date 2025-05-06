@@ -1,4 +1,3 @@
-// page.tsx
 import About from '@/components/layout/About';
 import StackGrid from '@/components/layout/StackGrid';
 import ContactForm from '@/components/layout/ContactForm';
@@ -51,7 +50,9 @@ export default function Home() {
         </Card>
         <Card className="w-full mt-4 md:mt-0">
           <CardHeader>
-            <h2 className="text-3xl font-bold">Profile Summary</h2>
+            <h2 className="text-3xl font-bold text-center md:text-start md:ml-6">
+              Profile Summary
+            </h2>
           </CardHeader>
           <CardContent>
             <ContactAbout />
