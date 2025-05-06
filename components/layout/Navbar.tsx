@@ -20,12 +20,12 @@ const Navbar = () => {
   return (
     <section className="border-b shadow-sm bg-background/70 backdrop-blur sticky top-0 left-0 z-50">
       <nav className="container mx-auto px-4 py-4 flex justify-between items-center text-xl">
-        <Link href="/" className="text-xl font-bold text-primary">
-          <div role="banner">
+        <Link href="/" className="text-xl font-bold text-primary ">
+          <div className="relative h-12 w-52 md:h-14 md:w-56">
             <Image
               src={Logo}
-              width={200}
-              height={50}
+              fill
+              sizes="(max-width: 768px) 208px, 224px"
               alt="mrbubbles-src — Fullstack Web Developer Logo"
             />
           </div>
