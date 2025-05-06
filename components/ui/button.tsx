@@ -52,7 +52,7 @@ function Button({
       data-slot="button"
       className={cn(
         buttonVariants({ variant, size, className }),
-        'cursor-pointer transition-all active:scale-95 font-semibold',
+        'cursor-pointer transition-all active:scale-95 font-semibold text-lg',
       )}
       {...props}
     />
