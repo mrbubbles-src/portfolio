@@ -37,7 +37,7 @@ const projects: Array<IProjects> = [
   {
     title: 'Random Student Name Generator',
     description:
-      'I created this little project while learning web development at the DCI Digital Career Institute, to help my teachers with choosing a random student for whatever they need one for (e.g. answering questions, presenting assignment solutins etc.). This is a little passion project for me which I am trying to improve whenever I find the time. I should be done soon so, keep an eye on it, once it is receives a re-launch!',
+      'I created this little project while learning web development at the DCI Digital Career Institute, to help my teachers with choosing a random student for whatever they need one for (e.g. answering questions, presenting assignment solutions etc.). This is a little passion project for me which I am trying to improve whenever I find the time. I should be done soon so, keep an eye on it, once it is receives a re-launch!',
     tech: ['JavaScript', 'React', 'SASS'],
     github: 'https://github.com/mrbubbles-src/teacherbuddy',
     live: 'https://random-student-name-generator.vercel.app/',
