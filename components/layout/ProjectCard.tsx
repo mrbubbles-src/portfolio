@@ -47,13 +47,17 @@ export default function ProjectCard({
         <p className="text-base text-muted-foreground">{description}</p>
       </CardDescription>
       <CardFooter className="mt-auto px-6 pt-2 pb-4">
-        <div className="flex gap-2 text-xs">
-          <Button asChild size="sm">
+        <div className="flex gap-2 text-xs grow justify-center">
+          <Button asChild size={'lg'} className="w-full max-w-[10rem]">
             <a href={live} target="_blank" rel="noopener noreferrer">
               Live
             </a>
           </Button>
-          <Button asChild size="sm" variant="outline">
+          <Button
+            asChild
+            size={'lg'}
+            variant="outline"
+            className="w-full max-w-[10rem]">
             <a href={github} target="_blank" rel="noopener noreferrer">
               GitHub
             </a>
