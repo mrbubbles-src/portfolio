@@ -55,6 +55,10 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" />
         <link rel="manifest" href="/site.webmanifest" />
         <meta name="theme-color" content="#0f0f0f" />
+        <meta
+          name="description"
+          content="Meet Manuel Fahrenholz (aka mrbubbles-src), a fullstack MERN web developer based in Germany."
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
