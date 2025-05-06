@@ -14,7 +14,7 @@ const stack: IStack = {
     'TailwindCSS',
     'Bootstrap',
   ],
-  Backend: ['Node.js', 'Express.js', 'MongoDB', 'SQL'],
+  Backend: ['Node.js', 'Express.js', 'MongoDB', 'PostgreSQL', 'MySQL'],
   'Tools & Frameworks': [
     'Next.js',
     'Prisma',
