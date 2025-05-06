@@ -8,6 +8,7 @@ import {
 } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import ProjectImage from './ProjectImage';
+import { Badge } from '../ui/badge';
 
 interface IProjectCardProps {
   title: string;
@@ -29,22 +30,25 @@ export default function ProjectCard({
   return (
     <Card className="shadow-md flex flex-col h-full">
       <CardHeader>
-        <CardTitle className="text-primary">{title}</CardTitle>
+        <CardTitle className="text-primary text-2xl">{title}</CardTitle>
       </CardHeader>
       <CardContent className="pb-0">
-        <div className="flex flex-wrap gap-2 text-xs">
+        <div className="flex flex-wrap gap-2">
           {tech.map((t) => (
-            <span key={t} className="bg-muted px-2 py-0.5 rounded text-base">
+            <Badge
+              variant={'default'}
+              key={t}
+              className="px-3 py-1 rounded text-lg font-bold">
               {t}
-            </span>
+            </Badge>
           ))}
         </div>
       </CardContent>
       <CardContent className="flex flex-col flex-1 gap-4">
         {live && <ProjectImage live={live} image={image} title={title} />}
       </CardContent>
-      <CardDescription className="px-6 pb-2 ">
-        <p className="text-base text-muted-foreground">{description}</p>
+      <CardDescription className="px-6 pb-2 h-full">
+        <p className="text-lg text-foreground text-justify">{description}</p>
       </CardDescription>
       <CardFooter className="mt-auto px-6 pt-2 pb-4">
         <div className="flex gap-2 text-xs grow justify-center">
