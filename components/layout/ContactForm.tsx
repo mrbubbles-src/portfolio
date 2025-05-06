@@ -8,6 +8,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 
 export default function ContactForm() {
+  const { pending } = useFormStatus();
   async function handleSubmit(formData: FormData) {
     const result = await sendEmail(formData);
 
@@ -20,21 +21,33 @@ export default function ContactForm() {
   }
 
   return (
-    <form action={handleSubmit} className="space-y-4">
-      <Input name="name" required placeholder="Your Name" />
-      <Input type="email" name="email" required placeholder="Your Email" />
-      <Textarea name="message" required placeholder="Your Message" rows={5} />
-      <SubmitButton />
+    <form action={handleSubmit} className="grid gap-4 md:grid-cols-2 h-full">
+      <Input
+        name="name"
+        required
+        placeholder="Your Name"
+        className="w-full min-h-12 !text-lg"
+      />
+      <Input
+        type="email"
+        name="email"
+        required
+        placeholder="Your Email"
+        className="w-full min-h-12 !text-lg"
+      />
+      <Textarea
+        name="message"
+        required
+        placeholder="Your Message"
+        className="md:col-span-2 w-full min-h-[12rem] md:min-h-[22rem] !text-lg"
+      />
+      <Button
+        type="submit"
+        disabled={pending}
+        size={'lg'}
+        className="md:col-span-2 md:mx-0 w-full max-w-[10rem] ">
+        {pending ? 'Sending...' : 'Send Message'}
+      </Button>
     </form>
-  );
-}
-
-function SubmitButton() {
-  const { pending } = useFormStatus();
-
-  return (
-    <Button type="submit" disabled={pending}>
-      {pending ? 'Sending...' : 'Send Message'}
-    </Button>
   );
 }
