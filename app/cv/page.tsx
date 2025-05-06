@@ -10,7 +10,7 @@ export default function CVPage() {
       </h1>
 
       <div className="flex justify-center">
-        <Button asChild className="gap-2">
+        <Button asChild className="gap-2 w-full max-w-[10rem]">
           <a href="/cv_manuel_fahrenholz_download.pdf" download>
             <Download className="w-4 h-4" />
             Download PDF
