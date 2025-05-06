@@ -1,0 +1,106 @@
+'use client';
+
+import Link from 'next/link';
+import {
+  NavigationMenu,
+  NavigationMenuList,
+  NavigationMenuItem,
+} from '@/components/ui/navigation-menu';
+import { ThemeToggle } from '@/components/ui/theme-toggle';
+import Image from 'next/image';
+import Logo from '@/public/logo.svg';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { Menu, X } from 'lucide-react';
+import { useState } from 'react';
+
+const NAV_ITEMS = [
+  { href: '/#about', label: 'About' },
+  { href: '/#stack', label: 'Stack' },
+  { href: '/#projects', label: 'Projects' },
+  { href: '/#contact', label: 'Contact' },
+  { href: '/cv', label: 'Curriculum Vitae' },
+];
+
+const Navbar = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  return (
+    <header className="sticky top-0 z-50 bg-background/90 backdrop-blur border-b shadow-md">
+      <nav className="container mx-auto max-w-7xl px-4 py-4 flex justify-between items-center text-xl transition-all duration-300 ease-in-out">
+        <Link href="/" className="text-xl font-bold text-primary">
+          <div className="relative h-12 w-52 md:h-14 md:w-56">
+            <Image
+              src={Logo}
+              fill
+              sizes="(max-width: 768px) 208px, 224px"
+              alt="mrbubbles-src — Fullstack Web Developer Logo"
+            />
+          </div>
+        </Link>
+
+        <NavigationMenu>
+          <NavigationMenuList className="gap-8">
+            {NAV_ITEMS.map(({ href, label }) => (
+              <NavigationMenuItem
+                key={href}
+                className="hidden md:block active:scale-95 font-semibold">
+                <Link
+                  href={href}
+                  className="hover:text-primary transition-all duration-300 ease-in-out hover:underline underline-offset-4">
+                  {label}
+                </Link>
+              </NavigationMenuItem>
+            ))}
+          </NavigationMenuList>
+          <div
+            className={`md:hidden fixed top-[5.04rem] inset-x-0 bg-background/90 backdrop-blur text-foreground px-6 py-6 text-center text-lg flex flex-col gap-6 z-50 shadow-lg transition-all duration-300 ease-in-out transform ${
+              menuOpen
+                ? 'translate-y-0 opacity-100'
+                : '-translate-y-4 opacity-0 pointer-events-none'
+            }`}>
+            {NAV_ITEMS.map(({ href, label }) => (
+              <Link
+                key={href}
+                href={href}
+                className="hover:text-primary transition-all duration-300 ease-in-out hover:underline underline-offset-4 font-semibold active:scale-95">
+                {label}
+              </Link>
+            ))}
+          </div>
+        </NavigationMenu>
+
+        <div className="flex items-center gap-3 md:order-2">
+          <a
+            href="https://github.com/mrbubbles-src"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-primary transition-all duration-300 ease-in-out active:scale-95">
+            <FontAwesomeIcon icon={faGithub} />
+          </a>
+          <a
+            href="https://linkedin.com/in/manuel-fahrenholz"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-primary transition-all duration-300 ease-in-out active:scale-95">
+            <FontAwesomeIcon icon={faLinkedin} />
+          </a>
+          <ThemeToggle />
+          <button
+            onClick={() => setMenuOpen(!menuOpen)}
+            className={`md:hidden ml-2 hover:text-primary transition-all duration-300 ease-in-out ${menuOpen ? 'rotate-90' : ''}`}
+            aria-label="Toggle Menu">
+            <span className="sr-only">Toggle Menu</span>
+            {menuOpen ? (
+              <X className="w-6 h-6" />
+            ) : (
+              <Menu className="w-6 h-6" />
+            )}
+          </button>
+        </div>
+      </nav>
+    </header>
+  );
+};
+
+export default Navbar;

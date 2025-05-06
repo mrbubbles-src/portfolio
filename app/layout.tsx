@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 import { Montserrat } from 'next/font/google';
 import { ThemeProvider } from '@/context/theme-provider';
-import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
+import Navbar from '@/components/layout/Navbar';
+import Footer from '@/components/layout/Footer';
 import { Toaster } from '@/components/ui/sonner';
 import './globals.css';
 
@@ -50,9 +50,39 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="dark scroll-smooth" suppressHydrationWarning>
+      <head>
+        <link rel="canonical" href="https://www.mrbubbles-src.dev" />
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="manifest" href="/site.webmanifest" />
+        <meta name="theme-color" content="#0f0f0f" />
+        <meta
+          name="description"
+          content="Meet Manuel Fahrenholz (aka mrbubbles-src), a fullstack MERN web developer based in Germany."
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'Person',
+              name: 'Manuel Fahrenholz',
+              jobTitle: 'Fullstack Web Developer',
+              url: 'https://www.mrbubbles-src.dev',
+              sameAs: [
+                'https://github.com/mrbubbles-src',
+                'https://linkedin.com/in/manuel-fahrenholz',
+              ],
+            }),
+          }}
+        />
+      </head>
       <body
         className={`${montserrat.variable} bg-background text-foreground min-h-screen antialiased`}>
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem
+          disableTransitionOnChange>
           <Navbar />
           <main className="flex-1 container mx-auto px-4 py-8">{children}</main>
           <Footer />
