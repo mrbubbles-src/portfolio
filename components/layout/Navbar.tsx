@@ -5,7 +5,7 @@ import {
   NavigationMenuItem,
   NavigationMenuList,
 } from '@/components/ui/navigation-menu';
-import { ThemeToggle } from './ui/theme-toggle';
+import { ThemeToggle } from '@/components/ui/theme-toggle';
 import Image from 'next/image';
 import Logo from '@/public/logo.svg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';

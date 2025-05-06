@@ -1,8 +1,8 @@
 // page.tsx
-import About from '@/components/About';
-import StackGrid from '@/components/StackGrid';
-import ContactForm from '@/components/ContactForm';
-import ProjectCard from '@/components/ProjectCard';
+import About from '@/components/layout/About';
+import StackGrid from '@/components/layout/StackGrid';
+import ContactForm from '@/components/layout/ContactForm';
+import ProjectCard from '@/components/layout/ProjectCard';
 import { projects } from '@/data/projects';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 

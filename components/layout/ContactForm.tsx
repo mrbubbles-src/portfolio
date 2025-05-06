@@ -3,9 +3,9 @@
 import { useFormStatus } from 'react-dom';
 import { sendEmail } from '@/app/actions/send-mails';
 import { toast } from 'sonner';
-import { Button } from './ui/button';
-import { Input } from './ui/input';
-import { Textarea } from './ui/textarea';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
 
 export default function ContactForm() {
   async function handleSubmit(formData: FormData) {
