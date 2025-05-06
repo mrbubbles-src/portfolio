@@ -14,7 +14,6 @@ export default function ContactForm() {
 
     if (result?.success) {
       toast.success('Email sent successfully!');
-      console.log('Email ID:', result.messageId);
     } else {
       toast.error('Email failed to send.');
     }
