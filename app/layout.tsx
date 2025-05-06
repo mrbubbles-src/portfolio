@@ -50,6 +50,28 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="dark scroll-smooth" suppressHydrationWarning>
+      <head>
+        <link rel="canonical" href="https://www.mrbubbles-src.dev" />
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="manifest" href="/site.webmanifest" />
+        <meta name="theme-color" content="#0f0f0f" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'Person',
+              name: 'Manuel Fahrenholz',
+              jobTitle: 'Fullstack Web Developer',
+              url: 'https://www.mrbubbles-src.dev',
+              sameAs: [
+                'https://github.com/mrbubbles-src',
+                'https://linkedin.com/in/manuel-fahrenholz',
+              ],
+            }),
+          }}
+        />
+      </head>
       <body
         className={`${montserrat.variable} bg-background text-foreground min-h-screen antialiased`}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
