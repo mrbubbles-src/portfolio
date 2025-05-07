@@ -116,7 +116,7 @@ export default function About() {
             With a background in caregiving, helping people is second nature — I
             aim to build apps that offer real support, even in small ways.
           </p>
-          <p className="mb-1 leading-relaxed">
+          <p className="mb-1 leading-relaxed text-lg text-justify">
             Outside of work, I LOVE gaming, reading (or listening to) books,
             binge-watching shows & movies, and occasionally doodling just for
             fun.
