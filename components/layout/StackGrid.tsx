@@ -8,7 +8,7 @@ export default function StackGrid() {
       {Object.entries(stack).map(([category, tools]) => (
         <Card key={category} className="flex flex-col p-4 h-full">
           <CardHeader>
-            <h3 className="text-xl text-center font-semibold pt-1">
+            <h3 className="text-2xl text-center font-semibold pt-1">
               {category}
             </h3>
           </CardHeader>
