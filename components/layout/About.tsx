@@ -41,7 +41,10 @@ export default function About() {
               href="https://github.com/mrbubbles-src"
               target="_blank"
               rel="noopener noreferrer">
-              <FontAwesomeIcon icon={faGithub} /> GitHub
+              <span aria-hidden="true">
+                <FontAwesomeIcon icon={faGithub} />
+              </span>{' '}
+              GitHub
             </a>
           </Button>
           <Button asChild size={'lg'} className="w-full max-w-[10rem]">
@@ -49,7 +52,10 @@ export default function About() {
               href="https://linkedin.com/in/manuel-fahrenholz"
               target="_blank"
               rel="noopener noreferrer">
-              <FontAwesomeIcon icon={faLinkedin} /> LinkedIn
+              <span aria-hidden="true">
+                <FontAwesomeIcon icon={faLinkedin} />
+              </span>{' '}
+              LinkedIn
             </a>
           </Button>
         </div>
@@ -75,10 +81,8 @@ export default function About() {
           </code>
           , nice to meet you!
         </h1>
-        <article aria-labelledby="about-description">
-          <h2 id="about-description" className="sr-only">
-            About Manuel Fahrenholz
-          </h2>
+        <article>
+          <h2 className="sr-only">About Manuel Fahrenholz</h2>
           <p className="mb-1 leading-relaxed text-lg text-justify">
             My name is{' '}
             <strong className="text-primary">Manuel Fahrenholz</strong>, aka{' '}

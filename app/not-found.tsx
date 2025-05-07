@@ -11,10 +11,8 @@ export default function NotFound() {
         Oops, this page got lost in the JavaScript void. Maybe it&apos;s in
         another branch?
       </p>
-      <Link
-        href="/"
-        className="font-bold underline-offset-4 "
-        aria-label="Back to homepage">
+      <Link href="/" className="font-bold underline-offset-4 ">
+        <span className="sr-only">Go back to Homepage</span>
         <code className="bg-muted hover:text-primary hover:underline transition-all duration-200 ease-in-out px-4 py-2 rounded text-lg text-muted-foreground mb-6">
           &gt; cd ~
         </code>

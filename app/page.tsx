@@ -12,8 +12,8 @@ export default function Home() {
       <section
         id="about"
         className="scroll-mt-24 py-16"
-        aria-labelledby="about-description">
-        <h2 id="about-description" className="sr-only">
+        aria-labelledby="about-section">
+        <h2 id="about-section" className="sr-only">
           About Me
         </h2>
         <About />

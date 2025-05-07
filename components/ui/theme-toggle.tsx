@@ -27,20 +27,17 @@ export function ThemeToggle() {
       <DropdownMenuContent align="end" title="dropdown menu for theme choosing">
         <DropdownMenuItem
           onClick={() => setTheme('light')}
-          className="cursor-pointer"
-          aria-label="light theme">
+          className="cursor-pointer">
           Light
         </DropdownMenuItem>
         <DropdownMenuItem
           onClick={() => setTheme('dark')}
-          className="cursor-pointer"
-          aria-label="dark theme">
+          className="cursor-pointer">
           Dark
         </DropdownMenuItem>
         <DropdownMenuItem
           onClick={() => setTheme('system')}
-          className="cursor-pointer"
-          aria-label="system theme">
+          className="cursor-pointer">
           System
         </DropdownMenuItem>
       </DropdownMenuContent>

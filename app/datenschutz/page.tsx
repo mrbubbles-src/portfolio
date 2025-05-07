@@ -120,7 +120,6 @@ export default function PrivacyPolicyPage() {
         <a
           href="/datenschutzerklaerung_www_mrbubbles_src_dev_de.pdf"
           download
-          aria-label="Download der vollständigen Datenschutzerklärung als PDF"
           className="inline-block px-6 py-3 bg-primary text-white font-medium rounded hover:bg-primary/90 transition">
           Download der kompletten Datenschutzerklärung (PDF)
         </a>
@@ -242,7 +241,6 @@ export default function PrivacyPolicyPage() {
         <a
           href="/datenschutzerklaerung_www_mrbubbles_src_dev_de.pdf"
           download
-          aria-label="Download full privacy policy as PDF"
           className="inline-block px-6 py-3 bg-primary text-white font-medium rounded hover:bg-primary/90 transition">
           Download full privacy policy (PDF)
         </a>

@@ -9,10 +9,7 @@ export default function CVPage() {
       </h1>
       <div className="flex justify-center">
         <Button asChild size={'lg'} className="w-full max-w-[10rem]">
-          <a
-            href="/cv_manuel_fahrenholz_download.pdf"
-            download
-            aria-label="Download Manuel Fahrenholz's CV as PDF">
+          <a href="/cv_manuel_fahrenholz_download.pdf" download>
             Download PDF
           </a>
         </Button>

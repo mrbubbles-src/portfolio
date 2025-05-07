@@ -58,7 +58,6 @@ export default function LegalPage() {
         <a
           href="/impressum_www_mrbubbles_src_dev_de.pdf"
           download
-          aria-label="Download des vollständigen Impressums als PDF"
           className="inline-block px-6 py-3 bg-primary text-white font-medium rounded hover:bg-primary/90 transition">
           Download des kompletten Impressums (PDF)
         </a>
@@ -89,7 +88,6 @@ export default function LegalPage() {
         <a
           href="/impressum_www_mrbubbles_src_dev_de.pdf"
           download
-          aria-label="Download full legal notice as PDF"
           className="inline-block px-6 py-3 bg-primary text-white font-medium rounded hover:bg-primary/90 transition">
           Download full legal notice (PDF)
         </a>

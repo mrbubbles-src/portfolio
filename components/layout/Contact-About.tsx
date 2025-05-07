@@ -68,7 +68,10 @@ export default function ContactAbout() {
               href="https://github.com/mrbubbles-src"
               target="_blank"
               rel="noopener noreferrer">
-              <FontAwesomeIcon icon={faGithub} aria-hidden="true" /> GitHub
+              <span aria-hidden="true">
+                <FontAwesomeIcon icon={faGithub} />
+              </span>{' '}
+              GitHub
             </a>
           </Button>
           <Button asChild size={'lg'} className="w-full max-w-[10rem]">
@@ -76,7 +79,10 @@ export default function ContactAbout() {
               href="https://linkedin.com/in/manuel-fahrenholz"
               target="_blank"
               rel="noopener noreferrer">
-              <FontAwesomeIcon icon={faLinkedin} aria-hidden="true" /> LinkedIn
+              <span aria-hidden="true">
+                <FontAwesomeIcon icon={faLinkedin} />
+              </span>{' '}
+              LinkedIn
             </a>
           </Button>
         </div>

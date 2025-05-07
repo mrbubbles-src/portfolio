@@ -1,9 +1,7 @@
 import Link from 'next/link';
 
 const Footer = () => (
-  <footer
-    className="mt-12 py-6 text-center text-lg text-muted-foreground border-t"
-    aria-label="Site footer">
+  <footer className="mt-12 py-6 text-center text-lg text-muted-foreground border-t">
     <p>&copy; {new Date().getFullYear()} Manuel Fahrenholz</p>
     <Link
       href="/impressum"

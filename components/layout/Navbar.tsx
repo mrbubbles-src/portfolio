@@ -15,14 +15,13 @@ import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
 
 const NAV_ITEMS = [
-  { href: '/#about', label: 'About', aria: 'Scroll to about-section' },
-  { href: '/#stack', label: 'Stack', aria: 'Scroll to tech-stack-section' },
-  { href: '/#projects', label: 'Projects', aria: 'Scroll to projects-section' },
-  { href: '/#contact', label: 'Contact', aria: 'Scroll to contact form' },
+  { href: '/#about', label: 'About' },
+  { href: '/#stack', label: 'Stack' },
+  { href: '/#projects', label: 'Projects' },
+  { href: '/#contact', label: 'Contact' },
   {
     href: '/cv',
     label: 'Curriculum Vitae',
-    aria: 'Navigate to Curriculum Vitae Page',
   },
 ];
 
@@ -48,14 +47,13 @@ const Navbar = () => {
 
         <NavigationMenu>
           <NavigationMenuList className="gap-8">
-            {NAV_ITEMS.map(({ href, label, aria }) => (
+            {NAV_ITEMS.map(({ href, label }) => (
               <NavigationMenuItem
                 key={href}
                 className="hidden md:block active:scale-95 font-semibold">
                 <Link
                   href={href}
-                  className="hover:text-primary transition-all duration-300 ease-in-out hover:underline underline-offset-4"
-                  aria-label={aria}>
+                  className="hover:text-primary transition-all duration-300 ease-in-out hover:underline underline-offset-4">
                   {label}
                 </Link>
               </NavigationMenuItem>
@@ -67,11 +65,10 @@ const Navbar = () => {
                 ? 'translate-y-0 opacity-100'
                 : '-translate-y-4 opacity-0 pointer-events-none'
             }`}>
-            {NAV_ITEMS.map(({ href, label, aria }) => (
+            {NAV_ITEMS.map(({ href, label }) => (
               <Link
                 key={href}
                 href={href}
-                aria-label={aria}
                 className="hover:text-primary transition-all duration-300 ease-in-out hover:underline underline-offset-4 font-semibold active:scale-95">
                 {label}
               </Link>
@@ -84,17 +81,25 @@ const Navbar = () => {
             href="https://github.com/mrbubbles-src"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-primary transition-all duration-300 ease-in-out active:scale-95"
-            aria-label="Go to github.com/mrbubbles-src profile">
-            <FontAwesomeIcon icon={faGithub} aria-hidden="true" />
+            className="hover:text-primary transition-all duration-300 ease-in-out active:scale-95">
+            <span aria-hidden="true">
+              <FontAwesomeIcon icon={faGithub} />
+            </span>{' '}
+            <span className="sr-only">
+              Go to github.com/mrbubbles-src profile
+            </span>
           </a>
           <a
             href="https://linkedin.com/in/manuel-fahrenholz"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-primary transition-all duration-300 ease-in-out active:scale-95"
-            aria-label="Go to linkedin.com/in/manuel-fahrenholz profile">
-            <FontAwesomeIcon icon={faLinkedin} aria-hidden="true" />
+            className="hover:text-primary transition-all duration-300 ease-in-out active:scale-95">
+            <span aria-hidden="true">
+              <FontAwesomeIcon icon={faLinkedin} aria-hidden="true" />
+            </span>
+            <span className="sr-only">
+              Go to linkedin.com/in/manuel-fahrenholz
+            </span>
           </a>
           <ThemeToggle />
           <button
