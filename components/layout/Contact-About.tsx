@@ -23,13 +23,13 @@ export default function ContactAbout() {
             Summary about Manuel Fahrenholz
           </h2>
           <ul>
-            <li className="text-lg">
+            <li className="text-md md:text-lg">
               <span>
                 <strong className="mr-2 text-sm text-primary">Name:</strong>
               </span>
               <span>Manuel Fahrenholz</span>
             </li>
-            <li className="text-lg">
+            <li className="text-md md:text-lg">
               <span>
                 <strong className="mr-2 text-sm text-primary">
                   Profession:
@@ -37,13 +37,13 @@ export default function ContactAbout() {
               </span>
               <span>Fullstack Web Developer</span>
             </li>
-            <li className="text-lg">
+            <li className="text-md md:text-lg">
               <span>
                 <strong className="mr-2 text-sm text-primary">Stack:</strong>
               </span>
               <span>MERN</span>
             </li>
-            <li className="text-lg">
+            <li className="text-md md:text-lg">
               <span>
                 <strong className="mr-2 text-sm text-primary">
                   Current Job:
@@ -51,7 +51,7 @@ export default function ContactAbout() {
               </span>
               <span>Junior Teacher for Web Development</span>
             </li>
-            <li className="text-lg">
+            <li className="text-md md:text-lg">
               <span>
                 <strong className="mr-2 text-sm text-primary">Location:</strong>
               </span>
