@@ -14,7 +14,7 @@ import {
 } from 'react-hook-form';
 
 import { cn } from '@/lib/utils';
-import { Label } from '@/components/ui//label';
+import { Label } from '@/components/ui/label';
 
 const Form = FormProvider;
 
@@ -107,15 +107,6 @@ function FormLabel({
 function FormControl({ ...props }: React.ComponentProps<typeof Slot>) {
   const { error, formItemId, formDescriptionId, formMessageId } =
     useFormField();
-
-  const describedByIds = [
-    props['aria-describedby'],
-    formDescriptionId,
-    error ? formMessageId : null,
-  ]
-    .filter(Boolean)
-    .join(' ')
-    .trim();
 
   return (
     <Slot
