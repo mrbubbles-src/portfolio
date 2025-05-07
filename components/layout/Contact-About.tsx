@@ -23,39 +23,46 @@ export default function ContactAbout() {
             Summary about Manuel Fahrenholz
           </h2>
           <ul>
-            <li className="text-xl">
+            <li className="text-md md:text-lg">
               <span>
-                <strong className="mr-2 text-primary">Name:</strong>
+                <strong className="mr-2 text-sm text-primary">Name:</strong>
               </span>
               <span>Manuel Fahrenholz</span>
             </li>
-            <li className="text-xl">
+            <li className="text-md md:text-lg">
               <span>
-                <strong className="mr-2 text-primary">Profession:</strong>
+                <strong className="mr-2 text-sm text-primary">
+                  Profession:
+                </strong>
               </span>
               <span>Fullstack Web Developer</span>
             </li>
-            <li className="text-xl">
+            <li className="text-md md:text-lg">
               <span>
-                <strong className="mr-2 text-primary">Stack:</strong>
+                <strong className="mr-2 text-sm text-primary">Stack:</strong>
               </span>
               <span>MERN</span>
             </li>
-            <li className="text-xl">
+            <li className="text-md md:text-lg">
               <span>
-                <strong className="mr-2 text-primary">Current Job:</strong>
+                <strong className="mr-2 text-sm text-primary">
+                  Current Job:
+                </strong>
               </span>
-              <span>Junior Teacher for Web Development</span>
+              <span>Jr. WebDev Teacher</span>
             </li>
-            <li className="text-xl">
+            <li className="text-md md:text-lg">
               <span>
-                <strong className="mr-2 text-primary">Location:</strong>
+                <strong className="mr-2 text-sm text-primary">Location:</strong>
               </span>
               <span>Cologne, Germany</span>
             </li>
           </ul>
         </article>
         <div className="flex justify-center gap-4 mt-6 flex-wrap place-self-center">
+          <Button asChild size={'lg'} className="w-full max-w-[10rem]">
+            <Link href="/cv">See my journey</Link>
+          </Button>
           <Button asChild size={'lg'} className="w-full max-w-[10rem]">
             <a
               href="https://github.com/mrbubbles-src"
@@ -71,9 +78,6 @@ export default function ContactAbout() {
               rel="noopener noreferrer">
               <FontAwesomeIcon icon={faLinkedin} /> LinkedIn
             </a>
-          </Button>
-          <Button asChild size={'lg'} className="w-full max-w-[10rem]">
-            <Link href="/cv">See my journey</Link>
           </Button>
         </div>
       </CardContent>

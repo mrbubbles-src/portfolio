@@ -1,36 +1,108 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 💻 mrbubbles-src Portfolio
 
-## Getting Started
+This is my personal developer portfolio, built with **Next.js 15**, **App Router**, **TypeScript**, **Tailwind CSS v4**, **shadcn/ui**, and **react-hook-form**.
 
-First, run the development server:
+It showcases projects, skill stacks, contact capabilities, and SEO-ready pages with modern UI components and email delivery via Resend.
+
+---
+
+## 🚀 Tech Stack
+
+- **Framework**: [Next.js 15](https://nextjs.org)
+- **Styling**: [Tailwind CSS v4](https://tailwindcss.com)
+- **Components**: [shadcn/ui](https://ui.shadcn.com)
+- **Forms**: `react-hook-form` with shadcn form integration
+- **Email**: [Resend](https://resend.com) API with autoresponder
+- **Hosting**: [Vercel](https://vercel.com)
+- **SEO**: Dynamic metadata, Open Graph images via `@vercel/og`
+- **Assets**: Favicon, social previews, and dark/light mode branding
+
+---
+
+## 📦 Getting Started
 
 ```bash
+# Install dependencies
+npm install
+
+# Start development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+Then open http://localhost:3000 in your browser.
+
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📁 Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
 
-## Learn More
+app/
+├── actions/
+│   └── send-mails.ts
+├── api/
+│   └── og/route.tsx
+├── cv/page.tsx
+├── datenschutz/page.tsx
+├── impressum/page.tsx
+├── layout.tsx
+├── loading.tsx
+├── not-found.tsx
+components/
+│   ├──layout/
+│   ├── About.tsx
+│   ├── CV.tsx
+│   ├── ContactForm.tsx
+│   ├── Footer.tsx
+│   ├── ProjectCard.tsx
+│   ├── ProjectImage.tsx
+│   └── StackGrid.tsx
+├── ui/
+│   ├── badge.tsx
+│   ├── button.tsx
+│   ├── dropdown-menu.tsx
+│   ├── form.tsx
+│   ├── input.tsx
+│   ├── label.tsx
+│   ├── navigation-menu.tsx
+│   ├── sonner.tsx
+│   ├── textarea.tsx
+│   └── theme-toggle.tsx
+context/
+└── theme-provider.tsx
+data/
+├── projects.ts
+└── stack.ts
+lib/
+└── utils.ts
+public/
+├── blur/
+└── screenshots/
+```
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+🌐 Live Demo
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Visit the portfolio live at: https://mrbubbles-src.dev
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+✨ Features
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+• One-pager responsive layout
+
+• CV viewer + download
+
+• Custom shadcn cards
+
+• Themed components with light/dark mode
+
+• Auto email reply system
+
+⸻
+
+📄 License
+
+MIT © mrbubbles-src
