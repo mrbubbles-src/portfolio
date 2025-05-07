@@ -59,21 +59,6 @@ const Navbar = () => {
               </NavigationMenuItem>
             ))}
           </NavigationMenuList>
-          <div
-            className={`md:hidden fixed top-[5.04rem] inset-x-0 bg-background/90 backdrop-blur text-foreground px-6 py-6 text-center text-lg flex flex-col gap-6 z-50 shadow-lg transition-all duration-300 ease-in-out transform ${
-              menuOpen
-                ? 'translate-y-0 opacity-100'
-                : '-translate-y-4 opacity-0 pointer-events-none'
-            }`}>
-            {NAV_ITEMS.map(({ href, label }) => (
-              <Link
-                key={href}
-                href={href}
-                className="hover:text-primary transition-all duration-300 ease-in-out hover:underline underline-offset-4 font-semibold active:scale-95">
-                {label}
-              </Link>
-            ))}
-          </div>
         </NavigationMenu>
 
         <div className="flex items-center gap-3 md:order-2">
@@ -95,7 +80,7 @@ const Navbar = () => {
             rel="noopener noreferrer"
             className="hover:text-primary transition-all duration-300 ease-in-out active:scale-95">
             <span aria-hidden="true">
-              <FontAwesomeIcon icon={faLinkedin} aria-hidden="true" />
+              <FontAwesomeIcon icon={faLinkedin} avia-hidden="true" />
             </span>
             <span className="sr-only">
               Go to linkedin.com/in/manuel-fahrenholz
@@ -105,7 +90,7 @@ const Navbar = () => {
           <button
             title="menu button"
             onClick={() => setMenuOpen(!menuOpen)}
-            className={`md:hidden ml-2 hover:text-primary transition-all duration-300 ease-in-out ${menuOpen ? 'rotate-90' : ''}`}
+            className={`md:hidden ml-2 hover:text-primary transition-all duration-300 ease-in-out cursor-pointer ${menuOpen ? 'rotate-90' : ''}`}
             aria-label="Toggle Menu">
             {menuOpen ? (
               <X className="w-6 h-6" />
@@ -113,6 +98,25 @@ const Navbar = () => {
               <Menu className="w-6 h-6" />
             )}
           </button>
+          <div
+            className={`md:hidden fixed top-[5.04rem] inset-x-0 z-50 transition-all duration-300 ease-in-out ${
+              !menuOpen
+                ? 'pointer-events-none opacity-0 -translate-y-4'
+                : 'opacity-100 translate-y-0'
+            }`}
+            aria-hidden={!menuOpen}>
+            <div className="bg-background/90 backdrop-blur text-foreground px-6 py-6 text-center text-lg flex flex-col gap-6 shadow-lg">
+              {NAV_ITEMS.map(({ href, label }) => (
+                <Link
+                  key={href}
+                  href={href}
+                  tabIndex={menuOpen ? 0 : -1}
+                  className="hover:text-primary transition-all duration-300 ease-in-out hover:underline underline-offset-4 font-semibold active:scale-95">
+                  {label}
+                </Link>
+              ))}
+            </div>
+          </div>
         </div>
       </nav>
     </header>
