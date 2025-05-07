@@ -60,63 +60,35 @@ export default function About() {
           <code
             className="bg-accent rounded-md shadow-sm p-[0.3rem] italic text-lg text-pretty text-primary"
             aria-hidden="true">
-            `
-            <strong className="text-sh-sign" aria-hidden="true">
-              &#36;
-            </strong>
-            <strong className="text-sh-entity" aria-hidden="true">
-              &#123;
-            </strong>
-            <strong className="text-sh-sign" aria-hidden="true">
-              &lt;
-            </strong>
-            <strong className="text-sh-identifier" aria-hidden="true">
-              span
-            </strong>
-            <strong className="text-sh-sign" aria-hidden="true">
-              &gt;
-            </strong>
-            <strong className="text-sh-entity" aria-hidden="true">
-              &#123;
-            </strong>
-            <strong className="text-sh-identifier" aria-hidden="true">
-              username
-            </strong>
-            <strong className="text-sh-entity" aria-hidden="true">
-              &#125;
-            </strong>
-            <strong className="text-sh-sign" aria-hidden="true">
-              &lt;/
-            </strong>
-            <strong className="text-sh-identifier" aria-hidden="true">
-              span
-            </strong>
-            <strong className="text-sh-sign" aria-hidden="true">
-              &gt;
-            </strong>
-            <strong className="text-sh-entity" aria-hidden="true">
-              &#125;
-            </strong>
-            `
+            `<strong className="text-sh-sign">&#36;</strong>
+            <strong className="text-sh-entity">&#123;</strong>
+            <strong className="text-sh-sign">&lt;</strong>
+            <strong className="text-sh-identifier">span</strong>
+            <strong className="text-sh-sign">&gt;</strong>
+            <strong className="text-sh-entity">&#123;</strong>
+            <strong className="text-sh-identifier">username</strong>
+            <strong className="text-sh-entity">&#125;</strong>
+            <strong className="text-sh-sign">&lt;/</strong>
+            <strong className="text-sh-identifier">span</strong>
+            <strong className="text-sh-sign">&gt;</strong>
+            <strong className="text-sh-entity">&#125;</strong>`
           </code>
           , nice to meet you!
         </h1>
-        <article>
+        <article aria-labelledby="about-description">
           <h2 id="about-description" className="sr-only">
             About Manuel Fahrenholz
           </h2>
           <p className="mb-1 leading-relaxed text-lg text-justify">
             My name is{' '}
             <strong className="text-primary">Manuel Fahrenholz</strong>, aka{' '}
-            <strong className="text-primary">
-              <a
-                href="https://github.com/mrbubbles-src"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="underline underline-offset-4 cursor-pointer">
-                mrbubbles-src
-              </a>
-            </strong>
+            <a
+              href="https://github.com/mrbubbles-src"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary font-bold underline underline-offset-4 cursor-pointer">
+              mrbubbles-src
+            </a>
             . Nice to meet you!
           </p>
           <p className="mb-1 leading-relaxed text-lg text-justify">

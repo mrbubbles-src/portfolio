@@ -15,11 +15,15 @@ import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
 
 const NAV_ITEMS = [
-  { href: '/#about', label: 'About' },
-  { href: '/#stack', label: 'Stack' },
-  { href: '/#projects', label: 'Projects' },
-  { href: '/#contact', label: 'Contact' },
-  { href: '/cv', label: 'Curriculum Vitae' },
+  { href: '/#about', label: 'About', aria: 'Scroll to about-section' },
+  { href: '/#stack', label: 'Stack', aria: 'Scroll to tech-stack-section' },
+  { href: '/#projects', label: 'Projects', aria: 'Scroll to projects-section' },
+  { href: '/#contact', label: 'Contact', aria: 'Scroll to contact form' },
+  {
+    href: '/cv',
+    label: 'Curriculum Vitae',
+    aria: 'Navigate to Curriculum Vitae Page',
+  },
 ];
 
 const Navbar = () => {
@@ -28,7 +32,10 @@ const Navbar = () => {
   return (
     <header className="sticky top-0 z-50 bg-background/90 backdrop-blur border-b shadow-md">
       <nav className="container mx-auto max-w-7xl px-4 py-4 flex justify-between items-center text-xl transition-all duration-300 ease-in-out">
-        <Link href="/" className="text-xl font-bold text-primary">
+        <Link
+          href="/"
+          className="text-xl font-bold text-primary"
+          aria-label="Back to landingpage">
           <div className="relative h-12 w-52 md:h-14 md:w-56">
             <Image
               src={Logo}
@@ -41,13 +48,14 @@ const Navbar = () => {
 
         <NavigationMenu>
           <NavigationMenuList className="gap-8">
-            {NAV_ITEMS.map(({ href, label }) => (
+            {NAV_ITEMS.map(({ href, label, aria }) => (
               <NavigationMenuItem
                 key={href}
                 className="hidden md:block active:scale-95 font-semibold">
                 <Link
                   href={href}
-                  className="hover:text-primary transition-all duration-300 ease-in-out hover:underline underline-offset-4">
+                  className="hover:text-primary transition-all duration-300 ease-in-out hover:underline underline-offset-4"
+                  aria-label={aria}>
                   {label}
                 </Link>
               </NavigationMenuItem>
@@ -59,10 +67,11 @@ const Navbar = () => {
                 ? 'translate-y-0 opacity-100'
                 : '-translate-y-4 opacity-0 pointer-events-none'
             }`}>
-            {NAV_ITEMS.map(({ href, label }) => (
+            {NAV_ITEMS.map(({ href, label, aria }) => (
               <Link
                 key={href}
                 href={href}
+                aria-label={aria}
                 className="hover:text-primary transition-all duration-300 ease-in-out hover:underline underline-offset-4 font-semibold active:scale-95">
                 {label}
               </Link>
@@ -75,22 +84,24 @@ const Navbar = () => {
             href="https://github.com/mrbubbles-src"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-primary transition-all duration-300 ease-in-out active:scale-95">
-            <FontAwesomeIcon icon={faGithub} />
+            className="hover:text-primary transition-all duration-300 ease-in-out active:scale-95"
+            aria-label="Go to github.com/mrbubbles-src profile">
+            <FontAwesomeIcon icon={faGithub} aria-hidden="true" />
           </a>
           <a
             href="https://linkedin.com/in/manuel-fahrenholz"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-primary transition-all duration-300 ease-in-out active:scale-95">
-            <FontAwesomeIcon icon={faLinkedin} />
+            className="hover:text-primary transition-all duration-300 ease-in-out active:scale-95"
+            aria-label="Go to linkedin.com/in/manuel-fahrenholz profile">
+            <FontAwesomeIcon icon={faLinkedin} aria-hidden="true" />
           </a>
           <ThemeToggle />
           <button
+            title="menu button"
             onClick={() => setMenuOpen(!menuOpen)}
             className={`md:hidden ml-2 hover:text-primary transition-all duration-300 ease-in-out ${menuOpen ? 'rotate-90' : ''}`}
             aria-label="Toggle Menu">
-            <span className="sr-only">Toggle Menu</span>
             {menuOpen ? (
               <X className="w-6 h-6" />
             ) : (

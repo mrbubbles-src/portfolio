@@ -12,10 +12,13 @@ export default function StackGrid() {
               {category}
             </h3>
           </CardHeader>
-          <CardContent className="flex flex-wrap gap-3 justify-center">
+          <CardContent
+            role="list"
+            className="flex flex-wrap gap-3 justify-center">
             {tools.map((tool: string) => (
               <Badge
                 key={tool}
+                role="listitem"
                 variant="default"
                 className="font-semibold text-lg">
                 {tool}

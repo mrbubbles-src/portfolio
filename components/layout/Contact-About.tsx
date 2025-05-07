@@ -18,8 +18,8 @@ export default function ContactAbout() {
         />
       </CardHeader>
       <CardContent className="flex flex-col justify-center">
-        <article className="mt-5 md:mt-0">
-          <h2 id="about-description" className="sr-only">
+        <article aria-labelledby="about-summary" className="mt-5 md:mt-0">
+          <h2 id="about-summary" className="sr-only">
             Summary about Manuel Fahrenholz
           </h2>
           <ul>
@@ -68,7 +68,7 @@ export default function ContactAbout() {
               href="https://github.com/mrbubbles-src"
               target="_blank"
               rel="noopener noreferrer">
-              <FontAwesomeIcon icon={faGithub} /> GitHub
+              <FontAwesomeIcon icon={faGithub} aria-hidden="true" /> GitHub
             </a>
           </Button>
           <Button asChild size={'lg'} className="w-full max-w-[10rem]">
@@ -76,7 +76,7 @@ export default function ContactAbout() {
               href="https://linkedin.com/in/manuel-fahrenholz"
               target="_blank"
               rel="noopener noreferrer">
-              <FontAwesomeIcon icon={faLinkedin} /> LinkedIn
+              <FontAwesomeIcon icon={faLinkedin} aria-hidden="true" /> LinkedIn
             </a>
           </Button>
         </div>

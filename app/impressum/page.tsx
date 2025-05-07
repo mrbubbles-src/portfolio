@@ -58,13 +58,16 @@ export default function LegalPage() {
         <a
           href="/impressum_www_mrbubbles_src_dev_de.pdf"
           download
+          aria-label="Download des vollständigen Impressums als PDF"
           className="inline-block px-6 py-3 bg-primary text-white font-medium rounded hover:bg-primary/90 transition">
           Download des kompletten Impressums (PDF)
         </a>
       </div>
 
       <section>
-        <h2 className="text-2xl font-bold mt-8 mb-4">Legal Notice (English)</h2>
+        <h2 id="legal-notice-en" className="text-2xl font-bold mt-8 mb-4">
+          Legal Notice (English)
+        </h2>
         <p>This website is operated by:</p>
         <p>
           Manuel Fahrenholz
@@ -86,6 +89,7 @@ export default function LegalPage() {
         <a
           href="/impressum_www_mrbubbles_src_dev_de.pdf"
           download
+          aria-label="Download full legal notice as PDF"
           className="inline-block px-6 py-3 bg-primary text-white font-medium rounded hover:bg-primary/90 transition">
           Download full legal notice (PDF)
         </a>

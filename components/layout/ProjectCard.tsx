@@ -32,17 +32,16 @@ export default function ProjectCard({
       <CardHeader>
         <CardTitle className="text-primary text-2xl">{title}</CardTitle>
       </CardHeader>
-      <CardContent className="pb-0">
-        <div className="flex flex-wrap gap-2">
-          {tech.map((t) => (
-            <Badge
-              variant={'default'}
-              key={t}
-              className="px-3 py-1 rounded text-lg font-bold">
-              {t}
-            </Badge>
-          ))}
-        </div>
+      <CardContent role="list" className="flex flex-wrap gap-2">
+        {tech.map((t) => (
+          <Badge
+            role="listitem"
+            variant={'default'}
+            key={t}
+            className="px-3 py-1 rounded text-lg font-bold">
+            {t}
+          </Badge>
+        ))}
       </CardContent>
       <CardContent className="flex flex-col flex-1 gap-4">
         {live && <ProjectImage live={live} image={image} title={title} />}
@@ -53,7 +52,11 @@ export default function ProjectCard({
       <CardFooter className="mt-auto px-6 pt-2 pb-4">
         <div className="flex gap-2 text-xs grow justify-center">
           <Button asChild size={'lg'} className="w-full max-w-[10rem]">
-            <a href={live} target="_blank" rel="noopener noreferrer">
+            <a
+              href={live}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`Open live version of ${title}`}>
               Live
             </a>
           </Button>
@@ -62,7 +65,11 @@ export default function ProjectCard({
             size={'lg'}
             variant="outline"
             className="w-full max-w-[10rem]">
-            <a href={github} target="_blank" rel="noopener noreferrer">
+            <a
+              href={github}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`Open GitHub repository for ${title}`}>
               GitHub
             </a>
           </Button>

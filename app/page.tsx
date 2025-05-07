@@ -13,6 +13,9 @@ export default function Home() {
         id="about"
         className="scroll-mt-24 py-16"
         aria-labelledby="about-description">
+        <h2 id="about-description" className="sr-only">
+          About Me
+        </h2>
         <About />
       </section>
 
@@ -20,7 +23,9 @@ export default function Home() {
         id="stack"
         className="scroll-mt-24 py-16"
         aria-labelledby="tech-stack">
-        <h2 className="text-3xl font-bold mb-6 text-center">Tech Stack</h2>
+        <h2 id="tech-stack" className="text-3xl font-bold mb-6 text-center">
+          Tech Stack
+        </h2>
         <StackGrid />
       </section>
 
@@ -28,7 +33,9 @@ export default function Home() {
         id="projects"
         className="scroll-mt-24 py-16"
         aria-labelledby="projects">
-        <h2 className="text-3xl font-bold mb-6">Projects</h2>
+        <h2 id="projects" className="text-3xl font-bold mb-6">
+          Projects
+        </h2>
         <div className="grid gap-6 sm:grid-cols-2">
           {projects.map((project, i) => (
             <ProjectCard key={i} {...project} />
@@ -42,7 +49,9 @@ export default function Home() {
         aria-labelledby="contact-section">
         <Card className="w-full">
           <CardHeader>
-            <h2 className="text-3xl font-bold">Contact Me</h2>
+            <h2 id="contact-section" className="text-3xl font-bold">
+              Contact Me
+            </h2>
           </CardHeader>
           <CardContent className="h-full">
             <ContactForm />
