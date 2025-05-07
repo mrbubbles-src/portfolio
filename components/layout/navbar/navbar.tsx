@@ -80,7 +80,7 @@ const Navbar = () => {
             rel="noopener noreferrer"
             className="hover:text-primary transition-all duration-300 ease-in-out active:scale-95">
             <span aria-hidden="true">
-              <FontAwesomeIcon icon={faLinkedin} avia-hidden="true" />
+              <FontAwesomeIcon icon={faLinkedin} aria-hidden="true" />
             </span>
             <span className="sr-only">
               Go to linkedin.com/in/manuel-fahrenholz
