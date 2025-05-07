@@ -84,7 +84,11 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange>
           <Navbar />
-          <main className="flex-1 container mx-auto px-4 py-8">{children}</main>
+          <main
+            id="main-content"
+            className="flex-1 container mx-auto px-4 py-8">
+            {children}
+          </main>
           <Footer />
           <Toaster richColors position="top-right" />
         </ThemeProvider>

@@ -32,17 +32,16 @@ export default function ProjectCard({
       <CardHeader>
         <CardTitle className="text-primary text-2xl">{title}</CardTitle>
       </CardHeader>
-      <CardContent className="pb-0">
-        <div className="flex flex-wrap gap-2">
-          {tech.map((t) => (
-            <Badge
-              variant={'default'}
-              key={t}
-              className="px-3 py-1 rounded text-lg font-bold">
-              {t}
-            </Badge>
-          ))}
-        </div>
+      <CardContent role="list" className="flex flex-wrap gap-2">
+        {tech.map((t) => (
+          <Badge
+            role="listitem"
+            variant={'default'}
+            key={t}
+            className="px-3 py-1 rounded text-lg font-bold">
+            {t}
+          </Badge>
+        ))}
       </CardContent>
       <CardContent className="flex flex-col flex-1 gap-4">
         {live && <ProjectImage live={live} image={image} title={title} />}

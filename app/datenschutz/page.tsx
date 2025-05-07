@@ -125,7 +125,9 @@ export default function PrivacyPolicyPage() {
         </a>
       </div>
       <section>
-        <h1 className="text-3xl font-bold mt-20">Privacy Policy (English)</h1>
+        <h2 className="text-3xl font-bold mt-20" id="privacy-policy-en">
+          Privacy Policy (English)
+        </h2>
 
         <p>
           The following information provides a simple overview of what happens

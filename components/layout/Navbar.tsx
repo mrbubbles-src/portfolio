@@ -19,7 +19,10 @@ const NAV_ITEMS = [
   { href: '/#stack', label: 'Stack' },
   { href: '/#projects', label: 'Projects' },
   { href: '/#contact', label: 'Contact' },
-  { href: '/cv', label: 'Curriculum Vitae' },
+  {
+    href: '/cv',
+    label: 'Curriculum Vitae',
+  },
 ];
 
 const Navbar = () => {
@@ -28,7 +31,10 @@ const Navbar = () => {
   return (
     <header className="sticky top-0 z-50 bg-background/90 backdrop-blur border-b shadow-md">
       <nav className="container mx-auto max-w-7xl px-4 py-4 flex justify-between items-center text-xl transition-all duration-300 ease-in-out">
-        <Link href="/" className="text-xl font-bold text-primary">
+        <Link
+          href="/"
+          className="text-xl font-bold text-primary"
+          aria-label="Back to landingpage">
           <div className="relative h-12 w-52 md:h-14 md:w-56">
             <Image
               src={Logo}
@@ -76,21 +82,31 @@ const Navbar = () => {
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-primary transition-all duration-300 ease-in-out active:scale-95">
-            <FontAwesomeIcon icon={faGithub} />
+            <span aria-hidden="true">
+              <FontAwesomeIcon icon={faGithub} />
+            </span>{' '}
+            <span className="sr-only">
+              Go to github.com/mrbubbles-src profile
+            </span>
           </a>
           <a
             href="https://linkedin.com/in/manuel-fahrenholz"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-primary transition-all duration-300 ease-in-out active:scale-95">
-            <FontAwesomeIcon icon={faLinkedin} />
+            <span aria-hidden="true">
+              <FontAwesomeIcon icon={faLinkedin} aria-hidden="true" />
+            </span>
+            <span className="sr-only">
+              Go to linkedin.com/in/manuel-fahrenholz
+            </span>
           </a>
           <ThemeToggle />
           <button
+            title="menu button"
             onClick={() => setMenuOpen(!menuOpen)}
             className={`md:hidden ml-2 hover:text-primary transition-all duration-300 ease-in-out ${menuOpen ? 'rotate-90' : ''}`}
             aria-label="Toggle Menu">
-            <span className="sr-only">Toggle Menu</span>
             {menuOpen ? (
               <X className="w-6 h-6" />
             ) : (

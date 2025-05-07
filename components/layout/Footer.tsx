@@ -5,13 +5,13 @@ const Footer = () => (
     <p>&copy; {new Date().getFullYear()} Manuel Fahrenholz</p>
     <Link
       href="/impressum"
-      className="hover:text-primary transition-all duration-300 ease-in-out hover:underline underline-offset-4">
+      className="hover:text-primary focus-visible:underline transition-all duration-300 ease-in-out hover:underline underline-offset-4">
       Impressum / Legal Notice
     </Link>{' '}
     |{' '}
     <Link
       href="/datenschutz"
-      className="hover:text-primary transition-all duration-300 ease-in-out hover:underline underline-offset-4">
+      className="hover:text-primary focus-visible:underline transition-all duration-300 ease-in-out hover:underline underline-offset-4">
       Datenschutz / Privacy Policy
     </Link>
   </footer>

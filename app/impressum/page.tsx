@@ -64,7 +64,9 @@ export default function LegalPage() {
       </div>
 
       <section>
-        <h2 className="text-2xl font-bold mt-8 mb-4">Legal Notice (English)</h2>
+        <h2 id="legal-notice-en" className="text-2xl font-bold mt-8 mb-4">
+          Legal Notice (English)
+        </h2>
         <p>This website is operated by:</p>
         <p>
           Manuel Fahrenholz
