@@ -37,32 +37,34 @@ Then open http://localhost:3000 in your browser.
 ## 📁 Project Structure
 
 ```
-app/                     # Next.js App Router directory
-├── actions/             # Server Actions (e.g. sendMail)
-├── api/                 # API routes (e.g. OpenGraph image)
-├── cv/                  # CV route (/cv) + Download
-├── datenschutz/         # Datenschutz page
-├── impressum/           # Impressum page
-├── layout.tsx           # Root layout with ThemeProvider
-├── loading.tsx          # Global custom loading UI
-├── not-found.tsx        # Custom 404 page
-├── page.tsx             # Root page (/)
-├── globals.css          # Tailwind base styles and resets
+app/                      # Next.js App Router directory
+├── actions/              # Server Actions (e.g. sendMail)
+├── api/                  # API routes (e.g. OpenGraph image)
+├── cv/                   # CV route (/cv) + Download
+├── datenschutz/          # Datenschutz page
+├── impressum/            # Impressum page
+├── layout.tsx            # Root layout with ThemeProvider
+├── loading.tsx           # Global custom loading UI
+├── not-found.tsx         # Custom 404 page
+├── page.tsx              # Root page (/)
+├── globals.css           # Tailwind base styles and resets
 
-components/              # UI & layout components
-├── layout/              # Structured page sections
-│   ├── contact/         # Contact form + UI logic
-│   ├── curriculum-vitae/# CV display
-│   ├── footer/          # Footer section
-│   ├── projects/        # Project cards, grids, images
-│   └──  stack/          # Tech stack display
-├── ui/                  # Reusable base components (shadcn/ui)
+components/               # UI & layout components
+├── layout/               # Structured page sections
+│   ├── about/            # About me card
+│   ├── contact/          # Contact form + UI logic
+│   ├── curriculum-vitae/ # CV display
+│   ├── navbar/           # Navbar section
+│   ├── footer/           # Footer section
+│   ├── projects/         # Project cards, grids, images
+│   └── stack/            # Tech stack display
+├── ui/                   # Reusable base components (shadcn/ui)
 
-context/                 # Theme context provider
-data/                    # Project + stack config data
-lib/                     # Utility functions
+context/                  # Theme context provider
+data/                     # Project + stack config data
+lib/                      # Utility functions
 
-public/                  # Static assets (images, icons, etc.)
+public/                   # Static assets (images, icons, etc.)
 ```
 
 ---
