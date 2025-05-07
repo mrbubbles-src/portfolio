@@ -32,8 +32,8 @@ export default function Home() {
       <section
         id="projects"
         className="scroll-mt-24 py-16"
-        aria-labelledby="projects">
-        <h2 id="projects" className="text-3xl font-bold mb-6">
+        aria-labelledby="projects-heading">
+        <h2 id="projects-heading" className="text-3xl font-bold mb-6">
           Projects
         </h2>
         <div className="grid gap-6 sm:grid-cols-2">
