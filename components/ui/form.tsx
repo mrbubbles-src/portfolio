@@ -108,20 +108,15 @@ function FormControl({ ...props }: React.ComponentProps<typeof Slot>) {
   const { error, formItemId, formDescriptionId, formMessageId } =
     useFormField();
 
-  const describedByIds = [
-    props['aria-describedby'],
-    formDescriptionId,
-    error ? formMessageId : null,
-  ]
-    .filter(Boolean)
-    .join(' ')
-    .trim();
-
   return (
     <Slot
       data-slot="form-control"
       id={formItemId}
-      aria-describedby={describedByIds || undefined}
+      aria-describedby={
+        !error
+          ? `${formDescriptionId}`
+          : `${formDescriptionId} ${formMessageId}`
+      }
       aria-invalid={!!error}
       {...props}
     />

@@ -8,6 +8,7 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
+  FormDescription,
 } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -69,6 +70,7 @@ export default function ContactForm() {
                   {...field}
                 />
               </FormControl>
+              <FormDescription>Please enter your full name.</FormDescription>
               <FormMessage />
             </FormItem>
           )}
@@ -89,6 +91,9 @@ export default function ContactForm() {
                   {...field}
                 />
               </FormControl>
+              <FormDescription>
+                We&apos;ll never share your email with anyone else.
+              </FormDescription>
               <FormMessage />
             </FormItem>
           )}
@@ -108,6 +113,9 @@ export default function ContactForm() {
                   {...field}
                 />
               </FormControl>
+              <FormDescription>
+                Feel free to share feedback, questions or greetings!
+              </FormDescription>
               <FormMessage />
             </FormItem>
           )}
