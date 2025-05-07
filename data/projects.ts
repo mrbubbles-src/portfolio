@@ -23,7 +23,7 @@ const projects: Array<IProjects> = [
     github:
       'https://github.com/mrbubbles-src/dci-final-project-roomtwenty-booknook',
     live: 'https://roomtwenty-booknook.vercel.app/',
-    image: '/screenshots/book-nook.png',
+    image: '/screenshots/book-nook.jpeg',
   },
   {
     title: 'Vet-Clinic Homepage Overhaul',

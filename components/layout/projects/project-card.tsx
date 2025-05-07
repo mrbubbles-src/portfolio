@@ -7,8 +7,8 @@ import {
   CardTitle,
 } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import ProjectImage from './ProjectImage';
-import { Badge } from '../ui/badge';
+import ProjectImage from '@/components/layout/projects/project-image';
+import { Badge } from '@/components/ui/badge';
 
 interface IProjectCardProps {
   title: string;

@@ -1,10 +1,10 @@
-import About from '@/components/layout/About';
-import StackGrid from '@/components/layout/StackGrid';
-import ContactForm from '@/components/layout/ContactForm';
-import ProjectCard from '@/components/layout/ProjectCard';
+import About from '@/components/layout/about/about';
+import StackGrid from '@/components/layout/stack/stack-grid';
+import ContactForm from '@/components/layout/contact/ContactForm';
+import ProjectCard from '@/components/layout/projects/project-card';
 import { projects } from '@/data/projects';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
-import ContactAbout from '@/components/layout/Contact-About';
+import ContactAbout from '@/components/layout/about/contact-about';
 
 export default function Home() {
   return (

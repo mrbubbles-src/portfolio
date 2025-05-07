@@ -83,7 +83,7 @@ export default function About() {
         </h1>
         <article>
           <h2 className="sr-only">About Manuel Fahrenholz</h2>
-          <p className="mb-1 leading-relaxed text-lg text-justify">
+          <p className="mb-1 leading-relaxed text-lg">
             My name is{' '}
             <strong className="text-primary">Manuel Fahrenholz</strong>, aka{' '}
             <a
@@ -95,12 +95,12 @@ export default function About() {
             </a>
             . Nice to meet you!
           </p>
-          <p className="mb-1 leading-relaxed text-lg text-justify">
+          <p className="mb-1 leading-relaxed text-lg">
             I&apos;m <strong className="text-primary">{age}</strong> years old
             and live in the b-e-a-utiful city of{' '}
             <strong className="text-primary">Cologne, Germany</strong>.
           </p>
-          <p className="mb-1 leading-relaxed text-lg text-justify">
+          <p className="mb-1 leading-relaxed text-lg">
             My journey as a{' '}
             <strong className="text-primary">Fullstack Web Developer</strong>{' '}
             began in September 2022 at the DCI Digital Career Institute, where I
@@ -112,24 +112,24 @@ export default function About() {
             </strong>
             , sharing my knowledge with the next wave of developers.
           </p>
-          <p className="mb-1 leading-relaxed text-lg text-justify">
+          <p className="mb-1 leading-relaxed text-lg">
             With a background in caregiving, helping people is second nature — I
             aim to build apps that offer real support, even in small ways.
           </p>
-          <p className="mb-1 leading-relaxed text-lg text-justify">
+          <p className="mb-1 leading-relaxed text-lg">
             Outside of work, I LOVE gaming, reading (or listening to) books,
             binge-watching shows & movies, and occasionally doodling just for
             fun.
           </p>
-          <p className="mb-1 leading-relaxed text-lg text-justify">
+          <p className="mb-1 leading-relaxed text-lg">
             Want to know more? Feel free to check out my CV, GitHub, or LinkedIn
             — or just send me a message via the contact form!
           </p>
-          <p className="mb-1 leading-relaxed text-lg text-justify">
+          <p className="mb-1 leading-relaxed text-lg">
             Can’t wait to hear more about YOU!
           </p>
-          <p className="mb-1 leading-relaxed text-lg text-justify">Best,</p>
-          <p className="mb-1 leading-relaxed text-lg text-justify">Manuel</p>
+          <p className="mb-1 leading-relaxed text-lg">Best,</p>
+          <p className="mb-1 leading-relaxed text-lg">Manuel</p>
         </article>
         <div className="flex justify-center gap-4 mt-3 grow">
           <Button asChild size={'lg'} className="w-full max-w-[10rem]">

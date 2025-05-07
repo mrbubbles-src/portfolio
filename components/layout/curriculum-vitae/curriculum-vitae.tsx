@@ -1,4 +1,4 @@
-const CV = () => {
+const CurriculumVitae = () => {
   return (
     <div className="rounded shadow overflow-hidden w-full mx-auto">
       <figure>
@@ -15,4 +15,4 @@ const CV = () => {
   );
 };
 
-export default CV;
+export default CurriculumVitae;

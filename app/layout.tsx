@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 import { Montserrat } from 'next/font/google';
 import { ThemeProvider } from '@/context/theme-provider';
-import Navbar from '@/components/layout/Navbar';
-import Footer from '@/components/layout/Footer';
+import Navbar from '@/components/layout/navbar/navbar';
+import Footer from '@/components/layout/footer/footer';
 import { Toaster } from '@/components/ui/sonner';
 import './globals.css';
 

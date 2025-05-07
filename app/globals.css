@@ -2,6 +2,10 @@
 @import 'tw-animate-css';
 
 @custom-variant dark (&:is(.dark *));
+
+*:focus-visible {
+  @apply ring-2 ring-offset-8 ring-offset-background ring-ring outline-none rounded-md;
+}
 :root {
   --radius: 0.5rem;
   --background: oklch(1 0 0);
