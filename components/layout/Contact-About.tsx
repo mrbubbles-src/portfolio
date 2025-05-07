@@ -49,7 +49,7 @@ export default function ContactAbout() {
                   Current Job:
                 </strong>
               </span>
-              <span>Junior Teacher for Web Development</span>
+              <span>Jr. WebDev Teacher</span>
             </li>
             <li className="text-md md:text-lg">
               <span>
