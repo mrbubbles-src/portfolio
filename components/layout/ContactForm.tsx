@@ -61,9 +61,7 @@ export default function ContactForm() {
           rules={{ required: 'Name is required' }}
           render={({ field }) => (
             <FormItem>
-              <FormLabel className="text-lg" htmlFor="name">
-                Your Name
-              </FormLabel>
+              <FormLabel className="text-lg">Your Name</FormLabel>
               <FormControl>
                 <Input
                   className="w-full min-h-12 !text-lg font-semibold shadow-md"
@@ -82,9 +80,7 @@ export default function ContactForm() {
           rules={{ required: 'Email is required' }}
           render={({ field }) => (
             <FormItem>
-              <FormLabel className="text-lg" htmlFor="email">
-                Your Email
-              </FormLabel>
+              <FormLabel className="text-lg">Your Email</FormLabel>
               <FormControl>
                 <Input
                   type="email"
@@ -104,9 +100,7 @@ export default function ContactForm() {
           rules={{ required: 'Message is required' }}
           render={({ field }) => (
             <FormItem className="md:col-span-2">
-              <FormLabel className="text-lg" htmlFor="message">
-                Your Message
-              </FormLabel>
+              <FormLabel className="text-lg">Your Message</FormLabel>
               <FormControl>
                 <Textarea
                   className="w-full min-h-[12rem] md:min-h-[22rem] !text-lg font-semibold shadow-md"
