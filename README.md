@@ -49,9 +49,8 @@ app/
 ├── layout.tsx
 ├── loading.tsx
 ├── not-found.tsx
-├── manifest.json
 components/
-├── layout/
+│   ├──layout/
 │   ├── About.tsx
 │   ├── CV.tsx
 │   ├── ContactForm.tsx
