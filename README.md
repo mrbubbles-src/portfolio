@@ -37,48 +37,32 @@ Then open http://localhost:3000 in your browser.
 ## 📁 Project Structure
 
 ```
+app/                     # Next.js App Router directory
+├── actions/             # Server Actions (e.g. sendMail)
+├── api/                 # API routes (e.g. OpenGraph image)
+├── cv/                  # CV route (/cv) + Download
+├── datenschutz/         # Datenschutz page
+├── impressum/           # Impressum page
+├── layout.tsx           # Root layout with ThemeProvider
+├── loading.tsx          # Global custom loading UI
+├── not-found.tsx        # Custom 404 page
+├── page.tsx             # Root page (/)
+├── globals.css          # Tailwind base styles and resets
 
-app/
-├── actions/
-│   └── send-mails.ts
-├── api/
-│   └── og/route.tsx
-├── cv/page.tsx
-├── datenschutz/page.tsx
-├── impressum/page.tsx
-├── layout.tsx
-├── loading.tsx
-├── not-found.tsx
-components/
-│   ├──layout/
-│   ├── About.tsx
-│   ├── CV.tsx
-│   ├── ContactForm.tsx
-│   ├── Footer.tsx
-│   ├── ProjectCard.tsx
-│   ├── ProjectImage.tsx
-│   └── StackGrid.tsx
-├── ui/
-│   ├── badge.tsx
-│   ├── button.tsx
-│   ├── dropdown-menu.tsx
-│   ├── form.tsx
-│   ├── input.tsx
-│   ├── label.tsx
-│   ├── navigation-menu.tsx
-│   ├── sonner.tsx
-│   ├── textarea.tsx
-│   └── theme-toggle.tsx
-context/
-└── theme-provider.tsx
-data/
-├── projects.ts
-└── stack.ts
-lib/
-└── utils.ts
-public/
-├── blur/
-└── screenshots/
+components/              # UI & layout components
+├── layout/              # Structured page sections
+│   ├── contact/         # Contact form + UI logic
+│   ├── curriculum-vitae/# CV display
+│   ├── footer/          # Footer section
+│   ├── projects/        # Project cards, grids, images
+│   └──  stack/          # Tech stack display
+├── ui/                  # Reusable base components (shadcn/ui)
+
+context/                 # Theme context provider
+data/                    # Project + stack config data
+lib/                     # Utility functions
+
+public/                  # Static assets (images, icons, etc.)
 ```
 
 ---
