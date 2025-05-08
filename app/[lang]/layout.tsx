@@ -4,7 +4,9 @@ import { ThemeProvider } from '@/context/theme-provider';
 import Navbar from '@/components/layout/navbar/navbar';
 import Footer from '@/components/layout/footer/footer';
 import { Toaster } from '@/components/ui/sonner';
-import './globals.css';
+import '@/app/globals.css';
+import { i18n, Locale } from '@/i18n-config';
+import { getDictionary } from '@/get-digtionary';
 
 const montserrat = Montserrat({
   variable: '--font-montserrat',
@@ -12,53 +14,61 @@ const montserrat = Montserrat({
   weight: ['300', '400', '500', '600', '700'],
 });
 
-export const metadata: Metadata = {
-  metadataBase: new URL(
-    process.env.NEXT_PUBLIC_APP_URL ?? 'http://localhost:3000',
-  ),
-  title: 'mrbubbles-src | Portfolio',
-  description: 'Fullstack (MERN) Web Developer Portfolio',
-  openGraph: {
-    title: 'mrbubbles-src < Fullstack Web Developer />',
-    description: 'Fullstack (MERN) Web Developer from Germany',
-    siteName: 'https://mrbubbles-src.dev',
-    images: [
-      {
-        url: 'https://mrbubbles-src.dev/api/og',
-        width: 1200,
-        height: 630,
-        alt: 'mrbubbles-src Portfolio Preview',
-      },
-    ],
-    type: 'website',
-    locale: 'en_GB',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'mrbubbles-src < Fullstack Web Developer />',
-    description: 'Fullstack (MERN) Web Developer from Germany',
-    images: ['https://mrbubbles-src.dev/api/og'],
-    creator: '@_MstrBubbles',
-  },
-  other: { 'apple-mobile-web-app-title': 'mrbubbles-src.dev' },
-};
+export async function generateStaticParams() {
+  return i18n.locales.map((locale) => ({ lang: locale }));
+}
 
-export default function RootLayout({
-  children,
-}: {
+export async function generateMetadata(props: {
+  params: Promise<{ lang: Locale }>;
+}): Promise<Metadata> {
+  const params = await props.params;
+  const dictionary = await getDictionary(params.lang);
+
+  return {
+    metadataBase: new URL(
+      process.env.NEXT_PUBLIC_APP_URL ?? 'http://localhost:3000',
+    ),
+    title: dictionary.meta.title,
+    description: dictionary.meta.description,
+    openGraph: {
+      title: dictionary.meta.openGraph.title,
+      description: dictionary.meta.openGraph.description,
+      siteName: 'https://mrbubbles-src.dev',
+      images: [
+        {
+          url: 'https://mrbubbles-src.dev/api/og',
+          width: 1200,
+          height: 630,
+          alt: dictionary.meta.openGraph.ogAlt,
+        },
+      ],
+      type: 'website',
+      locale: params.lang === 'de' ? 'de_DE' : 'en_GB',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: dictionary.meta.title,
+      description: dictionary.meta.openGraph.description,
+      images: ['https://mrbubbles-src.dev/api/og'],
+      creator: '@_MstrBubbles',
+    },
+    other: { 'apple-mobile-web-app-title': 'mrbubbles-src.dev' },
+  };
+}
+
+export default async function RootLayout(props: {
   children: React.ReactNode;
+  params: Promise<{ lang: Locale }>;
 }) {
+  const params = await props.params;
+  const { children } = props;
   return (
-    <html lang="en" className="dark scroll-smooth" suppressHydrationWarning>
+    <html
+      lang={params.lang}
+      className="dark scroll-smooth"
+      suppressHydrationWarning>
       <head>
-        <link rel="canonical" href="https://www.mrbubbles-src.dev" />
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="manifest" href="/site.webmanifest" />
-        <meta name="theme-color" content="#0f0f0f" />
-        <meta
-          name="description"
-          content="Meet Manuel Fahrenholz (aka mrbubbles-src), a fullstack MERN web developer based in Germany."
-        />
+        <link rel="canonical" href="https://mrbubbles-src.dev" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -67,7 +77,7 @@ export default function RootLayout({
               '@type': 'Person',
               name: 'Manuel Fahrenholz',
               jobTitle: 'Fullstack Web Developer',
-              url: 'https://www.mrbubbles-src.dev',
+              url: 'https://mrbubbles-src.dev',
               sameAs: [
                 'https://github.com/mrbubbles-src',
                 'https://linkedin.com/in/manuel-fahrenholz',
