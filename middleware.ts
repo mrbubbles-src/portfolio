@@ -51,6 +51,12 @@ export function middleware(request: NextRequest) {
       '/profile.jpeg',
       '/web-app-manifest-192x192.png',
       '/web-app-manifest-512x512.png',
+      '/blur/blur-placeholder.jpeg',
+      '/screenshots/book-nook.jpeg',
+      '/screenshots/placeholder.jpeg',
+      '/screenshots/redacted.jpeg',
+      '/screenshots/teacherbuddy.png',
+      '/screenshots/vet-clinic.png',
     ].includes(pathname)
   ) {
     return;
