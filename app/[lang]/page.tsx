@@ -5,8 +5,15 @@ import ProjectCard from '@/components/layout/projects/project-card';
 import { projects } from '@/data/projects';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import ContactAbout from '@/components/layout/about/contact-about';
+import { Locale } from '@/i18n-config';
+import { getDictionary } from '@/get-digtionary';
 
-export default function Home() {
+export default async function Home(props: {
+  params: Promise<{ lang: Locale }>;
+}) {
+  const { lang } = await props.params;
+  const dictionary = await getDictionary(lang);
+
   return (
     <>
       <section
@@ -16,7 +23,7 @@ export default function Home() {
         <h2 id="about-section" className="sr-only">
           About Me
         </h2>
-        <About />
+        <About dictionary={dictionary.about} />
       </section>
 
       <section
