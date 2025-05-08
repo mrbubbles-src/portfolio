@@ -1,0 +1,23 @@
+{
+  "about": {
+    "greetingP1": "Hello",
+    "greetingP2": "nice to meet you!",
+    "nameIntroP1": "My name is",
+    "nameIntroP2": ". Nice to meet you!",
+    "ageP1": "I&apos;m",
+    "ageP2": "years old and live in the b-e-a-utiful city of",
+    "ageP3": "Cologne, Germany",
+    "jobP1": "My journey as a",
+    "jobP2": "began in September 2022 at the DCI Digital Career Institute, where I completed a 12-month",
+    "jobP3": "course. I now work there as a",
+    "jobP4": "sharing my knowledge with the next wave of developers.",
+    "care": "With a background in caregiving, helping people is second nature — I aim to build apps that offer real support, even in small ways.",
+    "hobbies": "Outside of work, I LOVE gaming, reading (or listening to) books, binge-watching shows & movies, and occasionally doodling just for fun.",
+    "cta": "Want to know more? Feel free to check out my CV, GitHub, or LinkedIn — or just send me a message via the contact form!",
+    "closing": "Can&apos;t wait to hear more about YOU!",
+    "signature": "Best, Manuel",
+    "cvButton": "See my journey",
+    "contactButton": "Get in touch!",
+    "imageAlt": "Profile picture of Manuel Fahrenholz"
+  }
+}
