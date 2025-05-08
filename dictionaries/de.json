@@ -1,0 +1,34 @@
+{
+  "meta": {
+    "title": "mrbubbles-src | Portfolio",
+    "description": "Ich bin Manuel Fahrenholz (auch bekannt als mrbubbles-src), ein Fullstack-Webentwickler mit Fokus auf den MERN-Stack aus Deutschland.",
+    "openGraph": {
+      "title": "mrbubbles-src < Fullstack Webentwickler />",
+      "description": "Fullstack (MERN) Webentwickler aus Deutschland",
+      "ogAlt": "mrbubbles-src Portfolio vorschau."
+    }
+  },
+  "about": {
+    "greetingP1": "Hallo",
+    "greetingP2": "schön, dich kennenzulernen!",
+    "screenreaderTitle": "Über Manuel Fahrenholz",
+    "nameIntroP1": "Mein Name ist",
+    "nameIntroP2": "Schön, dich kennenzulernen!",
+    "ageP1": "Ich bin",
+    "ageP2": "Jahre alt und lebe in der wunderschönen Stadt",
+    "ageP3": "Köln, in Deutschland",
+    "jobP1": "Mein Weg als",
+    "jobP2": "begann im September 2022 am DCI Digital Career Institute, wo ich einen 12-monatigen",
+    "jobP3": "-Kurs absolvierte. Heute arbeite ich dort als",
+    "jobP4": "und teile mein Wissen mit der nächsten Entwicklergeneration.",
+    "care": "Mit einem Hintergrund in der Pflege ist es für mich selbstverständlich, Menschen zu helfen – ich möchte Apps entwickeln, die echte Unterstützung bieten, selbst im Kleinen.",
+    "hobbies": "Abseits der Arbeit liebe ich Gaming, das Lesen (oder Hören) von Büchern, Serien und Filme zu bingen und gelegentlich einfach zum Spaß zu kritzeln.",
+    "cta": "Du willst mehr wissen? Dann schau dir gerne meinen Lebenslauf, GitHub oder LinkedIn an – oder schick mir einfach eine Nachricht über das Kontaktformular!",
+    "closingP1": "Ich freue mich darauf, mehr über DICH zu erfahren!",
+    "closingP2": "Liebe Grüße,",
+    "signature": "Manuel",
+    "cvButton": "Lebenslauf",
+    "contactButton": "Kontakt",
+    "imageAlt": "Profilbild von Manuel Fahrenholz"
+  }
+}
