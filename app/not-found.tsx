@@ -1,5 +1,9 @@
 import Link from 'next/link';
-
+export const metadata = {
+  title: '404 | Page Not Found',
+  description:
+    'Oops, this page got lost in the JavaScript void. Maybe it&apos;s in another branch?',
+};
 export default function NotFound() {
   return (
     <div

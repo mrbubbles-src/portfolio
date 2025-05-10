@@ -4,9 +4,9 @@ import { ThemeProvider } from '@/context/theme-provider';
 import Navbar from '@/components/layout/navbar/navbar';
 import Footer from '@/components/layout/footer/footer';
 import { Toaster } from '@/components/ui/sonner';
-import '@/app/globals.css';
 import { i18n, Locale } from '@/i18n-config';
 import { getDictionary } from '@/get-digtionary';
+import '@/app/globals.css';
 
 const montserrat = Montserrat({
   variable: '--font-montserrat',
