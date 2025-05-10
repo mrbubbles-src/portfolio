@@ -1,7 +1,7 @@
 interface IStack {
   Frontend: string[];
   Backend: string[];
-  'Tools & Frameworks': string[];
+  'Tooling & Design': string[];
 }
 const stack: IStack = {
   Frontend: [
@@ -11,18 +11,19 @@ const stack: IStack = {
     'JavaScript',
     'TypeScript',
     'React',
+    'Next.js',
     'TailwindCSS',
     'Bootstrap',
-  ],
-  Backend: ['Node.js', 'Express.js', 'MongoDB', 'PostgreSQL', 'MySQL'],
-  'Tools & Frameworks': [
-    'Next.js',
-    'Prisma',
     'Vite',
-    'Git',
-    'Figma',
-    'Adobe Suite',
-    'Affinity Suite',
   ],
+  Backend: [
+    'Node.js',
+    'Express.js',
+    'MongoDB',
+    'PostgreSQL',
+    'MySQL',
+    'Prisma',
+  ],
+  'Tooling & Design': ['Git', 'Figma', 'Adobe Suite', 'Affinity Suite'],
 };
 export { stack };
