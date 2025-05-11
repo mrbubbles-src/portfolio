@@ -42,5 +42,56 @@
     "contactButton": "Kontakt",
     "imageAlt": "Profilbild von Manuel Fahrenholz"
   },
-  "contactAbout": {}
+  "contact": {
+    "title": "Contact Me",
+    "form": {
+      "nameLabel": "Dein Name",
+      "namePlaceholder": "Gib deinen Namen ein",
+      "nameDescription": "Bitte gib deinen vollständigen Namen ein",
+      "nameRequired": "Name ist erforderlich",
+      "emailLabel": "Deine E-Mail",
+      "emailPlaceholder": "Gib deine E-Mail ein",
+      "emailDescription": "Ich werde deine E-Mail niemals mit jemandem teilen.",
+      "emailRequired": "E-Mail ist erforderlich",
+      "messageLabel": "Deine Nachricht",
+      "messagePlaceholder": "Gib deine Nachricht ein",
+      "messageDescription": "Schick mir dein Feedback, deine Fragen oder sag einfach Hallo!",
+      "messageRequired": "Nachricht ist erforderlich",
+      "submitLabel": "Abschicken",
+      "submitLabelAlt": "Senden..."
+    },
+    "successMessage": "Danke für deine Nachricht! Ich werde mich so schnell wie möglich bei dir melden.",
+    "toastSuccess": "-Mail wurde erfolgreich gesendet!",
+    "toastError": "Fehler beim Senden der E-Mail. Bitte versuche es später noch einmal."
+  },
+  "contactAbout": {
+    "title": "Profil Zusammenfassung",
+    "proffessionTitle": "Fachrichtung",
+    "proffessionDescription": "Fullstack Web Developer",
+    "currentJobTitle": "Aktuelle Position",
+    "currentJobDescription": "Jr WebDev Lehrer",
+    "locationTitle": "Standort",
+    "locationDescription": "Köln, Deutschland",
+    "cvButton": "Lebenslauf",
+    "contactButton": "Kontakt",
+    "imageAlt": "Profilbild von Manuel Fahrenholz"
+  },
+  "projects": {
+    "redacted": {
+      "title": "< REDACTED /> kommt bald™ 👀",
+      "description": "< REDACTED />"
+    },
+    "bookNook": {
+      "title": "bookNook",
+      "description": "Eine Buchverwaltungs‑App, mit der du deinen bestehenden Bücherkatalog organisierst, festhältst, was du gerade liest – inklusive Seiten‑Tracking – und planst, was du als Nächstes lesen willst. Wenn du magst, setzt du dir sogar eine kleine Lese‑Challenge! < Hinweis: Das Backend läuft auf der render(dot)com Free‑Tier. Es kann daher manchmal eine Minute dauern, bis es aufwacht; hab bitte etwas Geduld. Sobald es wach ist, läuft alles butterweich 😉! Dieses Projekt entstand als unser Abschluss‑Gruppenprojekt während der Web‑Development‑Ausbildung am DCI Digital Career Institute. >"
+    },
+    "vetClinic": {
+      "title": "Überarbeitung der Tierarzt‑Homepage",
+      "description": "Mein Team und ich haben die Homepage einer Tierarztpraxis modernisiert, um ihr ein zeitgemäßes Design zu verleihen. < Hinweis: Dieses Projekt war unser Abschluss‑Gruppenprojekt im SPA‑Modul während der Ausbildung am DCI Digital Career Institute. >"
+    },
+    "studentNameGenerator": {
+      "title": "Zufälliger Schülernamengenerator",
+      "description": "Dieses kleine Tool habe ich während meiner Zeit am DCI Digital Career Institute entwickelt, um Lehrkräften das zufällige Auswählen einer Schülerin bzw. eines Schülers zu erleichtern (z. B. fürs Beantworten von Fragen oder Präsentieren von Lösungen). Es ist ein Herzensprojekt, das ich immer weiterpflege, wann immer ich Zeit finde. Ein Relaunch steht bald an – behalte es im Auge!"
+    }
+  }
 }

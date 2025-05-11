@@ -42,5 +42,56 @@
     "contactButton": "Get in touch!",
     "imageAlt": "Profile picture of Manuel Fahrenholz"
   },
-  "contactAbout": {}
+  "contact": {
+    "title": "Contact Me",
+    "form": {
+      "nameLabel": "Your Name",
+      "namePlaceholder": "Enter your name",
+      "nameDescription": "Please enter your full name",
+      "nameRequired": "Name is required",
+      "emailLabel": "Your Email",
+      "emailPlaceholder": "Enter your email",
+      "emailDescription": "We'll never share your email with anyone else.",
+      "emailRequired": "Email is required",
+      "messageLabel": "Your Message",
+      "messagePlaceholder": "Enter your message",
+      "messageDescription": "Feel free to share feedback, questions, or just say hi!",
+      "messageRequired": "Message is required",
+      "submitLabel": "Send Message",
+      "submitLabelAlt": "Sending..."
+    },
+    "successMessage": "Thank you for your message! I&apos;ll get back to you as soon as possible.",
+    "toastSuccess": "Email sent successfully!",
+    "toastError": "Error sending email. Please try again later."
+  },
+  "contactAbout": {
+    "title": "Profile Summary",
+    "proffessionTitle": "Profession",
+    "proffessionDescription": "Fullstack Web Developer",
+    "currentJobTitle": "Current Job",
+    "currentJobDescription": "Jr WebDev Teacher",
+    "locationTitle": "Location",
+    "locationDescription": "Cologne, Germany",
+    "cvButton": "See my journey",
+    "contactButton": "Get in touch!",
+    "imageAlt": "Profile picture of Manuel Fahrenholz"
+  },
+  "projects": {
+    "redacted": {
+      "title": "< REDACTED /> coming soon™ 👀",
+      "description": "< REDACTED />"
+    },
+    "bookNook": {
+      "title": "bookNook",
+      "description": "A book‑management application to track your existing book catalog, what you’re currently reading – including the current page – and what you’d like to read next. You can even set yourself a little reading challenge! < Note: The backend runs on the render(dot)com free tier. It can take a minute or so to wake up, so please be patient. Once it’s awake, it runs as smooth as butter 😉! This was created by my team and me as our final group project while studying web development at the DCI Digital Career Institute. >"
+    },
+    "vetClinic": {
+      "title": "Vet‑Clinic Homepage Overhaul",
+      "description": "My team and I overhauled a veterinarian’s homepage to give it a more modern look. < Note: This was our final group project for the SPA module while studying web development at the DCI Digital Career Institute. >"
+    },
+    "studentNameGenerator": {
+      "title": "Random Student Name Generator",
+      "description": "I created this little project while learning web development at the DCI Digital Career Institute to help my teachers pick a random student whenever they need one (e.g. for answering questions or presenting assignment solutions). It’s a passion project that I improve whenever I find the time. A relaunch is coming soon, so keep an eye on it!"
+    }
+  }
 }
