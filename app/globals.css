@@ -6,6 +6,9 @@
 *:focus-visible {
   @apply ring-2 ring-offset-8 ring-offset-background ring-ring outline-none rounded-md;
 }
+html.mouse-mode *:focus-visible {
+  @apply ring-0 ring-offset-0 outline-none;
+}
 :root {
   --radius: 0.5rem;
   --background: oklch(1 0 0);
