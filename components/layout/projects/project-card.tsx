@@ -9,28 +9,29 @@ import {
 import { Button } from '@/components/ui/button';
 import ProjectImage from '@/components/layout/projects/project-image';
 import { Badge } from '@/components/ui/badge';
+import { title } from 'process';
 
 interface IProjectCardProps {
-  title: string;
-  description: string;
   tech: string[];
   github: string;
   live: string;
   image: string;
 }
+type ProjectTranslation = { title: string; description: string };
 
 export default function ProjectCard({
-  title,
-  description,
   tech,
   github,
   live,
   image,
-}: IProjectCardProps) {
+  dictionary,
+}: IProjectCardProps & { dictionary: ProjectTranslation }) {
   return (
     <Card className="shadow-md flex flex-col h-full">
       <CardHeader>
-        <CardTitle className="text-primary text-2xl">{title}</CardTitle>
+        <CardTitle className="text-primary text-2xl">
+          {dictionary.title}
+        </CardTitle>
       </CardHeader>
       <CardContent role="list" className="flex flex-wrap gap-2">
         {tech.map((t) => (
@@ -47,7 +48,7 @@ export default function ProjectCard({
         {live && <ProjectImage live={live} image={image} title={title} />}
       </CardContent>
       <CardDescription className="px-6 pb-2 h-full">
-        <p className="text-lg text-foreground text-justify">{description}</p>
+        <p className="text-lg text-foreground">{dictionary.description}</p>
       </CardDescription>
       <CardFooter className="mt-auto px-6 pt-2 pb-4">
         <div className="flex gap-2 text-xs grow justify-center">
