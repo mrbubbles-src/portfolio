@@ -8,7 +8,24 @@
       "ogAlt": "mrbubbles-src Portfolio Preview"
     }
   },
-
+  "landingPage": {
+    "screenreaderAbout": "About Me",
+    "titleTech": "Tech Stack",
+    "titleProjects": "Projects",
+    "titleContact": "Contact Me",
+    "titleContactAbout": "Profile Summary"
+  },
+  "a11y": {
+    "landingPage": {
+      "labelledByAbout": "about-section",
+      "labelledByTech": "tech-stack",
+      "labelledByProjects": "projects-heading",
+      "labelledByContact": "contact-section"
+    },
+    "contactAbout": {
+      "labelledByContactAbout": "about-summary"
+    }
+  },
   "navbar": {
     "about": "About",
     "projects": "Projects",
@@ -26,6 +43,10 @@
       "screenreaderTitle": "Switch Language",
       "triggerTitle": "language switcher",
       "contentTitle": "dropdown menu for language selection"
+    },
+    "a11y": {
+      "labelBack": "Back to landingpage",
+      "labelToggle": "Toggle Menu"
     }
   },
   "footer": {
@@ -100,7 +121,10 @@
     "locationDescription": "Cologne, Germany",
     "cvButton": "See my journey",
     "contactButton": "Get in touch!",
-    "imageAlt": "Profile picture of Manuel Fahrenholz"
+    "imageAlt": "Profile picture of Manuel Fahrenholz",
+    "a11y": {
+      "labelledByContactAbout": "about-summary"
+    }
   },
   "projects": {
     "redacted": {

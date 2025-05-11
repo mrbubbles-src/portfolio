@@ -39,7 +39,7 @@ const Navbar = ({
         <Link
           href={`/${lang}`}
           className="text-xl font-bold text-primary"
-          aria-label="Back to landingpage">
+          aria-label={dictionary.a11y.labelBack}>
           <div className="relative h-12 w-52 md:h-14 md:w-56">
             <Image
               src={Logo}
@@ -73,7 +73,7 @@ const Navbar = ({
             title="menu button"
             onClick={() => setMenuOpen(!menuOpen)}
             className={`lg:hidden ml-2 hover:text-primary transition-all duration-300 ease-in-out cursor-pointer ${menuOpen ? 'rotate-90' : ''}`}
-            aria-label="Toggle Menu">
+            aria-label={dictionary.a11y.labelToggle}>
             {menuOpen ? (
               <X className="w-6 h-6" />
             ) : (

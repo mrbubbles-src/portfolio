@@ -8,7 +8,21 @@
       "ogAlt": "mrbubbles-src Portfolio vorschau."
     }
   },
-
+  "landingPage": {
+    "screenreaderAbout": "Über mich",
+    "titleTech": "Tech Stack",
+    "titleProjects": "Projekte",
+    "titleContact": "Kontaktiere mich",
+    "titleContactAbout": "Steckbrief"
+  },
+  "a11y": {
+    "landingPage": {
+      "labelledByAbout": "über-mich-sektion",
+      "labelledByTech": "tech-stack",
+      "labelledByProjects": "projekte-überschrift",
+      "labelledByContact": "kontakt-sektion"
+    }
+  },
   "navbar": {
     "about": "Über mich",
     "projects": "Projekte",
@@ -26,6 +40,10 @@
       "screenreaderTitle": "Ändere die Anzeigesprache",
       "triggerTitle": "Ändere die Anzeigesprache",
       "contentTitle": "dropdown menu für die Sprachauswahl"
+    },
+    "a11y": {
+      "labelBack": "Zurück zur Startseite",
+      "labelToggle": "Menü umschalten"
     }
   },
   "footer": {
@@ -100,7 +118,10 @@
     "locationDescription": "Köln, Deutschland",
     "cvButton": "Lebenslauf",
     "contactButton": "Kontakt",
-    "imageAlt": "Profilbild von Manuel Fahrenholz"
+    "imageAlt": "Profilbild von Manuel Fahrenholz",
+    "a11y": {
+      "labelledByContactAbout": "steckbrief"
+    }
   },
   "projects": {
     "redacted": {

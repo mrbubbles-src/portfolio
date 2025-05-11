@@ -10,7 +10,9 @@ const CurriculumVitae = ({ lang }: { lang: Locale }) => {
           title="Curriculum Vitae"
         />
         <figcaption className="sr-only">
-          Embedded PDF view of Manuel Fahrenholz&apos;s CV.
+          {lang === 'de'
+            ? 'Eingebettete PDF-Ansicht von Manuel Fahrenholz&apos;s CV.'
+            : 'Embedded PDF view of Manuel Fahrenholz&apos;s CV.'}
         </figcaption>
       </figure>
     </div>

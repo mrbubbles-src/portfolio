@@ -19,16 +19,23 @@ export default async function Home(props: {
       <section
         id="about"
         className="scroll-mt-24"
-        aria-labelledby="about-section">
-        <h2 id="about-section" className="sr-only">
-          About Me
+        aria-labelledby={dictionary.a11y.landingPage.labelledByAbout}>
+        <h2
+          id={dictionary.a11y.landingPage.labelledByAbout}
+          className="sr-only">
+          {dictionary.landingPage.screenreaderAbout}
         </h2>
         <About dictionary={dictionary.about} />
       </section>
 
-      <section id="stack" className="scroll-mt-24" aria-labelledby="tech-stack">
-        <h2 id="tech-stack" className="text-3xl font-bold mb-6">
-          Tech Stack
+      <section
+        id="stack"
+        className="scroll-mt-24"
+        aria-labelledby={dictionary.a11y.landingPage.labelledByTech}>
+        <h2
+          id={dictionary.a11y.landingPage.labelledByTech}
+          className="text-3xl font-bold mb-6">
+          {dictionary.landingPage.titleTech}
         </h2>
         <StackGrid />
       </section>
@@ -36,9 +43,11 @@ export default async function Home(props: {
       <section
         id="projects"
         className="scroll-mt-24 "
-        aria-labelledby="projects-heading">
-        <h2 id="projects-heading" className="text-3xl font-bold mb-6">
-          Projects
+        aria-labelledby={dictionary.a11y.landingPage.labelledByProjects}>
+        <h2
+          id={dictionary.a11y.landingPage.labelledByProjects}
+          className="text-3xl font-bold mb-6">
+          {dictionary.landingPage.titleProjects}
         </h2>
         <div className="grid gap-4 xl:grid-cols-2">
           {projects.map(({ key, ...projProps }) => (
@@ -54,11 +63,13 @@ export default async function Home(props: {
       <section
         id="contact"
         className="scroll-mt-24 xl:grid xl:grid-cols-2 gap-4"
-        aria-labelledby="contact-section">
+        aria-labelledby={dictionary.a11y.landingPage.labelledByContact}>
         <Card className="w-full">
           <CardHeader>
-            <h2 id="contact-section" className="text-3xl font-bold">
-              Contact Me
+            <h2
+              id={dictionary.a11y.landingPage.labelledByContact}
+              className="text-3xl font-bold">
+              {dictionary.landingPage.titleContact}
             </h2>
           </CardHeader>
           <CardContent className="h-full">
@@ -68,7 +79,7 @@ export default async function Home(props: {
         <Card className="w-full mt-4 xl:mt-0">
           <CardHeader>
             <h2 className="text-3xl font-bold text-center xl:text-start xl:ml-6">
-              Profile Summary
+              {dictionary.landingPage.titleContactAbout}
             </h2>
           </CardHeader>
           <CardContent>

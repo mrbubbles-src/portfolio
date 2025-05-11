@@ -23,8 +23,10 @@ export default function ContactAbout({
         />
       </CardHeader>
       <CardContent className="flex flex-col justify-center">
-        <article aria-labelledby="about-summary" className="mt-5 xl:mt-0">
-          <h2 id="about-summary" className="sr-only">
+        <article
+          aria-labelledby={dictionary.a11y.labelledByContactAbout}
+          className="mt-5 xl:mt-0">
+          <h2 id={dictionary.a11y.labelledByContactAbout} className="sr-only">
             {dictionary.title}
           </h2>
           <ul>
