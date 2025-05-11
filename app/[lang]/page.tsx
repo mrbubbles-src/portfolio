@@ -44,8 +44,12 @@ export default async function Home(props: {
           Projects
         </h2>
         <div className="grid gap-6 sm:grid-cols-2">
-          {projects.map((project, i) => (
-            <ProjectCard key={i} {...project} />
+          {projects.map(({ key, ...projProps }) => (
+            <ProjectCard
+              key={key}
+              dictionary={dictionary.projects[key]}
+              {...projProps}
+            />
           ))}
         </div>
       </section>
@@ -61,7 +65,7 @@ export default async function Home(props: {
             </h2>
           </CardHeader>
           <CardContent className="h-full">
-            <ContactForm />
+            <ContactForm dictionary={dictionary.contact} />
           </CardContent>
         </Card>
         <Card className="w-full mt-4 md:mt-0">
@@ -71,7 +75,7 @@ export default async function Home(props: {
             </h2>
           </CardHeader>
           <CardContent>
-            <ContactAbout />
+            <ContactAbout dictionary={dictionary.contactAbout} />
           </CardContent>
         </Card>
       </section>
