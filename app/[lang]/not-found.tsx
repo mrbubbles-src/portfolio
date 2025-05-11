@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import '@/app/globals.css';
 export const metadata = {
   title: '404 | Page Not Found',
   description:
@@ -10,7 +9,7 @@ export default function NotFound() {
     <div
       role="alert"
       aria-live="polite"
-      className="min-h-screen flex flex-col justify-center items-center text-center px-4 bg-black">
+      className="min-h-screen flex flex-col justify-center items-center text-center px-4 ">
       <h1 className="text-9xl font-bold mb-4 text-destructive">404</h1>
       <p className="text-2xl mb-6 max-w-md text-muted-foreground">
         Oops, this page got lost in the JavaScript void. Maybe it&apos;s in
