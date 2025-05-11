@@ -8,6 +8,17 @@
       "ogAlt": "mrbubbles-src Portfolio Preview"
     }
   },
+  "navbar": {
+    "about": "About",
+    "projects": "Projects",
+    "contact": "Contact",
+    "stack": "Stack",
+    "cv": "Curriculum Vitae"
+  },
+  "footer": {
+    "legal": "Legal Notice",
+    "privacy": "Privacy Policy"
+  },
   "about": {
     "greetingP1": "Hello",
     "greetingP2": "nice to meet you!",
@@ -30,5 +41,6 @@
     "cvButton": "See my journey",
     "contactButton": "Get in touch!",
     "imageAlt": "Profile picture of Manuel Fahrenholz"
-  }
+  },
+  "contactAbout": {}
 }
