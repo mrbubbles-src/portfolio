@@ -122,7 +122,7 @@ Manuel Fahrenholz`,
                   alt=""
                   width="40"
                   height="40"
-                  style="vertical-align: middle; margin-right: 12px" />
+                  style="vertical-align: middle; margin-right: 2px" />
                 Visit My Portfolio
               </a>
 
@@ -167,7 +167,7 @@ Manuel Fahrenholz`,
                     alt=""
                     width="20"
                     height="20"
-                    style="vertical-align: middle; margin-right: 10px" />
+                    style="vertical-align: middle; margin-right: 5px" />
                   <a
                     href="https://mrbubbles-src.dev"
                     style="color: #ffb800; text-decoration: none"
@@ -176,7 +176,7 @@ Manuel Fahrenholz`,
                 </p>
 
                 <p style="margin: 6px 0">
-                  <span style="margin-right: 10px">📧</span>
+                  <span style="margin-right: 5px">📧</span>
                   <a
                     href="mailto:contact@mrbubbles-src.dev"
                     style="color: #ffb800; text-decoration: none"
@@ -185,7 +185,7 @@ Manuel Fahrenholz`,
                 </p>
 
                 <p style="margin: 6px 0">
-                  <span style="margin-right: 10px">👨‍💻</span>
+                  <span style="margin-right: 5px">👨‍💻</span>
                   <a
                     href="https://github.com/mrbubbles-src"
                     style="color: #ffb800; text-decoration: none"
@@ -194,11 +194,11 @@ Manuel Fahrenholz`,
                 </p>
 
                 <p style="margin: 6px 0">
-                  <span style="margin-right: 10px">🧑‍🏫</span>
+                  <span style="margin-right: 5px">🧑‍🏫</span>
                   <a
                     href="https://linkedin.com/in/manuel-fahrenholz"
                     style="color: #ffb800; text-decoration: none"
-                    >linkedin.com/in/manuelfahrenholz</a
+                    >/in/manuel-fahrenholz</a
                   >
                 </p>
               </div>
@@ -209,7 +209,7 @@ Manuel Fahrenholz`,
     </tr>
   </table>
 </div>
-      `,
+`,
     });
     return { success: true, messageId: res.data?.id };
   } catch (error) {
