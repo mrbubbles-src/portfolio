@@ -8,16 +8,42 @@
       "ogAlt": "mrbubbles-src Portfolio Preview"
     }
   },
+
   "navbar": {
     "about": "About",
     "projects": "Projects",
     "contact": "Contact",
     "stack": "Stack",
-    "cv": "Curriculum Vitae"
+    "cv": "Curriculum Vitae",
+    "themeToggle": {
+      "screenreaderTitle": "Switch between light and dark mode",
+      "triggerTitle": "Switch between light and dark mode",
+      "contentTitle": "dropdown menu for light and dark mode"
+    },
+    "language": {
+      "en": "🇬🇧 English",
+      "de": "🇩🇪 German",
+      "screenreaderTitle": "Switch Language",
+      "triggerTitle": "language switcher",
+      "contentTitle": "dropdown menu for language selection"
+    }
   },
   "footer": {
     "legal": "Legal Notice",
-    "privacy": "Privacy Policy"
+    "privacy": "Privacy Policy",
+    "themeToggle": {
+      "screenreaderTitle": "Switch between light and dark mode",
+      "triggerTitle": "Switch between light and dark mode",
+      "contentTitle": "dropdown menu for light and dark mode",
+      "footerText": "Theme Toggle"
+    },
+    "language": {
+      "en": "🇬🇧 English",
+      "de": "🇩🇪 German",
+      "screenreaderTitle": "Switch Language",
+      "triggerTitle": "language switcher",
+      "contentTitle": "dropdown menu for language selection"
+    }
   },
   "about": {
     "greetingP1": "Hello",

@@ -11,7 +11,7 @@ export default function ContactAbout({
   dictionary: Awaited<ReturnType<typeof getDictionary>>['contactAbout'];
 }) {
   return (
-    <Card className="shadow-none md:flex md:flex-row gap-1 w-full h-full p-0">
+    <Card className="shadow-none xl:flex xl:flex-row gap-1 w-full h-full p-0">
       <CardHeader className="w-full max-w-[330px] place-self-center">
         <Image
           src="/profile.jpeg"
@@ -23,18 +23,18 @@ export default function ContactAbout({
         />
       </CardHeader>
       <CardContent className="flex flex-col justify-center">
-        <article aria-labelledby="about-summary" className="mt-5 md:mt-0">
+        <article aria-labelledby="about-summary" className="mt-5 xl:mt-0">
           <h2 id="about-summary" className="sr-only">
             {dictionary.title}
           </h2>
           <ul>
-            <li className="text-md md:text-lg">
+            <li className="text-md xl:text-lg">
               <span>
                 <strong className="mr-2 text-sm text-primary">Name:</strong>
               </span>
               <span>Manuel Fahrenholz</span>
             </li>
-            <li className="text-md md:text-lg">
+            <li className="text-md xl:text-lg">
               <span>
                 <strong className="mr-2 text-sm text-primary">
                   {dictionary.proffessionTitle}:
@@ -42,13 +42,13 @@ export default function ContactAbout({
               </span>
               <span>{dictionary.proffessionDescription}</span>
             </li>
-            <li className="text-md md:text-lg">
+            <li className="text-md xl:text-lg">
               <span>
                 <strong className="mr-2 text-sm text-primary">Stack:</strong>
               </span>
               <span>MERN</span>
             </li>
-            <li className="text-md md:text-lg">
+            <li className="text-md xl:text-lg">
               <span>
                 <strong className="mr-2 text-sm text-primary">
                   {dictionary.currentJobTitle}:
@@ -56,7 +56,7 @@ export default function ContactAbout({
               </span>
               <span>{dictionary.currentJobDescription}</span>
             </li>
-            <li className="text-md md:text-lg">
+            <li className="text-md xl:text-lg">
               <span>
                 <strong className="mr-2 text-sm text-primary">
                   {dictionary.locationTitle}
@@ -68,7 +68,7 @@ export default function ContactAbout({
         </article>
         <div className="flex justify-center gap-4 mt-6 flex-wrap place-self-center">
           <Button asChild size={'lg'} className="w-full max-w-[10rem]">
-            <Link href="/cv">See my journey</Link>
+            <Link href="/cv">{dictionary.cvButton}</Link>
           </Button>
           <Button asChild size={'lg'} className="w-full max-w-[10rem]">
             <a

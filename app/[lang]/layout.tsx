@@ -99,7 +99,7 @@ export default async function RootLayout(props: {
           <Navbar dictionary={dictionary.navbar} lang={lang} />
           <main
             id="main-content"
-            className="flex-1 container mx-auto px-4 py-8">
+            className="flex-1 flex flex-col gap-4 container mx-auto p-4 ">
             {children}
           </main>
           <Footer dictionary={dictionary.footer} />

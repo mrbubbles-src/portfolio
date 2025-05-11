@@ -8,16 +8,42 @@
       "ogAlt": "mrbubbles-src Portfolio vorschau."
     }
   },
+
   "navbar": {
     "about": "Über mich",
     "projects": "Projekte",
     "contact": "Kontakt",
     "stack": "Stack",
-    "cv": "Curriculum Vitae"
+    "cv": "Curriculum Vitae",
+    "themeToggle": {
+      "screenreaderTitle": "Wechsle zwischen Tag- und Nachtmodus",
+      "triggerTitle": "Wechsle zwischen Tag- und Nachtmodus",
+      "contentTitle": "dropdown menu für Tag- und Nachtmodus"
+    },
+    "language": {
+      "en": "🇬🇧 Englisch",
+      "de": "🇩🇪 Deutsch",
+      "screenreaderTitle": "Ändere die Anzeigesprache",
+      "triggerTitle": "Ändere die Anzeigesprache",
+      "contentTitle": "dropdown menu für die Sprachauswahl"
+    }
   },
   "footer": {
     "legal": "Impressum",
-    "privacy": "Datenschutz"
+    "privacy": "Datenschutz",
+    "themeToggle": {
+      "screenreaderTitle": "Wechsle zwischen Tag- und Nachtmodus",
+      "triggerTitle": "Wechsle zwischen Tag- und Nachtmodus",
+      "contentTitle": "dropdown menu für Tag- und Nachtmodus",
+      "footerText": "Wechsel das Theme"
+    },
+    "language": {
+      "en": "🇬🇧 Englisch",
+      "de": "🇩🇪 Deutsch",
+      "screenreaderTitle": "Ändere die Anzeigesprache",
+      "triggerTitle": "Ändere die Anzeigesprache",
+      "contentTitle": "dropdown menu für die Sprachauswahl"
+    }
   },
   "about": {
     "greetingP1": "Hallo",

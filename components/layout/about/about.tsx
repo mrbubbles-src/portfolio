@@ -31,7 +31,7 @@ export default function About({
   const age = calculateAge(1988, 4, 16);
 
   return (
-    <Card className="shadow-md md:flex md:flex-row gap-1">
+    <Card className="shadow-md xl:flex xl:flex-row gap-1">
       <CardHeader className="w-full place-self-center flex flex-col">
         <Image
           src="/profile.jpeg"
@@ -66,11 +66,11 @@ export default function About({
           </Button>
         </div>
       </CardHeader>
-      <CardContent className="md:place-self-center md:mr-16">
-        <h1 className="text-3xl font-bold my-4 md:my-0 md:mb-4">
+      <CardContent className="xl:place-self-center xl:mr-16">
+        <h1 className="text-3xl font-bold my-4 xl:my-0 xl:mb-4">
           {dictionary.greetingP1}{' '}
           <code
-            className="bg-accent rounded-md shadow-sm p-[0.3rem] italic text-sm md:text-lg text-pretty text-primary"
+            className="bg-accent rounded-md shadow-sm p-[0.3rem] italic text-sm md:text-xl text-pretty text-primary"
             aria-hidden="true">
             `<strong className="text-sh-sign">&#36;</strong>
             <strong className="text-sh-entity">&#123;</strong>

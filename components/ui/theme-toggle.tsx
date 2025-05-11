@@ -12,19 +12,30 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 
-export function ThemeToggle() {
+export function ThemeToggle({
+  dictionary,
+}: {
+  dictionary: {
+    screenreaderTitle: string;
+    triggerTitle: string;
+    contentTitle: string;
+  };
+}) {
   const { setTheme } = useTheme();
 
   return (
     <DropdownMenu>
-      <DropdownMenuTrigger asChild title="theme toggle button">
-        <Button variant="outline" size="icon">
+      <DropdownMenuTrigger asChild title={dictionary.triggerTitle}>
+        <Button
+          variant="outline"
+          size="icon"
+          className="hover:text-primary transition-all duration-300 ease-in-out">
           <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
           <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
-          <span className="sr-only">Toggle theme</span>
+          <span className="sr-only">{dictionary.screenreaderTitle}</span>
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent align="end" title="dropdown menu for theme choosing">
+      <DropdownMenuContent align="end" title={dictionary.contentTitle}>
         <DropdownMenuItem
           onClick={() => setTheme('light')}
           className="cursor-pointer">
