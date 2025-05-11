@@ -62,6 +62,9 @@ export default async function RootLayout(props: {
 }) {
   const params = await props.params;
   const { children } = props;
+  const { lang } = params;
+  const dictionary = await getDictionary(lang);
+
   return (
     <html
       lang={params.lang}
@@ -93,13 +96,13 @@ export default async function RootLayout(props: {
           defaultTheme="dark"
           enableSystem
           disableTransitionOnChange>
-          <Navbar />
+          <Navbar dictionary={dictionary.navbar} lang={lang} />
           <main
             id="main-content"
             className="flex-1 container mx-auto px-4 py-8">
             {children}
           </main>
-          <Footer />
+          <Footer dictionary={dictionary.footer} />
           <Toaster richColors position="top-right" />
         </ThemeProvider>
       </body>
