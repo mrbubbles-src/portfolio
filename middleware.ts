@@ -59,6 +59,7 @@ export function middleware(request: NextRequest) {
       '/screenshots/redacted.jpeg',
       '/screenshots/teacherbuddy.png',
       '/screenshots/vet-clinic.png',
+      '/srcicon.png',
     ].includes(pathname)
   ) {
     return;
