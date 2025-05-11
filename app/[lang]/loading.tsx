@@ -4,7 +4,7 @@ export default function Loading() {
       role="status"
       aria-live="polite"
       aria-busy="true"
-      className="min-h-screen flex flex-col justify-center items-center text-center animate-pulse">
+      className="min-h-screen flex flex-col justify-center items-center text-center animate-pulse ">
       <div className="text-2xl font-mono text-muted-foreground mb-2">
         &gt; compiling UI...
         <span className="sr-only">Loading interface…</span>

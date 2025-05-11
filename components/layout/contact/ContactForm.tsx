@@ -15,6 +15,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
 import { toast } from 'sonner';
 import { sendEmail } from '@/app/actions/send-mails';
+import { getDictionary } from '@/get-digtionary';
 
 interface ContactFormValues {
   name: string;
@@ -22,7 +23,11 @@ interface ContactFormValues {
   message: string;
 }
 
-export default function ContactForm() {
+export default function ContactForm({
+  dictionary,
+}: {
+  dictionary: Awaited<ReturnType<typeof getDictionary>>['contact'];
+}) {
   const form = useForm<ContactFormValues>({
     defaultValues: {
       name: '',
@@ -59,18 +64,22 @@ export default function ContactForm() {
         <FormField
           control={form.control}
           name="name"
-          rules={{ required: 'Name is required' }}
+          rules={{ required: dictionary.form.nameRequired }}
           render={({ field }) => (
             <FormItem>
-              <FormLabel className="text-lg">Your Name</FormLabel>
+              <FormLabel className="text-lg">
+                {dictionary.form.nameLabel}
+              </FormLabel>
               <FormControl>
                 <Input
                   className="w-full min-h-12 !text-lg font-semibold shadow-md"
-                  placeholder="Your Name"
+                  placeholder={dictionary.form.namePlaceholder}
                   {...field}
                 />
               </FormControl>
-              <FormDescription>Please enter your full name.</FormDescription>
+              <FormDescription>
+                {dictionary.form.nameDescription}
+              </FormDescription>
               <FormMessage />
             </FormItem>
           )}
@@ -79,20 +88,22 @@ export default function ContactForm() {
         <FormField
           control={form.control}
           name="email"
-          rules={{ required: 'Email is required' }}
+          rules={{ required: dictionary.form.emailRequired }}
           render={({ field }) => (
             <FormItem>
-              <FormLabel className="text-lg">Your Email</FormLabel>
+              <FormLabel className="text-lg">
+                {dictionary.form.emailLabel}
+              </FormLabel>
               <FormControl>
                 <Input
                   type="email"
                   className="w-full min-h-12 !text-lg font-semibold shadow-md"
-                  placeholder="Your Email"
+                  placeholder={dictionary.form.emailPlaceholder}
                   {...field}
                 />
               </FormControl>
               <FormDescription>
-                We&apos;ll never share your email with anyone else.
+                {dictionary.form.emailDescription}
               </FormDescription>
               <FormMessage />
             </FormItem>
@@ -102,19 +113,21 @@ export default function ContactForm() {
         <FormField
           control={form.control}
           name="message"
-          rules={{ required: 'Message is required' }}
+          rules={{ required: dictionary.form.messageRequired }}
           render={({ field }) => (
             <FormItem className="md:col-span-2">
-              <FormLabel className="text-lg">Your Message</FormLabel>
+              <FormLabel className="text-lg">
+                {dictionary.form.messageLabel}
+              </FormLabel>
               <FormControl>
                 <Textarea
                   className="w-full min-h-[12rem] md:min-h-[22rem] !text-lg font-semibold shadow-md"
-                  placeholder="Your Message"
+                  placeholder={dictionary.form.messagePlaceholder}
                   {...field}
                 />
               </FormControl>
               <FormDescription>
-                Feel free to share feedback, questions or greetings!
+                {dictionary.form.messageDescription}
               </FormDescription>
               <FormMessage />
             </FormItem>
@@ -127,11 +140,13 @@ export default function ContactForm() {
           size="lg"
           aria-busy={isSubmitting}
           className="md:col-span-2 md:mx-0 w-full max-w-[10rem]">
-          {isSubmitting ? 'Sending...' : 'Send Message'}
+          {isSubmitting
+            ? `${dictionary.form.submitLabelAlt}`
+            : `${dictionary.form.submitLabel}`}
         </Button>
         {form.formState.isSubmitSuccessful && (
           <p className="sr-only" role="status">
-            Email sent successfully!
+            {dictionary.successMessage}
           </p>
         )}
       </form>

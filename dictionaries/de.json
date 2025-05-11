@@ -1,0 +1,144 @@
+{
+  "meta": {
+    "title": "mrbubbles-src | Portfolio",
+    "description": "Ich bin Manuel Fahrenholz (auch bekannt als mrbubbles-src), ein Fullstack-Webentwickler mit Fokus auf den MERN-Stack aus Deutschland.",
+    "openGraph": {
+      "title": "mrbubbles-src < Fullstack Webentwickler />",
+      "description": "Fullstack (MERN) Webentwickler aus Deutschland",
+      "ogAlt": "mrbubbles-src Portfolio vorschau."
+    }
+  },
+  "landingPage": {
+    "screenreaderAbout": "Über mich",
+    "titleTech": "Tech Stack",
+    "titleProjects": "Projekte",
+    "titleContact": "Kontaktiere mich",
+    "titleContactAbout": "Steckbrief"
+  },
+  "a11y": {
+    "landingPage": {
+      "labelledByAbout": "über-mich-sektion",
+      "labelledByTech": "tech-stack",
+      "labelledByProjects": "projekte-überschrift",
+      "labelledByContact": "kontakt-sektion"
+    }
+  },
+  "navbar": {
+    "about": "Über mich",
+    "projects": "Projekte",
+    "contact": "Kontakt",
+    "stack": "Stack",
+    "cv": "Curriculum Vitae",
+    "themeToggle": {
+      "screenreaderTitle": "Wechsle zwischen Tag- und Nachtmodus",
+      "triggerTitle": "Wechsle zwischen Tag- und Nachtmodus",
+      "contentTitle": "dropdown menu für Tag- und Nachtmodus"
+    },
+    "language": {
+      "en": "🇬🇧 Englisch",
+      "de": "🇩🇪 Deutsch",
+      "screenreaderTitle": "Ändere die Anzeigesprache",
+      "triggerTitle": "Ändere die Anzeigesprache",
+      "contentTitle": "dropdown menu für die Sprachauswahl"
+    },
+    "a11y": {
+      "labelBack": "Zurück zur Startseite",
+      "labelToggle": "Menü umschalten"
+    }
+  },
+  "footer": {
+    "legal": "Impressum",
+    "privacy": "Datenschutz",
+    "themeToggle": {
+      "screenreaderTitle": "Wechsle zwischen Tag- und Nachtmodus",
+      "triggerTitle": "Wechsle zwischen Tag- und Nachtmodus",
+      "contentTitle": "dropdown menu für Tag- und Nachtmodus",
+      "footerText": "Wechsel das Theme"
+    },
+    "language": {
+      "en": "🇬🇧 Englisch",
+      "de": "🇩🇪 Deutsch",
+      "screenreaderTitle": "Ändere die Anzeigesprache",
+      "triggerTitle": "Ändere die Anzeigesprache",
+      "contentTitle": "dropdown menu für die Sprachauswahl"
+    }
+  },
+  "about": {
+    "greetingP1": "Hallo",
+    "greetingP2": "schön, dich kennenzulernen!",
+    "screenreaderTitle": "Über Manuel Fahrenholz",
+    "nameIntroP1": "Mein Name ist",
+    "nameIntroP2": "Schön, dich kennenzulernen!",
+    "ageP1": "Ich bin",
+    "ageP2": "Jahre alt und lebe in der wunderschönen Stadt",
+    "ageP3": "Köln, in Deutschland",
+    "jobP1": "Mein Weg als",
+    "jobP2": "begann im September 2022 am DCI Digital Career Institute, wo ich einen 12-monatigen",
+    "jobP3": "-Kurs absolvierte. Heute arbeite ich dort als",
+    "jobP4": "und teile mein Wissen mit der nächsten Entwicklergeneration.",
+    "care": "Mit einem Hintergrund in der Pflege ist es für mich selbstverständlich, Menschen zu helfen – ich möchte Apps entwickeln, die echte Unterstützung bieten, selbst im Kleinen.",
+    "hobbies": "Abseits der Arbeit liebe ich Gaming, das Lesen (oder Hören) von Büchern, Serien und Filme zu bingen und gelegentlich einfach zum Spaß zu kritzeln.",
+    "cta": "Du willst mehr wissen? Dann schau dir gerne meinen Lebenslauf, GitHub oder LinkedIn an – oder schick mir einfach eine Nachricht über das Kontaktformular!",
+    "closingP1": "Ich freue mich darauf, mehr über DICH zu erfahren!",
+    "closingP2": "Liebe Grüße,",
+    "signature": "Manuel",
+    "cvButton": "Lebenslauf",
+    "contactButton": "Kontakt",
+    "imageAlt": "Profilbild von Manuel Fahrenholz"
+  },
+  "contact": {
+    "title": "Contact Me",
+    "form": {
+      "nameLabel": "Dein Name",
+      "namePlaceholder": "Gib deinen Namen ein",
+      "nameDescription": "Bitte gib deinen vollständigen Namen ein",
+      "nameRequired": "Name ist erforderlich",
+      "emailLabel": "Deine E-Mail",
+      "emailPlaceholder": "Gib deine E-Mail ein",
+      "emailDescription": "Ich werde deine E-Mail niemals mit jemandem teilen.",
+      "emailRequired": "E-Mail ist erforderlich",
+      "messageLabel": "Deine Nachricht",
+      "messagePlaceholder": "Gib deine Nachricht ein",
+      "messageDescription": "Schick mir dein Feedback, deine Fragen oder sag einfach Hallo!",
+      "messageRequired": "Nachricht ist erforderlich",
+      "submitLabel": "Abschicken",
+      "submitLabelAlt": "Senden..."
+    },
+    "successMessage": "Danke für deine Nachricht! Ich werde mich so schnell wie möglich bei dir melden.",
+    "toastSuccess": "-Mail wurde erfolgreich gesendet!",
+    "toastError": "Fehler beim Senden der E-Mail. Bitte versuche es später noch einmal."
+  },
+  "contactAbout": {
+    "title": "Profil Zusammenfassung",
+    "proffessionTitle": "Fachrichtung",
+    "proffessionDescription": "Fullstack Web Developer",
+    "currentJobTitle": "Aktuelle Position",
+    "currentJobDescription": "Jr WebDev Lehrer",
+    "locationTitle": "Standort",
+    "locationDescription": "Köln, Deutschland",
+    "cvButton": "Lebenslauf",
+    "contactButton": "Kontakt",
+    "imageAlt": "Profilbild von Manuel Fahrenholz",
+    "a11y": {
+      "labelledByContactAbout": "steckbrief"
+    }
+  },
+  "projects": {
+    "redacted": {
+      "title": "< REDACTED /> kommt bald™ 👀",
+      "description": "< REDACTED />"
+    },
+    "bookNook": {
+      "title": "bookNook",
+      "description": "Eine Buchverwaltungs‑App, mit der du deinen bestehenden Bücherkatalog organisierst, festhältst, was du gerade liest – inklusive Seiten‑Tracking – und planst, was du als Nächstes lesen willst. Wenn du magst, setzt du dir sogar eine kleine Lese‑Challenge! < Hinweis: Das Backend läuft auf der render(dot)com Free‑Tier. Es kann daher manchmal eine Minute dauern, bis es aufwacht; hab bitte etwas Geduld. Sobald es wach ist, läuft alles butterweich 😉! Dieses Projekt entstand als unser Abschluss‑Gruppenprojekt während der Web‑Development‑Ausbildung am DCI Digital Career Institute. >"
+    },
+    "vetClinic": {
+      "title": "Überarbeitung der Tierarzt‑Homepage",
+      "description": "Mein Team und ich haben die Homepage einer Tierarztpraxis modernisiert, um ihr ein zeitgemäßes Design zu verleihen. < Hinweis: Dieses Projekt war unser Abschluss‑Gruppenprojekt im SPA‑Modul während der Ausbildung am DCI Digital Career Institute. >"
+    },
+    "studentNameGenerator": {
+      "title": "Zufälliger Schülernamengenerator",
+      "description": "Dieses kleine Tool habe ich während meiner Zeit am DCI Digital Career Institute entwickelt, um Lehrkräften das zufällige Auswählen einer Schülerin bzw. eines Schülers zu erleichtern (z. B. fürs Beantworten von Fragen oder Präsentieren von Lösungen). Es ist ein Herzensprojekt, das ich immer weiterpflege, wann immer ich Zeit finde. Ein Relaunch steht bald an – behalte es im Auge!"
+    }
+  }
+}

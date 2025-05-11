@@ -4,7 +4,7 @@ import { Card, CardContent, CardHeader } from '@/components/ui/card';
 
 export default function StackGrid() {
   return (
-    <div className="space-y-6 md:grid md:grid-cols-3 gap-4 auto-rows-fr">
+    <div className="space-y-6 lg:grid lg:grid-cols-3 gap-4 auto-rows-fr">
       {Object.entries(stack).map(([category, tools]) => (
         <Card key={category} className="flex flex-col p-4 h-full">
           <CardHeader>

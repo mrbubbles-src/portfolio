@@ -1,11 +1,15 @@
 import Link from 'next/link';
-
+export const metadata = {
+  title: '404 | Page Not Found',
+  description:
+    'Oops, this page got lost in the JavaScript void. Maybe it&apos;s in another branch?',
+};
 export default function NotFound() {
   return (
     <div
       role="alert"
       aria-live="polite"
-      className="min-h-screen flex flex-col justify-center items-center text-center px-4">
+      className="min-h-screen flex flex-col justify-center items-center text-center px-4 ">
       <h1 className="text-9xl font-bold mb-4 text-destructive">404</h1>
       <p className="text-2xl mb-6 max-w-md text-muted-foreground">
         Oops, this page got lost in the JavaScript void. Maybe it&apos;s in
