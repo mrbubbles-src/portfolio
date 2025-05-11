@@ -7,6 +7,7 @@ import { Toaster } from '@/components/ui/sonner';
 import { i18n, Locale } from '@/i18n-config';
 import { getDictionary } from '@/get-digtionary';
 import '@/app/globals.css';
+import { InputModalityTracker } from '@/components/modailty-hack';
 
 const montserrat = Montserrat({
   variable: '--font-montserrat',
@@ -68,7 +69,7 @@ export default async function RootLayout(props: {
   return (
     <html
       lang={params.lang}
-      className="dark scroll-smooth"
+      className="dark scroll-smooth mouse-mode"
       suppressHydrationWarning>
       <head>
         <link rel="canonical" href="https://mrbubbles-src.dev" />
@@ -96,6 +97,7 @@ export default async function RootLayout(props: {
           defaultTheme="dark"
           enableSystem
           disableTransitionOnChange>
+          <InputModalityTracker />
           <Navbar dictionary={dictionary.navbar} lang={lang} />
           <main
             id="main-content"
