@@ -1,4 +1,6 @@
-const CurriculumVitae = ({ lang }: { lang: string }) => {
+import { Locale } from '@/i18n-config';
+
+const CurriculumVitae = ({ lang }: { lang: Locale }) => {
   return (
     <div className="rounded shadow overflow-hidden w-full mx-auto">
       <figure>
