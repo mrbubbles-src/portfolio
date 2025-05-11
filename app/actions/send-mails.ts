@@ -11,15 +11,108 @@ export async function sendEmail(formData: FormData) {
 
   try {
     const res = await resend.emails.send({
-      from: 'Portfolio Contact <contact@contact.mrbubbles-src.dev>',
-      to: 'contact@mrbubbles-src.dev',
+      from: 'Manuel Fahrenholz <contact@contact.mrbubbles-src.dev>',
+      to: 'manuel_fahrenholz@web.de',
+      bcc: 'contact@mrbubbles-src.dev',
       subject: `New message from ${name}`,
       replyTo: email,
       text: message,
+      html: `
+  <div
+  style="
+    font-family: 'Montserrat', sans-serif;
+    background-color: #14121a;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  ">
+  <table
+    width="100%"
+    cellpadding="0"
+    cellspacing="0"
+    border="0"
+    style="background-color: #14121a; width: 100%">
+    <tr>
+      <td align="center">
+        <table
+          width="100%"
+          cellpadding="0"
+          cellspacing="0"
+          border="0"
+          style="max-width: 1200px; padding: 64px 24px">
+          <tr>
+            <td
+              style="
+                background-color: #18181b;
+                padding: 48px;
+                border-radius: 16px;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+                text-align: center;
+              ">
+              <img
+                src="https://www.mrbubbles-src.dev/logo-og.png"
+                alt="mrbubbles-src logo"
+                width="280"
+                height="auto"
+                style="display: block; margin: 0 auto 48px auto" />
+              <h2
+                style="
+                  font-size: 36px;
+                  font-weight: 800;
+                  color: #efb100;
+                  margin-bottom: 24px;
+                ">
+                New message from:
+                <br />
+                ${name}
+              </h2>
+              <hr
+                style="
+                  border: none;
+                  border-top: 1px solid #333;
+                  margin: 36px 0;
+                " />
+              <p
+                style="
+                  font-size: 22px;
+                  color: #e5e5e5;
+                  line-height: 1.6;
+                  margin-bottom: 36px;
+                ">
+                Sender E-mail:
+                <br />
+                ${email}
+              </p>
+              <hr
+                style="
+                  border: none;
+                  border-top: 1px solid #333;
+                  margin: 36px 0;
+                " />
+              <p
+                style="
+                  font-size: 22px;
+                  color: #e5e5e5;
+                  line-height: 1.6;
+                  margin-bottom: 36px;
+                ">
+                SenderMessage:
+                <br />
+                ${message}
+              </p>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</div>
+
+`,
     });
 
     await resend.emails.send({
-      from: 'Portfolio Contact <contact@contact.mrbubbles-src.dev>',
+      from: 'Manuel Fahrenholz <contact@contact.mrbubbles-src.dev>',
       to: email,
       subject: 'Thanks for your message! 📨',
       text: `Hi ${name},
@@ -120,8 +213,8 @@ Manuel Fahrenholz`,
                 <img
                   src="https://www.mrbubbles-src.dev/srcicon.png"
                   alt=""
-                  width="40"
-                  height="40"
+                  width="30"
+                  height="30"
                   style="vertical-align: middle; margin-right: 2px" />
                 Visit My Portfolio
               </a>
