@@ -5,7 +5,7 @@ import { Locale } from '@/i18n-config';
 export default async function CurriculumVitaePage(props: {
   params: Promise<{ lang: Locale }>;
 }) {
-  const { lang } = await props.params;
+  const params = await props.params;
 
   return (
     <div className="w-full max-w-screen-xl mx-auto py-12 px-4 space-y-6">
@@ -15,13 +15,13 @@ export default async function CurriculumVitaePage(props: {
       <div className="flex justify-center">
         <Button asChild size={'lg'} className="w-full max-w-[10rem]">
           <a
-            href={`${process.env.NEXT_PUBLIC_APP_URL}/cv_manuel_fahrenholz_${lang}_download.pdf`}
+            href={`${process.env.NEXT_PUBLIC_APP_URL}/cv_manuel_fahrenholz_${params.lang}_download.pdf`}
             download>
             Download PDF
           </a>
         </Button>
       </div>
-      <CurriculumVitae lang={lang} />
+      <CurriculumVitae lang={params.lang} />
     </div>
   );
 }
