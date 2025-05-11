@@ -72,7 +72,7 @@
     "screenreaderTitle": "About Manuel Fahrenholz",
     "nameIntroP1": "My name is",
     "nameIntroP2": "Nice to meet you!",
-    "ageP1": "I&apos;m",
+    "ageP1": "I'm",
     "ageP2": "years old and live in the b-e-a-utiful city of",
     "ageP3": "Cologne, Germany",
     "jobP1": "My journey as a",
@@ -82,7 +82,7 @@
     "care": "With a background in caregiving, helping people is second nature — I aim to build apps that offer real support, even in small ways.",
     "hobbies": "Outside of work, I LOVE gaming, reading (or listening to) books, binge-watching shows & movies, and occasionally doodling just for fun.",
     "cta": "Want to know more? Feel free to check out my CV, GitHub, or LinkedIn — or just send me a message via the contact form!",
-    "closingP1": "Can&apos;t wait to hear more about YOU!",
+    "closingP1": "Can't wait to hear more about YOU!",
     "closingP2": "Best,",
     "signature": "Manuel",
     "cvButton": "See my journey",
@@ -107,7 +107,7 @@
       "submitLabel": "Send Message",
       "submitLabelAlt": "Sending..."
     },
-    "successMessage": "Thank you for your message! I&apos;ll get back to you as soon as possible.",
+    "successMessage": "Thank you for your message! I'll get back to you as soon as possible.",
     "toastSuccess": "Email sent successfully!",
     "toastError": "Error sending email. Please try again later."
   },
