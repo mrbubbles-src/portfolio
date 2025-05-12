@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { getDictionary } from '@/get-digtionary';
+import ProfileImage from '@/public/profile.jpg';
 
 export default function About({
   dictionary,
@@ -34,13 +35,13 @@ export default function About({
     <Card className="shadow-md xl:flex xl:flex-row gap-1">
       <CardHeader className="w-full place-self-center flex flex-col">
         <Image
-          src="/profile.jpeg"
+          src={ProfileImage}
           alt={dictionary.imageAlt}
           width={400}
           height={400}
           placeholder="blur"
+          blurDataURL={ProfileImage.blurDataURL}
           className="rounded-lg shadow-md object-cover place-self-center"
-          priority
         />
         <div className="flex justify-center gap-4 mt-4 w-full grow">
           <Button asChild size={'lg'} className="w-full max-w-[10rem]">

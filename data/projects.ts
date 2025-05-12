@@ -1,3 +1,9 @@
+import Redacted from '@/public/screenshots/redacted.jpg';
+import BookNook from '@/public/screenshots/book-nook.jpg';
+import VetClinic from '@/public/screenshots/vet-clinic.png';
+import StudentNameGenerator from '@/public/screenshots/teacherbuddy.png';
+import { StaticImageData } from 'next/image';
+
 type ProjectKey =
   | 'redacted'
   | 'bookNook'
@@ -11,7 +17,7 @@ interface IProjects {
   tech: string[];
   github: string;
   live: string;
-  image: string;
+  image: StaticImageData;
 }
 const projects: Array<IProjects> = [
   {
@@ -21,7 +27,7 @@ const projects: Array<IProjects> = [
     tech: ['redacted.description'],
     github: 'https://github.com/',
     live: 'https://mrbubbles-src.dev',
-    image: '/screenshots/redacted.jpeg',
+    image: Redacted,
   },
   {
     key: 'bookNook',
@@ -31,7 +37,7 @@ const projects: Array<IProjects> = [
     github:
       'https://github.com/mrbubbles-src/dci-final-project-roomtwenty-booknook',
     live: 'https://roomtwenty-booknook.vercel.app/',
-    image: '/screenshots/book-nook.jpeg',
+    image: BookNook,
   },
   {
     key: 'vetClinic',
@@ -40,7 +46,7 @@ const projects: Array<IProjects> = [
     tech: ['React', 'SASS'],
     github: 'https://github.com/mrbubbles-src/spa-final-group-project',
     live: 'https://spa-final-group-project.vercel.app/',
-    image: '/screenshots/vet-clinic.png',
+    image: VetClinic,
   },
   {
     key: 'studentNameGenerator',
@@ -49,7 +55,7 @@ const projects: Array<IProjects> = [
     tech: ['JavaScript', 'React', 'SASS'],
     github: 'https://github.com/mrbubbles-src/teacherbuddy',
     live: 'https://random-student-name-generator.vercel.app/',
-    image: '/screenshots/teacherbuddy.png',
+    image: StudentNameGenerator,
   },
 ];
 

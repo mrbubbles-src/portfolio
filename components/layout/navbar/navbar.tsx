@@ -46,7 +46,7 @@ const Navbar = ({
               fill
               sizes="(max-width: 768px) 208px, 224px"
               alt="mrbubbles-src — Fullstack Web Developer Logo"
-              placeholder="blur"
+              priority
             />
           </div>
         </Link>
