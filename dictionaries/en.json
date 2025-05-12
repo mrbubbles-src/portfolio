@@ -109,7 +109,8 @@
     },
     "successMessage": "Thank you for your message! I'll get back to you as soon as possible.",
     "toastSuccess": "Email sent successfully!",
-    "toastError": "Error sending email. Please try again later."
+    "toastError": "Error sending email. Please try again later.",
+    "captchaMissing": "Please verify that you are not a robot."
   },
   "contactAbout": {
     "title": "Profile Summary",

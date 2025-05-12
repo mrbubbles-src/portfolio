@@ -1,6 +1,10 @@
 'use client';
 
 import { useForm } from 'react-hook-form';
+
+import { useState } from 'react';
+import Turnstile from 'react-turnstile';
+
 import {
   Form,
   FormControl,
@@ -16,43 +20,57 @@ import { Button } from '@/components/ui/button';
 import { toast } from 'sonner';
 import { sendEmail } from '@/app/actions/send-mails';
 import { getDictionary } from '@/get-digtionary';
+import { Locale } from '@/i18n-config';
 
 interface ContactFormValues {
   name: string;
   email: string;
   message: string;
+  website?: string;
 }
 
 export default function ContactForm({
   dictionary,
+  language,
 }: {
   dictionary: Awaited<ReturnType<typeof getDictionary>>['contact'];
+  language: Locale;
 }) {
+  const [captchaToken, setCaptchaToken] = useState('');
+
   const form = useForm<ContactFormValues>({
     defaultValues: {
       name: '',
       email: '',
       message: '',
+      website: '',
     },
   });
-
   const {
     handleSubmit,
     formState: { isSubmitting },
   } = form;
 
   async function onSubmit(values: ContactFormValues) {
+    if (!captchaToken) {
+      toast.error(
+        dictionary.captchaMissing || 'Captcha failed. Please try again.',
+      );
+      return;
+    }
     const formData = new FormData();
     formData.append('name', values.name);
     formData.append('email', values.email);
     formData.append('message', values.message);
+    formData.append('locale', language);
+    formData.append('captcha', captchaToken);
 
     const result = await sendEmail(formData);
 
     if (result?.success) {
-      toast.success('Email sent successfully!');
+      toast.success(dictionary.toastSuccess);
     } else {
-      toast.error('Email failed to send.');
+      toast.error(dictionary.toastError);
     }
   }
 
@@ -60,7 +78,7 @@ export default function ContactForm({
     <Form {...form}>
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className="grid gap-4 md:grid-cols-2 h-full">
+        className="grid gap-4 md:grid-cols-2 h-full text-pretty">
         <FormField
           control={form.control}
           name="name"
@@ -77,7 +95,7 @@ export default function ContactForm({
                   {...field}
                 />
               </FormControl>
-              <FormDescription>
+              <FormDescription className="min-h-[3rem]">
                 {dictionary.form.nameDescription}
               </FormDescription>
               <FormMessage />
@@ -102,7 +120,7 @@ export default function ContactForm({
                   {...field}
                 />
               </FormControl>
-              <FormDescription>
+              <FormDescription className="min-h-[3rem]">
                 {dictionary.form.emailDescription}
               </FormDescription>
               <FormMessage />
@@ -126,12 +144,21 @@ export default function ContactForm({
                   {...field}
                 />
               </FormControl>
-              <FormDescription>
+              <FormDescription className="min-h-[2rem]">
                 {dictionary.form.messageDescription}
               </FormDescription>
               <FormMessage />
             </FormItem>
           )}
+        />
+
+        <Turnstile
+          sitekey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY!}
+          onVerify={(token) => setCaptchaToken(token)}
+          onExpire={() => setCaptchaToken('')}
+          refreshExpired="auto"
+          fixedSize={true}
+          className="mb-4"
         />
 
         <Button
