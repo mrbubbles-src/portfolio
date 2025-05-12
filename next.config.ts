@@ -32,7 +32,7 @@ const nextConfig: NextConfig = {
           {
             key: 'Content-Security-Policy',
             value:
-              "default-src 'self'; img-src 'self' https: data:; script-src 'self' 'unsafe-inline' https://challenges.cloudflare.com https://vercel.live; style-src 'self' 'unsafe-inline'; frame-src 'self' https://challenges.cloudflare.com https://mrbubbles-src.dev chrome-extension: blob: data:;",
+              "default-src 'self'; img-src 'self' https: data:; script-src 'self' 'unsafe-inline' https://challenges.cloudflare.com https://vercel.live; style-src 'self' 'unsafe-inline'; frame-src 'self' https://challenges.cloudflare.com https://mrbubbles-src.dev https://www.mrbubbles-src.dev https://vercel.live chrome-extension: blob: data:;",
           },
           {
             key: 'Strict-Transport-Security',
