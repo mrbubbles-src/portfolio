@@ -26,7 +26,7 @@ interface ContactFormValues {
   name: string;
   email: string;
   message: string;
-  website?: string;
+  captcha: string;
 }
 
 export default function ContactForm({
@@ -43,12 +43,13 @@ export default function ContactForm({
       name: '',
       email: '',
       message: '',
-      website: '',
+      captcha: '',
     },
   });
   const {
     handleSubmit,
     formState: { isSubmitting },
+    reset,
   } = form;
 
   async function onSubmit(values: ContactFormValues) {
@@ -68,6 +69,8 @@ export default function ContactForm({
     const result = await sendEmail(formData);
 
     if (result?.success) {
+      reset();
+      setCaptchaToken('');
       toast.success(dictionary.toastSuccess);
     } else {
       toast.error(dictionary.toastError);
@@ -163,7 +166,7 @@ export default function ContactForm({
 
         <Button
           type="submit"
-          disabled={isSubmitting}
+          disabled={!captchaToken || isSubmitting}
           size="lg"
           aria-busy={isSubmitting}
           className="md:col-span-2 md:mx-0 w-full max-w-[10rem]">
