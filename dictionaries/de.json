@@ -106,7 +106,8 @@
     },
     "successMessage": "Danke für deine Nachricht! Ich werde mich so schnell wie möglich bei dir melden.",
     "toastSuccess": "-Mail wurde erfolgreich gesendet!",
-    "toastError": "Fehler beim Senden der E-Mail. Bitte versuche es später noch einmal."
+    "toastError": "Fehler beim Senden der E-Mail. Bitte versuche es später noch einmal.",
+    "captchaMissing": "Bitte bestätige, dass du kein Robot bist."
   },
   "contactAbout": {
     "title": "Profil Zusammenfassung",

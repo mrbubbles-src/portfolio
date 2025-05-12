@@ -73,12 +73,12 @@ export default async function Home(props: {
             </h2>
           </CardHeader>
           <CardContent className="h-full">
-            <ContactForm dictionary={dictionary.contact} />
+            <ContactForm language={lang} dictionary={dictionary.contact} />
           </CardContent>
         </Card>
         <Card className="w-full mt-4 xl:mt-0">
           <CardHeader>
-            <h2 className="text-3xl font-bold text-center xl:text-start xl:ml-6">
+            <h2 className="text-3xl font-bold text-center">
               {dictionary.landingPage.titleContactAbout}
             </h2>
           </CardHeader>
