@@ -78,7 +78,7 @@ export default function ContactForm({
     <Form {...form}>
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className="grid gap-4 md:grid-cols-2 h-full">
+        className="grid gap-4 md:grid-cols-2 h-full text-pretty">
         <FormField
           control={form.control}
           name="name"
@@ -95,7 +95,7 @@ export default function ContactForm({
                   {...field}
                 />
               </FormControl>
-              <FormDescription>
+              <FormDescription className="min-h-[3rem]">
                 {dictionary.form.nameDescription}
               </FormDescription>
               <FormMessage />
@@ -120,7 +120,7 @@ export default function ContactForm({
                   {...field}
                 />
               </FormControl>
-              <FormDescription>
+              <FormDescription className="min-h-[3rem]">
                 {dictionary.form.emailDescription}
               </FormDescription>
               <FormMessage />
@@ -144,7 +144,7 @@ export default function ContactForm({
                   {...field}
                 />
               </FormControl>
-              <FormDescription>
+              <FormDescription className="min-h-[2rem]">
                 {dictionary.form.messageDescription}
               </FormDescription>
               <FormMessage />
@@ -158,7 +158,7 @@ export default function ContactForm({
           onExpire={() => setCaptchaToken('')}
           refreshExpired="auto"
           fixedSize={true}
-          className="my-4"
+          className="mb-4"
         />
 
         <Button
