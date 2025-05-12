@@ -73,7 +73,7 @@ export default async function Home(props: {
             </h2>
           </CardHeader>
           <CardContent className="h-full">
-            <ContactForm dictionary={dictionary.contact} />
+            <ContactForm language={lang} dictionary={dictionary.contact} />
           </CardContent>
         </Card>
         <Card className="w-full mt-4 xl:mt-0">

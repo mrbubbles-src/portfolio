@@ -16,6 +16,7 @@ import { Button } from '@/components/ui/button';
 import { toast } from 'sonner';
 import { sendEmail } from '@/app/actions/send-mails';
 import { getDictionary } from '@/get-digtionary';
+import { Locale } from '@/i18n-config';
 
 interface ContactFormValues {
   name: string;
@@ -25,8 +26,10 @@ interface ContactFormValues {
 
 export default function ContactForm({
   dictionary,
+  language,
 }: {
   dictionary: Awaited<ReturnType<typeof getDictionary>>['contact'];
+  language: Locale;
 }) {
   const form = useForm<ContactFormValues>({
     defaultValues: {
@@ -35,7 +38,6 @@ export default function ContactForm({
       message: '',
     },
   });
-
   const {
     handleSubmit,
     formState: { isSubmitting },
@@ -46,13 +48,14 @@ export default function ContactForm({
     formData.append('name', values.name);
     formData.append('email', values.email);
     formData.append('message', values.message);
+    formData.append('locale', language);
 
     const result = await sendEmail(formData);
 
     if (result?.success) {
-      toast.success('Email sent successfully!');
+      toast.success(dictionary.toastSuccess);
     } else {
-      toast.error('Email failed to send.');
+      toast.error(dictionary.toastError);
     }
   }
 
