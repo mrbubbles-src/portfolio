@@ -107,6 +107,30 @@ export default function PrivacyPolicyPage() {
         <h2 className="text-2xl font-semibold mt-8">5. Plugins und Tools</h2>
         <ul className="list-disc list-inside">
           <li>Google Fonts (lokal eingebunden)</li>
+          <li>
+            Cloudflare Turnstile (Spam‑Schutz, Datenverarbeitung innerhalb der
+            EU)
+          </li>
+          <p className="mt-2">
+            Bei Verwendung des Kontaktformulars setzen wir{' '}
+            <strong>Cloudflare&nbsp;Turnstile</strong>
+            ein. Turnstile überprüft anhand von IP‑Adresse, Header‑Informationen
+            und ggf.&nbsp;Maus‑bewegungen, ob die Eingabe von einem Menschen
+            stammt. Die Daten werden an Cloudflare‑Server innerhalb der EU
+            übertragen und dort maximal&nbsp;24&nbsp;Stunden gespeichert, um
+            Missbrauch zu verhindern. Rechtsgrundlage ist
+            Art.&nbsp;6&nbsp;Abs.&nbsp;1&nbsp;lit.&nbsp;f DSGVO (berechtigtes
+            Interesse an der Sicherheit und Funktionsfähigkeit dieser Website).
+            Weitere Informationen:{' '}
+            <a
+              href="https://developers.cloudflare.com/turnstile/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline">
+              developers.cloudflare.com/turnstile
+            </a>
+            .
+          </p>
           <li>Font Awesome (lokal eingebunden)</li>
         </ul>
 
@@ -228,6 +252,28 @@ export default function PrivacyPolicyPage() {
         <h2 className="text-2xl font-semibold mt-8">5. Plugins and Tools</h2>
         <ul className="list-disc list-inside">
           <li>Google Fonts (self-hosted)</li>
+          <li>
+            Cloudflare Turnstile (spam protection, processed within the EU)
+          </li>
+          <p className="mt-2">
+            When the contact form is used we leverage{' '}
+            <strong>Cloudflare&nbsp;Turnstile</strong>. Turnstile checks, based
+            on IP address, request headers and optionally mouse movements,
+            whether the input comes from a human. These data are sent to
+            Cloudflare servers within the EU and stored for up
+            to&nbsp;24&nbsp;hours to prevent abuse. Processing is based on
+            Art.&nbsp;6&nbsp;(1)&nbsp;f GDPR (legitimate interest in the
+            security and proper functioning of this website). More
+            details:&nbsp;
+            <a
+              href="https://developers.cloudflare.com/turnstile/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline">
+              developers.cloudflare.com/turnstile
+            </a>
+            .
+          </p>
           <li>Font Awesome (self-hosted)</li>
         </ul>
 
