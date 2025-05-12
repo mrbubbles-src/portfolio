@@ -1,6 +1,8 @@
 import CurriculumVitae from '@/components/layout/curriculum-vitae/curriculum-vitae';
+import CurriculumVitaeSkeleton from '@/components/layout/curriculum-vitae/curriculum-vitae-skeleton';
 import { Button } from '@/components/ui/button';
 import { Locale } from '@/i18n-config';
+import { Suspense } from 'react';
 
 export default async function CurriculumVitaePage(props: {
   params: Promise<{ lang: Locale }>;
@@ -21,7 +23,9 @@ export default async function CurriculumVitaePage(props: {
           </a>
         </Button>
       </div>
-      <CurriculumVitae lang={params.lang} />
+      <Suspense fallback={<CurriculumVitaeSkeleton />}>
+        <CurriculumVitae lang={params.lang} />
+      </Suspense>
     </div>
   );
 }
