@@ -18,6 +18,7 @@ export default function ContactAbout({
           alt={dictionary.imageAlt}
           width={400}
           height={400}
+          placeholder="blur"
           className="rounded-lg shadow-md object-cover"
           priority
         />
