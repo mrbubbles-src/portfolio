@@ -10,12 +10,13 @@ import { Button } from '@/components/ui/button';
 import ProjectImage from '@/components/layout/projects/project-image';
 import { Badge } from '@/components/ui/badge';
 import { title } from 'process';
+import { StaticImageData } from 'next/image';
 
 interface IProjectCardProps {
   tech: string[];
   github: string;
   live: string;
-  image: string;
+  image: StaticImageData;
 }
 type ProjectTranslation = { title: string; description: string };
 
