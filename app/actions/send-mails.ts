@@ -57,7 +57,10 @@ export async function sendEmail(formData: FormData) {
       from: 'Manuel Fahrenholz <contact@mrbubbles-src.dev>',
       to: email,
       replyTo: 'contact@mrbubbles-src.dev',
-      subject: 'Thanks for your message! 📨',
+      subject:
+        locale === 'de'
+          ? 'Danke für deine Nachricht! 📨'
+          : 'Thanks for your message! 📨',
       text: autoReplyText.plainText,
       html: autoReplyText.autoReply,
     });
