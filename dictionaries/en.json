@@ -96,10 +96,10 @@
       "namePlaceholder": "Enter your name",
       "nameDescription": "Please enter your full name",
       "nameRequired": "Name is required",
-      "emailLabel": "Your Email",
-      "emailPlaceholder": "Enter your email",
-      "emailDescription": "We'll never share your email with anyone else.",
-      "emailRequired": "Email is required",
+      "emailLabel": "Your E-mail",
+      "emailPlaceholder": "Enter your e-mail",
+      "emailDescription": "We'll never share your e-mail with anyone else.",
+      "emailRequired": "E-mail is required",
       "messageLabel": "Your Message",
       "messagePlaceholder": "Enter your message",
       "messageDescription": "Feel free to share feedback, questions, or just say hi!",
@@ -108,8 +108,8 @@
       "submitLabelAlt": "Sending..."
     },
     "successMessage": "Thank you for your message! I'll get back to you as soon as possible.",
-    "toastSuccess": "Email sent successfully!",
-    "toastError": "Error sending email. Please try again later.",
+    "toastSuccess": "E-mail sent successfully!",
+    "toastError": "Error sending e-mail. Please try again later.",
     "captchaMissing": "Please verify that you are not a robot."
   },
   "contactAbout": {
