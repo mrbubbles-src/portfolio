@@ -100,6 +100,11 @@ export default function PrivacyPolicyPage() {
         <h2 className="text-2xl font-semibold mt-8">4. Datenerfassung</h2>
         <ul className="list-disc list-inside">
           <li>Cookies: lokal gesetzt, kein Drittanbieter-Zugriff</li>
+          <li>
+            Lokaler&nbsp;/&nbsp;Session&nbsp;Storage: Theme-Einstellung
+            (Hell / Dunkel) sowie temporäre Cloudflare‑Turnstile&nbsp;Tokens
+            (werden nach dem Seitenwechsel automatisch gelöscht)
+          </li>
           <li>Server-Logs: IP-Adresse, Browser, Referrer etc.</li>
           <li>Kontaktformular: Datenverarbeitung nur mit Einwilligung</li>
         </ul>
@@ -244,7 +249,12 @@ export default function PrivacyPolicyPage() {
 
         <h2 className="text-2xl font-semibold mt-8">4. Data Collection</h2>
         <ul className="list-disc list-inside">
-          <li>Cookies: locally stored, no third-party access</li>
+          <li>Cookies: locally stored, no third‑party access</li>
+          <li>
+            Local&nbsp;/&nbsp;session storage: theme preference (light / dark)
+            and temporary Cloudflare Turnstile tokens (automatically cleared
+            after navigation)
+          </li>
           <li>Server logs: IP address, browser type, referrer, etc.</li>
           <li>Contact form: data processing only with consent</li>
         </ul>
