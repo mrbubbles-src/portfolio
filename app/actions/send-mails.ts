@@ -15,6 +15,27 @@ const transporter = nodemailer.createTransport({
 });
 
 export async function sendEmail(formData: FormData) {
+  const captcha = formData.get('captcha');
+
+  if (!captcha) {
+    console.warn('🚫 No Turnstile token provided.');
+    return { success: false, error: 'Missing captcha.' };
+  }
+
+  const verifyRes = await fetch(
+    'https://challenges.cloudflare.com/turnstile/v0/siteverify',
+    {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: `secret=${process.env.TURNSTILE_SECRET_KEY}&response=${captcha}`,
+    },
+  );
+
+  const { success: captchaSuccess } = await verifyRes.json();
+  if (!captchaSuccess) {
+    console.warn('⛔ Turnstile verification failed.');
+    return { success: false, error: 'Captcha failed.' };
+  }
   const name = formData.get('name') as string;
   const email = formData.get('email') as string;
   const message = formData.get('message') as string;

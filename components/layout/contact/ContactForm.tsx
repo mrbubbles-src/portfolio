@@ -1,6 +1,10 @@
 'use client';
 
 import { useForm } from 'react-hook-form';
+
+import { useState } from 'react';
+import Turnstile from 'react-turnstile';
+
 import {
   Form,
   FormControl,
@@ -22,6 +26,7 @@ interface ContactFormValues {
   name: string;
   email: string;
   message: string;
+  website?: string;
 }
 
 export default function ContactForm({
@@ -31,11 +36,14 @@ export default function ContactForm({
   dictionary: Awaited<ReturnType<typeof getDictionary>>['contact'];
   language: Locale;
 }) {
+  const [captchaToken, setCaptchaToken] = useState('');
+
   const form = useForm<ContactFormValues>({
     defaultValues: {
       name: '',
       email: '',
       message: '',
+      website: '',
     },
   });
   const {
@@ -44,11 +52,18 @@ export default function ContactForm({
   } = form;
 
   async function onSubmit(values: ContactFormValues) {
+    if (!captchaToken) {
+      toast.error(
+        dictionary.captchaMissing || 'Captcha failed. Please try again.',
+      );
+      return;
+    }
     const formData = new FormData();
     formData.append('name', values.name);
     formData.append('email', values.email);
     formData.append('message', values.message);
     formData.append('locale', language);
+    formData.append('captcha', captchaToken);
 
     const result = await sendEmail(formData);
 
@@ -135,6 +150,15 @@ export default function ContactForm({
               <FormMessage />
             </FormItem>
           )}
+        />
+
+        <Turnstile
+          sitekey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY!}
+          onVerify={(token) => setCaptchaToken(token)}
+          onExpire={() => setCaptchaToken('')}
+          refreshExpired="auto"
+          fixedSize={true}
+          className="my-4"
         />
 
         <Button
