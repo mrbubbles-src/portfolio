@@ -3,43 +3,58 @@
 import { ChevronUp } from 'lucide-react';
 import { Button } from '../ui/button';
 import { useState, useEffect } from 'react';
+import { usePathname } from 'next/navigation';
 
 const ScrollToTop = () => {
   const [isVisible, setIsVisible] = useState(false);
-  const [threshold, setThreshold] = useState(300);
+  const [shouldBounce, setShouldBounce] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
-    const updateThreshold = () => {
-      if (window.matchMedia('(max-width: 425px)').matches) {
-        setThreshold(1625);
-      } else if (window.matchMedia('(max-width: 768px)').matches) {
-        setThreshold(1365);
-      } else {
-        setThreshold(734);
-      }
+    const startObserver = () => {
+      const sentinel = document.querySelector('#scroll‑sentinel');
+      if (!sentinel) return;
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (!entry.isIntersecting) {
+              setIsVisible(true);
+              setShouldBounce(true);
+            } else {
+              setIsVisible(false);
+            }
+          });
+        },
+        {
+          root: null,
+          threshold: 0,
+          rootMargin: '400px 0px 0px 0px',
+        },
+      );
+
+      const delay = window.location.hash.length > 1 ? 500 : 100;
+      const timerId = setTimeout(() => observer.observe(sentinel), delay);
+
+      return () => {
+        clearTimeout(timerId);
+        observer.disconnect();
+      };
     };
-    updateThreshold();
 
-    window.addEventListener('resize', updateThreshold);
+    const cleanup = startObserver();
 
-    return () => window.removeEventListener('resize', updateThreshold);
-  }, []);
+    return () => {
+      if (typeof cleanup === 'function') cleanup();
+    };
+  }, [pathname]);
 
   useEffect(() => {
-    const handleVisibility = () => {
-      const scrollPosition = window.scrollY;
-
-      if (scrollPosition > threshold) {
-        setIsVisible(true);
-      } else {
-        setIsVisible(false);
-      }
-    };
-
-    window.addEventListener('scroll', handleVisibility);
-
-    return () => window.removeEventListener('scroll', handleVisibility);
-  }, [threshold]);
+    if (shouldBounce) {
+      const bounceTimer = setTimeout(() => setShouldBounce(false), 2511);
+      return () => clearTimeout(bounceTimer);
+    }
+  }, [shouldBounce]);
 
   const handleScroll = () => {
     return document.documentElement.scrollTo({
@@ -49,20 +64,23 @@ const ScrollToTop = () => {
     });
   };
 
+  if (!isVisible) return null;
+
   return (
-    isVisible && (
-      <Button
-        variant={'default'}
-        size={'icon'}
-        className="fixed bottom-4 right-4 z-50 rounded-full shadow-md transition-all bg-primary/50 duration-300 ease-in-out hover:bg-primary p-6"
-        onClick={handleScroll}
-        id="scroll-to-top"
-        aria-label="Scroll to top"
-        title="Scroll to top">
-        <ChevronUp className="size-8" />
-      </Button>
-    )
+    <Button
+      id="scroll-to-top"
+      aria-label="Scroll to top"
+      title="Scroll to top"
+      variant={'default'}
+      size={'icon'}
+      className={`fixed bottom-4 right-4 z-50 rounded-full transition-all duration-300 ease-in-out bg-primary/50 hover:bg-primary p-6 ${shouldBounce ? 'animate-bounce shadow-md shadow-destructive' : 'shadow-md'} ${
+        isVisible ? 'opacity-100 visible' : 'opacity-0 invisible'
+      }`}
+      onClick={handleScroll}>
+      <ChevronUp className="size-8" />
+    </Button>
   );
 };
 
 export default ScrollToTop;
+export { ScrollToTop };
