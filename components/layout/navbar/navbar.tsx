@@ -14,6 +14,8 @@ import { useState } from 'react';
 import { getDictionary } from '@/get-digtionary';
 import LocaleSwitcher from '@/components/ui/locale-switcher';
 import { Locale } from '@/i18n-config';
+import { handleScroll } from '@/lib/utils';
+import { usePathname, useRouter } from 'next/navigation';
 
 const Navbar = ({
   dictionary,
@@ -22,6 +24,8 @@ const Navbar = ({
   dictionary: Awaited<ReturnType<typeof getDictionary>>['navbar'];
   lang: Locale;
 }) => {
+  const pathname = usePathname();
+  const router = useRouter();
   const [menuOpen, setMenuOpen] = useState(false);
   const navItems = [
     { href: `/${lang}/#about`, label: dictionary.about },
@@ -33,11 +37,26 @@ const Navbar = ({
       label: dictionary.cv,
     },
   ];
+
+  const handleLogoClick = (
+    e: React.MouseEvent<HTMLAnchorElement, MouseEvent>,
+  ) => {
+    if (pathname === `/${lang}`) {
+      e.preventDefault();
+      if (window.location.hash) {
+        router.replace(`/${lang}`, { scroll: false });
+      }
+      handleScroll();
+    }
+    setMenuOpen(false);
+  };
+
   return (
     <header className="sticky top-0 z-50 bg-background/90 backdrop-blur border-b shadow-md">
       <nav className="container mx-auto max-w-7xl px-4 py-4 flex justify-between items-center text-xl transition-all duration-300 ease-in-out">
         <Link
           href={`/${lang}`}
+          onClick={handleLogoClick}
           className="text-xl font-bold text-primary"
           aria-label={dictionary.a11y.labelBack}>
           <div className="relative h-12 w-52 md:h-14 md:w-56">
@@ -94,6 +113,7 @@ const Navbar = ({
                   key={href}
                   href={href}
                   tabIndex={menuOpen ? 0 : -1}
+                  onClick={() => setMenuOpen(false)}
                   className="hover:text-primary transition-all duration-300 ease-in-out hover:underline underline-offset-4 font-semibold active:scale-95">
                   {label}
                 </Link>
