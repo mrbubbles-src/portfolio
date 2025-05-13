@@ -93,13 +93,16 @@ export default async function RootLayout(props: {
       </head>
       <body
         className={`${montserrat.variable} bg-background text-foreground min-h-screen antialiased`}>
+        <div
+          id="scroll‑sentinel"
+          className="absolute top-0 left-0 w-[1px] h-[1px]"
+          aria-hidden="true"></div>
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
           enableSystem
           disableTransitionOnChange>
           <InputModalityTracker />
-          <ScrollToTop />
           <Navbar dictionary={dictionary.navbar} lang={lang} />
           <main
             id="main-content"
@@ -107,6 +110,7 @@ export default async function RootLayout(props: {
             {children}
           </main>
           <Footer dictionary={dictionary.footer} />
+          <ScrollToTop />
           <Toaster richColors position="top-right" />
         </ThemeProvider>
       </body>
