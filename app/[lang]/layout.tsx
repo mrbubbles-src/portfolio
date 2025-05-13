@@ -8,6 +8,7 @@ import { i18n, Locale } from '@/i18n-config';
 import { getDictionary } from '@/get-digtionary';
 import '@/app/globals.css';
 import { InputModalityTracker } from '@/components/modailty-hack';
+import ScrollToTop from '@/components/utility/scroll-to-top';
 
 const montserrat = Montserrat({
   variable: '--font-montserrat',
@@ -98,6 +99,7 @@ export default async function RootLayout(props: {
           enableSystem
           disableTransitionOnChange>
           <InputModalityTracker />
+          <ScrollToTop />
           <Navbar dictionary={dictionary.navbar} lang={lang} />
           <main
             id="main-content"
