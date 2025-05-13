@@ -1,14 +1,30 @@
 'use client';
 
 import { ChevronUp } from 'lucide-react';
-import { Button } from '../ui/button';
+import { Button } from '@/components/ui/button';
 import { useState, useEffect } from 'react';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
+import { handleScroll } from '@/lib/utils';
+import { Locale } from '@/i18n-config';
 
-const ScrollToTop = () => {
+const ScrollToTop = ({ lang }: { lang: Locale }) => {
   const [isVisible, setIsVisible] = useState(false);
   const [shouldBounce, setShouldBounce] = useState(false);
+
   const pathname = usePathname();
+  const router = useRouter();
+
+  const handleNavigateToTop = (
+    e: React.MouseEvent<HTMLButtonElement, MouseEvent>,
+  ) => {
+    if (pathname === `/${lang}`) {
+      e.preventDefault();
+      if (window.location.hash) {
+        router.replace(`/${lang}`, { scroll: false });
+      }
+    }
+    handleScroll();
+  };
 
   useEffect(() => {
     const startObserver = () => {
@@ -56,14 +72,6 @@ const ScrollToTop = () => {
     }
   }, [shouldBounce]);
 
-  const handleScroll = () => {
-    return document.documentElement.scrollTo({
-      top: 0,
-      left: 0,
-      behavior: 'smooth',
-    });
-  };
-
   if (!isVisible) return null;
 
   return (
@@ -76,11 +84,10 @@ const ScrollToTop = () => {
       className={`fixed bottom-4 right-4 z-50 rounded-full transition-all duration-300 ease-in-out bg-primary/50 hover:bg-primary p-6 ${shouldBounce ? 'animate-bounce shadow-md shadow-destructive' : 'shadow-md'} ${
         isVisible ? 'opacity-100 visible' : 'opacity-0 invisible'
       }`}
-      onClick={handleScroll}>
+      onClick={handleNavigateToTop}>
       <ChevronUp className="size-8" />
     </Button>
   );
 };
 
 export default ScrollToTop;
-export { ScrollToTop };
