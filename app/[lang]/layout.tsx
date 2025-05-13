@@ -110,7 +110,7 @@ export default async function RootLayout(props: {
             {children}
           </main>
           <Footer dictionary={dictionary.footer} />
-          <ScrollToTop />
+          <ScrollToTop lang={lang} />
           <Toaster richColors position="top-right" />
         </ThemeProvider>
       </body>
