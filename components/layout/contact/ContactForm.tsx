@@ -161,7 +161,7 @@ export default function ContactForm({
           onExpire={() => setCaptchaToken('')}
           refreshExpired="auto"
           fixedSize={true}
-          className="mb-4"
+          className="mb-4 shadow-md dark:shadow-popover-foreground/5"
         />
 
         <Button
@@ -169,7 +169,7 @@ export default function ContactForm({
           disabled={!captchaToken || isSubmitting}
           size="lg"
           aria-busy={isSubmitting}
-          className="md:col-span-2 md:mx-0 w-full max-w-[10rem]">
+          className="md:col-span-2 md:mx-0 w-full max-w-[10rem] dark:shadow-popover-foreground/5">
           {isSubmitting
             ? `${dictionary.form.submitLabelAlt}`
             : `${dictionary.form.submitLabel}`}

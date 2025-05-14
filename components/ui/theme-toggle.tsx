@@ -35,20 +35,23 @@ export function ThemeToggle({
           <span className="sr-only">{dictionary.screenreaderTitle}</span>
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent align="end" title={dictionary.contentTitle}>
+      <DropdownMenuContent
+        align="end"
+        title={dictionary.contentTitle}
+        className="p-0">
         <DropdownMenuItem
           onClick={() => setTheme('light')}
-          className="cursor-pointer">
+          className="cursor-pointer p-4 w-full flex justify-center">
           Light
         </DropdownMenuItem>
         <DropdownMenuItem
           onClick={() => setTheme('dark')}
-          className="cursor-pointer">
+          className="cursor-pointer p-4 w-full flex justify-center">
           Dark
         </DropdownMenuItem>
         <DropdownMenuItem
           onClick={() => setTheme('system')}
-          className="cursor-pointer">
+          className="cursor-pointer p-4 w-full flex justify-center">
           System
         </DropdownMenuItem>
       </DropdownMenuContent>

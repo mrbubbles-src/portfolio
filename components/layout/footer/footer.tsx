@@ -21,7 +21,11 @@ const Footer = ({
       <span>{dictionary.themeToggle.footerText}</span>
     </aside>
     <aside className="flex gap-3 items-center justify-center lg:col-2 lg:row-start-1">
-      <Button asChild variant={'outline'} size={'lg'}>
+      <Button
+        asChild
+        variant={'outline'}
+        size={'lg'}
+        className="dark:shadow-popover-foreground/5">
         <a
           href="https://github.com/mrbubbles-src"
           target="_blank"
@@ -35,7 +39,11 @@ const Footer = ({
         </a>
       </Button>
       <span> | </span>
-      <Button asChild variant={'outline'} size={'lg'}>
+      <Button
+        asChild
+        variant={'outline'}
+        size={'lg'}
+        className="dark:shadow-popover-foreground/5">
         <a
           href="https://linkedin.com/in/manuel-fahrenholz"
           target="_blank"

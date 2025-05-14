@@ -40,7 +40,7 @@ export default function ProjectCard({
             role="listitem"
             variant={'default'}
             key={t}
-            className="px-3 py-1 rounded text-lg font-bold">
+            className="px-3 py-1 rounded text-lg font-bold dark:shadow-popover-foreground/5">
             {t}
           </Badge>
         ))}
