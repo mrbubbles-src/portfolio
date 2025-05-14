@@ -6,7 +6,9 @@ export default function StackGrid() {
   return (
     <div className="space-y-6 lg:grid lg:grid-cols-3 gap-4 auto-rows-fr">
       {Object.entries(stack).map(([category, tools]) => (
-        <Card key={category} className="flex flex-col p-4 h-full">
+        <Card
+          key={category}
+          className="flex flex-col p-4 h-full dark:shadow-popover-foreground/5">
           <CardHeader>
             <h3 className="text-2xl text-center font-semibold pt-1">
               {category}
@@ -20,7 +22,7 @@ export default function StackGrid() {
                 key={tool}
                 role="listitem"
                 variant="default"
-                className="font-semibold text-lg">
+                className="font-semibold text-lg dark:shadow-popover-foreground/5">
                 {tool}
               </Badge>
             ))}

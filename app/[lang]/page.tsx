@@ -76,7 +76,7 @@ export default async function Home(props: {
             <ContactForm language={lang} dictionary={dictionary.contact} />
           </CardContent>
         </Card>
-        <Card className="w-full mt-4 xl:mt-0">
+        <Card className="w-full mt-4 xl:mt-0 dark:shadow-popover-foreground/5">
           <CardHeader>
             <h2 className="text-3xl font-bold text-center">
               {dictionary.landingPage.titleContactAbout}
