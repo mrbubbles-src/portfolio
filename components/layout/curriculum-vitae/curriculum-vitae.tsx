@@ -10,6 +10,8 @@ import type { PDFDocumentProxy } from 'pdfjs-dist';
 import { Locale } from '@/i18n-config';
 import CurriculumVitaeSkeleton from './curriculum-vitae-skeleton';
 import { toast } from 'sonner';
+import { ChevronDown, ChevronUp } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 
 pdfjs.GlobalWorkerOptions.workerSrc = new URL(
   'pdfjs-dist/build/pdf.worker.min.mjs',
@@ -28,6 +30,41 @@ const maxWidth = 800;
 const CurriculumVitae = ({ lang }: { lang: Locale }) => {
   const [numPages, setNumPages] = useState<number>();
   const [isLoading, setIsLoading] = useState(true);
+
+  const [currentPage, setCurrentPage] = useState<number>(1);
+
+  const scrollToPage = (page: number) => {
+    const el = document.querySelector<HTMLElement>(
+      `[data-page-number="${page}"]`,
+    );
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
+  const gotoPrev = () => {
+    if (numPages && currentPage === 1) {
+      scrollToPage(numPages);
+      setCurrentPage(numPages);
+    } else if (currentPage > 1) {
+      const prev = currentPage - 1;
+      scrollToPage(prev);
+      setCurrentPage(prev);
+    }
+  };
+
+  const gotoNext = () => {
+    if (numPages) {
+      if (currentPage === numPages) {
+        scrollToPage(1);
+        setCurrentPage(1);
+      } else {
+        const next = currentPage + 1;
+        scrollToPage(next);
+        setCurrentPage(next);
+      }
+    }
+  };
 
   const [containerRef, setContainerRef] = useState<HTMLElement | null>(null);
   const [containerWidth, setContainerWidth] = useState<number>();
@@ -50,51 +87,76 @@ const CurriculumVitae = ({ lang }: { lang: Locale }) => {
   }
 
   return (
-    <div className="flex flex-col items-center my-2.5 p-2.5">
-      <div
-        className="w-full max-w-[calc(100%-2em)] my-4 relative"
-        ref={setContainerRef}>
-        {isLoading && <CurriculumVitaeSkeleton />}
-        <Document
-          className="flex flex-col items-center"
-          file={`/cv_manuel_fahrenholz_${lang}_view.pdf`}
-          onError={() => {
-            toast.error('Something went wrong, please try again later.');
-          }}
-          onLoadError={() => {
-            toast.error('Error loading PDF, please try again later.');
-          }}
-          onSourceError={() => {
-            toast.error('PDF was not found, please try again later.');
-          }}
-          onLoadSuccess={onDocumentLoadSuccess}
-          loading
-          options={options}>
-          {Array.from({ length: numPages ?? 0 }, (_, index) => (
-            <Page
-              key={`page_${index + 1}`}
-              className="my-4 shadow-xl dark:shadow-popover-foreground/10"
-              pageNumber={index + 1}
-              renderTextLayer={false}
-              renderAnnotationLayer={false}
-              loading
-              onError={() => {
-                toast.error('Something went wrong, please try again later.');
-              }}
-              onLoadError={() => {
-                toast.error('Error loading PDF, please try again later.');
-              }}
-              onRenderError={() => {
-                toast.error('Error rendering PDF, please try again later.');
-              }}
-              width={
-                containerWidth ? Math.min(containerWidth, maxWidth) : maxWidth
-              }
-            />
-          ))}
-        </Document>
+    <>
+      <div className="flex w-full flex-col items-center my-2.5 p-2.5">
+        <div
+          className="w-full max-w-[calc(100%-2em)] my-4 relative"
+          ref={setContainerRef}>
+          {isLoading && <CurriculumVitaeSkeleton />}
+
+          <Document
+            className="flex flex-col items-center"
+            file={`/cv_manuel_fahrenholz_${lang}_view.pdf`}
+            onError={() => {
+              toast.error('Something went wrong, please try again later.');
+            }}
+            onLoadError={() => {
+              toast.error('Error loading PDF, please try again later.');
+            }}
+            onSourceError={() => {
+              toast.error('PDF was not found, please try again later.');
+            }}
+            onLoadSuccess={onDocumentLoadSuccess}
+            loading
+            options={options}>
+            {Array.from({ length: numPages ?? 0 }, (_, index) => (
+              <div key={`page_${index + 1}`} className="relative my-4">
+                <Page
+                  pageNumber={index + 1}
+                  className="shadow-xl dark:shadow-popover-foreground/10 scroll-mt-24 xl:scroll-mt-32"
+                  renderTextLayer={false}
+                  renderAnnotationLayer={false}
+                  onError={() => {
+                    toast.error(
+                      'Something went wrong, please try again later.',
+                    );
+                  }}
+                  onLoadError={() => {
+                    toast.error('Error loading PDF, please try again later.');
+                  }}
+                  onRenderError={() => {
+                    toast.error('Error rendering PDF, please try again later.');
+                  }}
+                  width={
+                    containerWidth
+                      ? Math.min(containerWidth, maxWidth)
+                      : maxWidth
+                  }
+                />
+              </div>
+            ))}
+          </Document>
+          {!isLoading && numPages && (
+            <div className="fixed top-1/2 right-2 lg:right-15.5 xl:right-67.5 2xl:right-199.5 z-50 transform -translate-y-1/2 flex flex-col gap-2 opacity-25 hover:opacity-100 transition-all duration-300 ease-in-out">
+              <Button
+                asChild
+                size="icon"
+                onClick={gotoPrev}
+                className="rounded-t-full shadow-md dark:shadow-popover-foreground/10">
+                <ChevronUp className="size-12 stroke-[1.5]" />
+              </Button>
+              <Button
+                asChild
+                size="icon"
+                onClick={gotoNext}
+                className="rounded-b-full shadow-md dark:shadow-popover-foreground/10">
+                <ChevronDown className="size-12 stroke-[1.5]" />
+              </Button>
+            </div>
+          )}
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 
