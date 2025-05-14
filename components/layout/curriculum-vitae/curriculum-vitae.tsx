@@ -137,19 +137,19 @@ const CurriculumVitae = ({ lang }: { lang: Locale }) => {
             ))}
           </Document>
           {!isLoading && numPages && (
-            <div className="fixed top-1/2 right-2 lg:right-15.5 xl:right-67.5 2xl:right-199.5 z-50 transform -translate-y-1/2 flex flex-col gap-2 opacity-25 hover:opacity-100 transition-all duration-300 ease-in-out">
+            <div className="fixed bottom-10 left-1/2 -translate-x-1/2 z-50 transform  flex gap-2 opacity-25 hover:opacity-100 transition-all duration-300 ease-in-out">
               <Button
                 asChild
                 size="icon"
                 onClick={gotoPrev}
-                className="rounded-t-full shadow-md dark:shadow-popover-foreground/10">
+                className="rounded-full shadow-md dark:shadow-popover-foreground/10">
                 <ChevronUp className="size-12 stroke-[1.5]" />
               </Button>
               <Button
                 asChild
                 size="icon"
                 onClick={gotoNext}
-                className="rounded-b-full shadow-md dark:shadow-popover-foreground/10">
+                className="rounded-full shadow-md dark:shadow-popover-foreground/10">
                 <ChevronDown className="size-12 stroke-[1.5]" />
               </Button>
             </div>
