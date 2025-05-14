@@ -36,16 +36,21 @@ export default function LocaleSwitcher({
         <Button
           variant="outline"
           size={'icon'}
-          className="hover:text-primary transition-all duration-300 ease-in-out">
+          className="hover:text-primary transition-all duration-300 ease-in-out dark:shadow-popover-foreground/5">
           <span className="sr-only">{dictionary.screenreaderTitle}</span>
           <Globe className="h-[1.2rem] w-[1.2rem]" />
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent align="end" title={dictionary.contentTitle}>
+      <DropdownMenuContent
+        align="end"
+        title={dictionary.contentTitle}
+        className="p-0">
         {i18n.locales.map((locale) => {
           return (
-            <DropdownMenuItem key={locale}>
-              <Link href={redirectedPathname(locale)}>
+            <DropdownMenuItem key={locale} className="p-0">
+              <Link
+                href={redirectedPathname(locale)}
+                className="cursor-pointer p-4 w-full flex justify-center">
                 {locale === 'de' ? dictionary.de : dictionary.en}
               </Link>
             </DropdownMenuItem>

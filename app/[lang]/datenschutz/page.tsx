@@ -1,7 +1,7 @@
 export default function PrivacyPolicyPage() {
   return (
-    <main className="max-w-3xl mx-auto py-16 px-6 space-y-8">
-      <section>
+    <section className="w-full  mx-auto py-16 px-6 space-y-8 break-words overflow-hidden">
+      <article>
         <h1 className="text-3xl font-bold">Datenschutzerklärung</h1>
 
         <p>
@@ -144,16 +144,16 @@ export default function PrivacyPolicyPage() {
           Für rechtliche Details siehe auch die PDF-Version oder kontaktieren
           Sie mich direkt.
         </p>
-      </section>
+      </article>
       <div className="mt-16 text-center">
         <a
           href="/datenschutzerklaerung_www_mrbubbles_src_dev_de.pdf"
           download
-          className="inline-block px-6 py-3 bg-primary text-white font-medium rounded hover:bg-primary/90 transition">
+          className="block w-full text-center px-6 py-3 bg-primary text-white font-medium rounded hover:bg-primary/90 transition md:inline-block md:w-auto">
           Download der kompletten Datenschutzerklärung (PDF)
         </a>
       </div>
-      <section>
+      <article>
         <h2 className="text-3xl font-bold mt-20" id="privacy-policy-en">
           Privacy Policy (English)
         </h2>
@@ -292,15 +292,15 @@ export default function PrivacyPolicyPage() {
           original). For legal validity, please refer to the German version.
           Feel free to contact us for clarification.
         </p>
-      </section>
+      </article>
       <div className="mt-16 text-center">
         <a
           href="/datenschutzerklaerung_www_mrbubbles_src_dev_de.pdf"
           download
-          className="inline-block px-6 py-3 bg-primary text-white font-medium rounded hover:bg-primary/90 transition">
+          className="block w-full text-center px-6 py-3 bg-primary text-white font-medium rounded hover:bg-primary/90 transition md:inline-block md:w-auto">
           Download full privacy policy (PDF)
         </a>
       </div>
-    </main>
+    </section>
   );
 }

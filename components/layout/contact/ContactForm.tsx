@@ -93,7 +93,7 @@ export default function ContactForm({
               </FormLabel>
               <FormControl>
                 <Input
-                  className="w-full min-h-12 !text-lg font-semibold shadow-md"
+                  className="w-full min-h-12 !text-lg font-semibold shadow-md dark:shadow-popover-foreground/5"
                   placeholder={dictionary.form.namePlaceholder}
                   {...field}
                 />
@@ -118,7 +118,7 @@ export default function ContactForm({
               <FormControl>
                 <Input
                   type="email"
-                  className="w-full min-h-12 !text-lg font-semibold shadow-md"
+                  className="w-full min-h-12 !text-lg font-semibold shadow-md dark:shadow-popover-foreground/5"
                   placeholder={dictionary.form.emailPlaceholder}
                   {...field}
                 />
@@ -142,7 +142,7 @@ export default function ContactForm({
               </FormLabel>
               <FormControl>
                 <Textarea
-                  className="w-full min-h-[12rem] md:min-h-[22rem] !text-lg font-semibold shadow-md"
+                  className="w-full min-h-[12rem] md:min-h-[22rem] !text-lg font-semibold shadow-md dark:shadow-popover-foreground/5"
                   placeholder={dictionary.form.messagePlaceholder}
                   {...field}
                 />
@@ -161,7 +161,7 @@ export default function ContactForm({
           onExpire={() => setCaptchaToken('')}
           refreshExpired="auto"
           fixedSize={true}
-          className="mb-4"
+          className="mb-4 shadow-md dark:shadow-popover-foreground/5"
         />
 
         <Button
@@ -169,7 +169,7 @@ export default function ContactForm({
           disabled={!captchaToken || isSubmitting}
           size="lg"
           aria-busy={isSubmitting}
-          className="md:col-span-2 md:mx-0 w-full max-w-[10rem]">
+          className="md:col-span-2 md:mx-0 w-full max-w-[10rem] dark:shadow-popover-foreground/5">
           {isSubmitting
             ? `${dictionary.form.submitLabelAlt}`
             : `${dictionary.form.submitLabel}`}

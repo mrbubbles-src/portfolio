@@ -32,7 +32,7 @@ export default function About({
   const age = calculateAge(1988, 4, 16);
 
   return (
-    <Card className="shadow-md xl:flex xl:flex-row gap-1">
+    <Card className="shadow-md dark:shadow-popover-foreground/5 xl:flex xl:flex-row gap-1">
       <CardHeader className="w-full place-self-center flex flex-col">
         <Image
           src={ProfileImage}
@@ -41,10 +41,13 @@ export default function About({
           height={400}
           placeholder="blur"
           blurDataURL={ProfileImage.blurDataURL}
-          className="rounded-lg shadow-md object-cover place-self-center"
+          className="rounded-lg shadow-md dark:shadow-popover-foreground/5 object-cover place-self-center"
         />
         <div className="flex justify-center gap-4 mt-4 w-full grow">
-          <Button asChild size={'lg'} className="w-full max-w-[10rem]">
+          <Button
+            asChild
+            size={'lg'}
+            className="w-full max-w-[10rem] dark:shadow-popover-foreground/5">
             <a
               href="https://github.com/mrbubbles-src"
               target="_blank"
@@ -55,7 +58,10 @@ export default function About({
               GitHub
             </a>
           </Button>
-          <Button asChild size={'lg'} className="w-full max-w-[10rem]">
+          <Button
+            asChild
+            size={'lg'}
+            className="w-full max-w-[10rem] dark:shadow-popover-foreground/5">
             <a
               href="https://linkedin.com/in/manuel-fahrenholz"
               target="_blank"
@@ -72,7 +78,7 @@ export default function About({
         <h1 className="text-3xl font-bold my-4 xl:my-0 xl:mb-4">
           {dictionary.greetingP1}{' '}
           <code
-            className="bg-accent rounded-md shadow-sm p-[0.3rem] italic text-sm md:text-xl text-pretty text-primary"
+            className="bg-accent rounded-md shadow-sm p-[0.3rem] dark:shadow-popover-foreground/5 italic text-sm md:text-xl text-pretty text-primary"
             aria-hidden="true">
             `<strong className="text-sh-sign">&#36;</strong>
             <strong className="text-sh-entity">&#123;</strong>
@@ -129,10 +135,16 @@ export default function About({
           <p className="mb-1 leading-relaxed text-lg">{dictionary.signature}</p>
         </article>
         <div className="flex justify-center gap-4 mt-3 grow">
-          <Button asChild size={'lg'} className="w-full max-w-[10rem]">
+          <Button
+            asChild
+            size={'lg'}
+            className="w-full max-w-[10rem] dark:shadow-popover-foreground/5">
             <Link href="/cv">{dictionary.cvButton}</Link>
           </Button>
-          <Button asChild size={'lg'} className="w-full max-w-[10rem]">
+          <Button
+            asChild
+            size={'lg'}
+            className="w-full max-w-[10rem] dark:shadow-popover-foreground/5">
             <Link href="/#contact">{dictionary.contactButton}</Link>
           </Button>
         </div>

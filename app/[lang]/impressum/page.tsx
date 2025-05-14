@@ -1,10 +1,12 @@
+import { Button } from '@/components/ui/button';
+
 export default function LegalPage() {
   return (
-    <main className="max-w-3xl mx-auto py-16 px-6 space-y-12">
-      <section>
+    <section className="flex flex-col w-full max-w-3xl mx-auto py-16 px-6 space-y-12 break-words overflow-hidden">
+      <article>
         <h1 className="text-3xl font-bold mb-4">Impressum / Legal Notice</h1>
 
-        <div className="space-y-6">
+        <div className="space-t-6">
           <div>
             <h2 className="text-xl font-semibold">Angaben gemäß § 5 TMG</h2>
             <p>
@@ -52,46 +54,78 @@ export default function LegalPage() {
             </p>
           </div>
         </div>
-      </section>
+      </article>
 
-      <div className="mt-16 text-center">
+      <Button size="lg" className="h-fit">
         <a
           href="/impressum_www_mrbubbles_src_dev_de.pdf"
           download
-          className="inline-block px-6 py-3 bg-primary text-white font-medium rounded hover:bg-primary/90 transition">
+          className="text-pretty leading-snug">
           Download des kompletten Impressums (PDF)
         </a>
-      </div>
+      </Button>
 
-      <section>
-        <h2 id="legal-notice-en" className="text-2xl font-bold mt-8 mb-4">
-          Legal Notice (English)
-        </h2>
-        <p>This website is operated by:</p>
-        <p>
-          Manuel Fahrenholz
-          <br />
-          Am Maarhof 28
-          <br />
-          51145 Cologne, Germany
-          <br />
-          Email: contact@mrbubbles-src.dev
-          <br />
-          Phone: +49 (0) 1727284635
-        </p>
-        <p>
-          Responsible for content according to § 55 Abs. 2 RStV: Manuel
-          Fahrenholz
-        </p>
-      </section>
-      <div className="mt-16 text-center">
+      <article>
+        <h1 className="text-3xl font-bold mb-4">Legal Notice (English)</h1>
+
+        <div className="space-t-6">
+          <div>
+            <h2 className="text-xl font-semibold">
+              Information according to Section 5 of the German Telemedia Act
+              (TMG)
+            </h2>
+            <p>
+              Manuel Fahrenholz
+              <br />
+              Am Maarhof 28
+              <br />
+              51145 Cologne, Germany
+              <br />
+            </p>
+          </div>
+
+          <div>
+            <h2 className="text-xl font-semibold">Contact</h2>
+            <p>
+              Phone: +49 (0) 1727284635
+              <br />
+              E-Mail: contact@mrbubbles-src.dev
+            </p>
+          </div>
+
+          <div>
+            <h2 className="text-xl font-semibold">Editorially responsible</h2>
+            <p>
+              Manuel Fahrenholz
+              <br />
+              Am Maarhof 28
+              <br />
+              51145 Cologne, Germany
+            </p>
+          </div>
+
+          <div>
+            <h2 className="text-xl font-semibold">Source</h2>
+            <p>
+              <a
+                className="underline"
+                href="https://www.e-recht24.de/impressum-generator.html"
+                target="_blank"
+                rel="noopener noreferrer">
+                https://www.e-recht24.de/impressum-generator.html
+              </a>
+            </p>
+          </div>
+        </div>
+      </article>
+      <Button size="lg" className="h-fit">
         <a
           href="/impressum_www_mrbubbles_src_dev_de.pdf"
           download
-          className="inline-block px-6 py-3 bg-primary text-white font-medium rounded hover:bg-primary/90 transition">
+          className="text-pretty leading-snug">
           Download full legal notice (PDF)
         </a>
-      </div>
-    </main>
+      </Button>
+    </section>
   );
 }

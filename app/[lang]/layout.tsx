@@ -8,6 +8,7 @@ import { i18n, Locale } from '@/i18n-config';
 import { getDictionary } from '@/get-digtionary';
 import '@/app/globals.css';
 import { InputModalityTracker } from '@/components/modailty-hack';
+import ScrollToTop from '@/components/utility/scroll-to-top';
 
 const montserrat = Montserrat({
   variable: '--font-montserrat',
@@ -92,6 +93,10 @@ export default async function RootLayout(props: {
       </head>
       <body
         className={`${montserrat.variable} bg-background text-foreground min-h-screen antialiased`}>
+        <div
+          id="scroll‑sentinel"
+          className="absolute top-0 left-0 w-[1px] h-[1px]"
+          aria-hidden="true"></div>
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
@@ -105,6 +110,7 @@ export default async function RootLayout(props: {
             {children}
           </main>
           <Footer dictionary={dictionary.footer} />
+          <ScrollToTop lang={lang} />
           <Toaster richColors position="top-right" />
         </ThemeProvider>
       </body>
