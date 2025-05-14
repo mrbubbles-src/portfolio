@@ -24,7 +24,7 @@ const Footer = ({
       <Button
         asChild
         variant={'outline'}
-        size={'lg'}
+        size={'sm'}
         className="dark:shadow-popover-foreground/5">
         <a
           href="https://github.com/mrbubbles-src"
@@ -42,7 +42,7 @@ const Footer = ({
       <Button
         asChild
         variant={'outline'}
-        size={'lg'}
+        size={'sm'}
         className="dark:shadow-popover-foreground/5">
         <a
           href="https://linkedin.com/in/manuel-fahrenholz"

@@ -9,6 +9,7 @@ import 'react-pdf/dist/esm/Page/TextLayer.css';
 import type { PDFDocumentProxy } from 'pdfjs-dist';
 import { Locale } from '@/i18n-config';
 import CurriculumVitaeSkeleton from './curriculum-vitae-skeleton';
+import { toast } from 'sonner';
 
 pdfjs.GlobalWorkerOptions.workerSrc = new URL(
   'pdfjs-dist/build/pdf.worker.min.mjs',
@@ -26,6 +27,8 @@ const maxWidth = 800;
 
 const CurriculumVitae = ({ lang }: { lang: Locale }) => {
   const [numPages, setNumPages] = useState<number>();
+  const [isLoading, setIsLoading] = useState(true);
+
   const [containerRef, setContainerRef] = useState<HTMLElement | null>(null);
   const [containerWidth, setContainerWidth] = useState<number>();
 
@@ -43,16 +46,29 @@ const CurriculumVitae = ({ lang }: { lang: Locale }) => {
     numPages: nextNumPages,
   }: PDFDocumentProxy): void {
     setNumPages(nextNumPages);
+    setIsLoading(false);
   }
 
   return (
     <div className="flex flex-col items-center my-2.5 p-2.5">
-      <div className="w-full max-w-[calc(100%-2em)] my-4" ref={setContainerRef}>
+      <div
+        className="w-full max-w-[calc(100%-2em)] my-4 relative"
+        ref={setContainerRef}>
+        {isLoading && <CurriculumVitaeSkeleton />}
         <Document
           className="flex flex-col items-center"
           file={`${process.env.NEXT_PUBLIC_APP_URL}/cv_manuel_fahrenholz_${lang}_view.pdf`}
-          loading={<CurriculumVitaeSkeleton />}
+          onError={() => {
+            toast.error('Something went wrong, please try again later.');
+          }}
+          onLoadError={() => {
+            toast.error('Error loading PDF, please try again later.');
+          }}
+          onSourceError={() => {
+            toast.error('PDF was not found, please try again later.');
+          }}
           onLoadSuccess={onDocumentLoadSuccess}
+          loading
           options={options}>
           {Array.from({ length: numPages ?? 0 }, (_, index) => (
             <Page
@@ -61,7 +77,16 @@ const CurriculumVitae = ({ lang }: { lang: Locale }) => {
               pageNumber={index + 1}
               renderTextLayer={false}
               renderAnnotationLayer={false}
-              loading={<CurriculumVitaeSkeleton />}
+              loading
+              onError={() => {
+                toast.error('Something went wrong, please try again later.');
+              }}
+              onLoadError={() => {
+                toast.error('Error loading PDF, please try again later.');
+              }}
+              onRenderError={() => {
+                toast.error('Error rendering PDF, please try again later.');
+              }}
               width={
                 containerWidth ? Math.min(containerWidth, maxWidth) : maxWidth
               }

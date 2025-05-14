@@ -59,11 +59,11 @@ const Navbar = ({
           onClick={handleLogoClick}
           className="text-xl font-bold text-primary"
           aria-label={dictionary.a11y.labelBack}>
-          <div className="relative h-12 w-52 md:h-14 md:w-56">
+          <div className="relative h-6 w-24 min-[321px]:h-10 min-[321px]:w-40 md:h-12 md:w-52 lg:h-14 lg:w-56">
             <Image
               src={Logo}
               fill
-              sizes="(max-width: 768px) 208px, 224px"
+              sizes="(max-width: 320px) 96px, (max-width: 768px) 160px, 224px"
               alt="mrbubbles-src — Fullstack Web Developer Logo"
               priority
             />

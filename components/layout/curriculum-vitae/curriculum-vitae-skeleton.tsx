@@ -3,7 +3,7 @@ import { Skeleton } from '@/components/ui/skeleton';
 const CurriculumVitaeSkeleton = () => {
   return (
     <>
-      <Skeleton className="w-full h-[90vh] bg-slate-500" />
+      <Skeleton className="w-full lg:max-w-[calc(100%-8em)] xl:max-w-[calc(100%-26em)] max-w-[calc(100%-2em)] h-[45rem] md:h-[60rem] bg-card place-self-center" />
     </>
   );
 };
