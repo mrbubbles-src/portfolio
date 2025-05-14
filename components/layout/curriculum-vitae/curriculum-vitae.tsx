@@ -57,7 +57,7 @@ const CurriculumVitae = ({ lang }: { lang: Locale }) => {
           {Array.from({ length: numPages ?? 0 }, (_, index) => (
             <Page
               key={`page_${index + 1}`}
-              className="my-4 shadow-xl dark:shadow-primary/15"
+              className="my-4 shadow-xl dark:shadow-popover-foreground/10"
               pageNumber={index + 1}
               renderTextLayer={false}
               renderAnnotationLayer={false}

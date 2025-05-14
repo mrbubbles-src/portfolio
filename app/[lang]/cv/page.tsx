@@ -14,7 +14,10 @@ export default async function CurriculumVitaePage(props: {
         Curriculum Vitae Manuel Fahrenholz
       </h1>
       <div className="flex justify-center">
-        <Button asChild size="lg" className="w-full max-w-[10rem]">
+        <Button
+          asChild
+          size="lg"
+          className="w-full max-w-[10rem] dark:shadow-popover-foreground/5">
           <a
             href={`${process.env.NEXT_PUBLIC_APP_URL}/cv_manuel_fahrenholz_${lang}_download.pdf`}
             download>

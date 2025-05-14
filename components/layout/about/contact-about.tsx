@@ -22,7 +22,7 @@ export default function ContactAbout({
           height={400}
           placeholder="blur"
           blurDataURL={ProfileImage.blurDataURL}
-          className="rounded-lg shadow-md object-cover"
+          className="rounded-lg shadow-md dark:shadow-popover-foreground/5 object-cover"
         />
       </CardHeader>
       <CardContent className="flex flex-col justify-center">
@@ -77,7 +77,10 @@ export default function ContactAbout({
           </ul>
         </article>
         <div className="flex justify-center gap-4 mt-6 flex-wrap place-self-center">
-          <Button asChild size={'lg'} className="w-full max-w-[10rem]">
+          <Button
+            asChild
+            size={'lg'}
+            className="w-full max-w-[10rem] dark:shadow-popover-foreground/5">
             <a
               href="https://github.com/mrbubbles-src"
               target="_blank"
@@ -88,7 +91,10 @@ export default function ContactAbout({
               GitHub
             </a>
           </Button>
-          <Button asChild size={'lg'} className="w-full max-w-[10rem]">
+          <Button
+            asChild
+            size={'lg'}
+            className="w-full max-w-[10rem] dark:shadow-popover-foreground/5">
             <a
               href="https://linkedin.com/in/manuel-fahrenholz"
               target="_blank"
@@ -99,7 +105,10 @@ export default function ContactAbout({
               LinkedIn
             </a>
           </Button>
-          <Button asChild size={'lg'} className="w-full max-w-[10rem]">
+          <Button
+            asChild
+            size={'lg'}
+            className="w-full max-w-[10rem] dark:shadow-popover-foreground/5">
             <Link href="/cv">{dictionary.cvButton}</Link>
           </Button>
         </div>

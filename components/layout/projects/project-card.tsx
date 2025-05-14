@@ -28,7 +28,7 @@ export default function ProjectCard({
   dictionary,
 }: IProjectCardProps & { dictionary: ProjectTranslation }) {
   return (
-    <Card className="shadow-md flex flex-col h-full">
+    <Card className="shadow-md dark:shadow-popover-foreground/5 flex flex-col h-full">
       <CardHeader>
         <CardTitle className="text-primary text-2xl">
           {dictionary.title}
@@ -53,7 +53,10 @@ export default function ProjectCard({
       </CardDescription>
       <CardFooter className="mt-auto px-6 pt-2 pb-4">
         <div className="flex gap-2 text-xs grow justify-center">
-          <Button asChild size={'lg'} className="w-full max-w-[10rem]">
+          <Button
+            asChild
+            size={'lg'}
+            className="w-full max-w-[10rem] dark:shadow-popover-foreground/5">
             <a href={live} target="_blank" rel="noopener noreferrer">
               Live
             </a>
@@ -62,7 +65,7 @@ export default function ProjectCard({
             asChild
             size={'lg'}
             variant="outline"
-            className="w-full max-w-[10rem]">
+            className="w-full max-w-[10rem] dark:shadow-popover-foreground/5">
             <a href={github} target="_blank" rel="noopener noreferrer">
               GitHub
             </a>

@@ -36,7 +36,7 @@ export default function LocaleSwitcher({
         <Button
           variant="outline"
           size={'icon'}
-          className="hover:text-primary transition-all duration-300 ease-in-out">
+          className="hover:text-primary transition-all duration-300 ease-in-out dark:shadow-popover-foreground/5">
           <span className="sr-only">{dictionary.screenreaderTitle}</span>
           <Globe className="h-[1.2rem] w-[1.2rem]" />
         </Button>

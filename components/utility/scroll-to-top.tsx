@@ -81,7 +81,7 @@ const ScrollToTop = ({ lang }: { lang: Locale }) => {
       title="Scroll to top"
       variant={'default'}
       size={'icon'}
-      className={`fixed bottom-4 right-4 z-50 rounded-full transition-all duration-300 ease-in-out bg-primary/50 hover:bg-primary p-6 ${shouldBounce ? 'animate-bounce shadow-md shadow-destructive' : 'shadow-md'} ${
+      className={`fixed bottom-4 right-4 z-50 rounded-full transition-all duration-300 ease-in-out bg-primary/50 hover:bg-primary p-6 ${shouldBounce ? 'animate-bounce shadow-md shadow-destructive' : 'shadow-md dark:shadow-popover-foreground/5'} ${
         isVisible ? 'opacity-100 visible' : 'opacity-0 invisible'
       }`}
       onClick={handleNavigateToTop}>

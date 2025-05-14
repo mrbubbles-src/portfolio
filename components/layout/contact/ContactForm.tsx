@@ -93,7 +93,7 @@ export default function ContactForm({
               </FormLabel>
               <FormControl>
                 <Input
-                  className="w-full min-h-12 !text-lg font-semibold shadow-md"
+                  className="w-full min-h-12 !text-lg font-semibold shadow-md dark:shadow-popover-foreground/5"
                   placeholder={dictionary.form.namePlaceholder}
                   {...field}
                 />
@@ -118,7 +118,7 @@ export default function ContactForm({
               <FormControl>
                 <Input
                   type="email"
-                  className="w-full min-h-12 !text-lg font-semibold shadow-md"
+                  className="w-full min-h-12 !text-lg font-semibold shadow-md dark:shadow-popover-foreground/5"
                   placeholder={dictionary.form.emailPlaceholder}
                   {...field}
                 />
@@ -142,7 +142,7 @@ export default function ContactForm({
               </FormLabel>
               <FormControl>
                 <Textarea
-                  className="w-full min-h-[12rem] md:min-h-[22rem] !text-lg font-semibold shadow-md"
+                  className="w-full min-h-[12rem] md:min-h-[22rem] !text-lg font-semibold shadow-md dark:shadow-popover-foreground/5"
                   placeholder={dictionary.form.messagePlaceholder}
                   {...field}
                 />

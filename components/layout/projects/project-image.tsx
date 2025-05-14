@@ -15,7 +15,7 @@ const ProjectImage = ({ live, image, title }: IProjectImage) => {
         href={live}
         target="_blank"
         rel="noopener noreferrer"
-        className="block mb-4 overflow-hidden rounded hover:opacity-90 transition shadow-md">
+        className="block mb-4 overflow-hidden rounded hover:opacity-90 transition shadow-md dark:shadow-popover-foreground/5">
         <Image
           src={image || PlaceholderImage}
           alt={`Screenshot of ${title}`}
