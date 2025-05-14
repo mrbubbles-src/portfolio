@@ -92,7 +92,7 @@ const Navbar = ({
           <button
             title="menu button"
             onClick={() => setMenuOpen(!menuOpen)}
-            className={`lg:hidden ml-2 hover:text-primary transition-all dark:shadow-popover-foreground/5 duration-300 ease-in-out cursor-pointer p-2 ${menuOpen ? 'rotate-90' : ''}`}
+            className={`lg:hidden ml-2 hover:text-primary transition-all dark:shadow-popover-foreground/5 duration-300 ease-in-out cursor-pointer p-1 ${menuOpen ? 'rotate-90' : ''}`}
             aria-label={dictionary.a11y.labelToggle}>
             {menuOpen ? (
               <X className="w-6 h-6" />
