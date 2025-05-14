@@ -57,7 +57,7 @@ const CurriculumVitae = ({ lang }: { lang: Locale }) => {
         {isLoading && <CurriculumVitaeSkeleton />}
         <Document
           className="flex flex-col items-center"
-          file={`${process.env.NEXT_PUBLIC_APP_URL}/cv_manuel_fahrenholz_${lang}_view.pdf`}
+          file={`/cv_manuel_fahrenholz_${lang}_view.pdf`}
           onError={() => {
             toast.error('Something went wrong, please try again later.');
           }}
