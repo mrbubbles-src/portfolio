@@ -1,5 +1,3 @@
-import { Button } from '@/components/ui/button';
-
 export default function LegalPage() {
   return (
     <section className="flex flex-col w-full max-w-3xl mx-auto py-16 px-6 space-y-12 break-words overflow-hidden">
@@ -56,14 +54,14 @@ export default function LegalPage() {
         </div>
       </article>
 
-      <Button size="lg" className="h-fit">
+      <div className="mt-16 text-center text-black">
         <a
           href="/impressum_www_mrbubbles_src_dev_de.pdf"
           download
-          className="text-pretty leading-snug">
+          className="block w-full text-center px-6 py-3 bg-primary font-semibold rounded hover:bg-primary/90 transition md:inline-block md:w-auto">
           Download des kompletten Impressums (PDF)
         </a>
-      </Button>
+      </div>
 
       <article>
         <h1 className="text-3xl font-bold mb-4">Legal Notice (English)</h1>
@@ -118,14 +116,15 @@ export default function LegalPage() {
           </div>
         </div>
       </article>
-      <Button size="lg" className="h-fit">
+
+      <div className="mt-16 text-center text-black">
         <a
           href="/impressum_www_mrbubbles_src_dev_de.pdf"
           download
-          className="text-pretty leading-snug">
+          className="block w-full text-center px-6 py-3 bg-primary font-semibold rounded hover:bg-primary/90 transition md:inline-block md:w-auto">
           Download full legal notice (PDF)
         </a>
-      </Button>
+      </div>
     </section>
   );
 }

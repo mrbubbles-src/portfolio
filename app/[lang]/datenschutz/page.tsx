@@ -145,11 +145,11 @@ export default function PrivacyPolicyPage() {
           Sie mich direkt.
         </p>
       </article>
-      <div className="mt-16 text-center">
+      <div className="mt-16 text-center text-black">
         <a
           href="/datenschutzerklaerung_www_mrbubbles_src_dev_de.pdf"
           download
-          className="block w-full text-center px-6 py-3 bg-primary text-white font-medium rounded hover:bg-primary/90 transition md:inline-block md:w-auto">
+          className="block w-full text-center px-6 py-3 bg-primary font-semibold rounded hover:bg-primary/90 transition md:inline-block md:w-auto">
           Download der kompletten Datenschutzerklärung (PDF)
         </a>
       </div>
@@ -293,11 +293,11 @@ export default function PrivacyPolicyPage() {
           Feel free to contact us for clarification.
         </p>
       </article>
-      <div className="mt-16 text-center">
+      <div className="mt-16 text-center text-black">
         <a
           href="/datenschutzerklaerung_www_mrbubbles_src_dev_de.pdf"
           download
-          className="block w-full text-center px-6 py-3 bg-primary text-white font-medium rounded hover:bg-primary/90 transition md:inline-block md:w-auto">
+          className="block w-full text-center px-6 py-3 bg-primary font-semibold rounded hover:bg-primary/90 transition md:inline-block md:w-auto">
           Download full privacy policy (PDF)
         </a>
       </div>
