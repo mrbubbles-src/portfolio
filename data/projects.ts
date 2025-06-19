@@ -1,14 +1,16 @@
 import Redacted from '@/public/screenshots/redacted.jpg';
 import BookNook from '@/public/screenshots/book-nook.jpg';
-import VetClinic from '@/public/screenshots/vet-clinic.png';
+// import VetClinic from '@/public/screenshots/vet-clinic.png';
 import StudentNameGenerator from '@/public/screenshots/teacherbuddy.png';
+import BubblesGenerator from '@/public/screenshots/bubbles-express.png';
 import { StaticImageData } from 'next/image';
 
 type ProjectKey =
   | 'redacted'
   | 'bookNook'
-  | 'vetClinic'
+  | 'bubblesGenerator'
   | 'studentNameGenerator';
+// | 'vetClinic';
 
 interface IProjects {
   key: ProjectKey;
@@ -30,6 +32,24 @@ const projects: Array<IProjects> = [
     image: Redacted,
   },
   {
+    key: 'bubblesGenerator',
+    title: 'bubblesGenerator.title',
+    description: 'bubblesGenerator.description',
+    tech: [
+      'TypeScript',
+      'JavaScript',
+      'Express.js',
+      'Node.js',
+      'MongoDB',
+      'postgreSQL',
+      'Mongoose',
+      'Drizzle',
+    ],
+    github: 'https://github.com/mrbubbles-src/bubbles-express-generator',
+    live: 'https://www.npmjs.com/package/bubbles-express-generator',
+    image: BubblesGenerator,
+  },
+  {
     key: 'bookNook',
     title: 'bookNook.title',
     description: 'bookNook.description',
@@ -38,15 +58,6 @@ const projects: Array<IProjects> = [
       'https://github.com/mrbubbles-src/dci-final-project-roomtwenty-booknook',
     live: 'https://roomtwenty-booknook.vercel.app/',
     image: BookNook,
-  },
-  {
-    key: 'vetClinic',
-    title: 'vetClinic.title',
-    description: 'vetClinic.description',
-    tech: ['React', 'SASS'],
-    github: 'https://github.com/mrbubbles-src/spa-final-group-project',
-    live: 'https://spa-final-group-project.vercel.app/',
-    image: VetClinic,
   },
   {
     key: 'studentNameGenerator',
