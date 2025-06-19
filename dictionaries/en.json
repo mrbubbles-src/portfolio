@@ -143,6 +143,10 @@
     "studentNameGenerator": {
       "title": "Random Student Name Generator",
       "description": "I created this little project while learning web development at the DCI Digital Career Institute to help my teachers pick a random student whenever they need one (e.g. for answering questions or presenting assignment solutions). It’s a passion project that I improve whenever I find the time. A relaunch is coming soon, so keep an eye on it!"
+    },
+    "bubblesGenerator": {
+      "title": "bubbles-express-generator",
+      "description": "A simple CLI to scaffold Express.js starter projects. Other similar tools are available, but I wanted to create my own to learn more about Node.js and Express.js. Other tools were also very complex and opinionated. They contained a lot of features I didn't need, so I wanted to create a simple tool that only does what I need it to do. It’s a work in progress, and I’m planning to add more features in the future."
     }
   }
 }

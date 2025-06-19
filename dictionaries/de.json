@@ -140,6 +140,10 @@
     "studentNameGenerator": {
       "title": "Zufälliger Schülernamengenerator",
       "description": "Dieses kleine Tool habe ich während meiner Zeit am DCI Digital Career Institute entwickelt, um Lehrkräften das zufällige Auswählen einer Schülerin bzw. eines Schülers zu erleichtern (z. B. fürs Beantworten von Fragen oder Präsentieren von Lösungen). Es ist ein Herzensprojekt, das ich immer weiterpflege, wann immer ich Zeit finde. Ein Relaunch steht bald an – behalte es im Auge!"
+    },
+    "bubblesGenerator": {
+      "title": "bubbles-express-generator",
+      "description": "Ein einfaches CLI‑Tool, um Express.js‑Starterprojekte zu erstellen. Es gibt ähnliche Tools, aber ich wollte mein eigenes entwickeln, um mehr über Node.js und Express.js zu lernen. Andere Tools sind oft sehr komplex und meinungsstark. Sie enthalten viele Funktionen, die ich nicht benötige, daher wollte ich ein einfaches Tool erstellen, das nur das tut, was ich brauche. Es ist ein laufendes Projekt, und ich plane, in Zukunft weitere Funktionen hinzuzufügen."
     }
   }
 }
