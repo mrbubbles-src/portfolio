@@ -1,6 +1,6 @@
 import { Button } from '@/components/ui/button';
 import { Locale } from '@/i18n-config';
-import CurriculumVitae from '@/components/layout/curriculum-vitae/curriculum-vitae';
+import CurriculumVitae from '@/components/layout/curriculum-vitae/curriculum-vitae.client';
 
 export default async function CurriculumVitaePage(props: {
   params: Promise<{ lang: Locale }>;
