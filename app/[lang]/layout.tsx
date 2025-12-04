@@ -21,10 +21,13 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata(props: {
-  params: Promise<{ lang: Locale }>;
+  params: Promise<{ lang: string }>;
 }): Promise<Metadata> {
   const params = await props.params;
-  const dictionary = await getDictionary(params.lang);
+  const lang = i18n.locales.includes(params.lang as Locale)
+    ? (params.lang as Locale)
+    : i18n.defaultLocale;
+  const dictionary = await getDictionary(lang);
 
   return {
     metadataBase: new URL(
@@ -45,7 +48,7 @@ export async function generateMetadata(props: {
         },
       ],
       type: 'website',
-      locale: params.lang === 'de' ? 'de_DE' : 'en_GB',
+      locale: lang === 'de' ? 'de_DE' : 'en_GB',
     },
     twitter: {
       card: 'summary_large_image',
@@ -60,16 +63,18 @@ export async function generateMetadata(props: {
 
 export default async function RootLayout(props: {
   children: React.ReactNode;
-  params: Promise<{ lang: Locale }>;
+  params: Promise<{ lang: string }>;
 }) {
   const params = await props.params;
+  const lang = i18n.locales.includes(params.lang as Locale)
+    ? (params.lang as Locale)
+    : i18n.defaultLocale;
   const { children } = props;
-  const { lang } = params;
   const dictionary = await getDictionary(lang);
 
   return (
     <html
-      lang={params.lang}
+      lang={lang}
       className="dark scroll-smooth mouse-mode"
       suppressHydrationWarning>
       <head>
